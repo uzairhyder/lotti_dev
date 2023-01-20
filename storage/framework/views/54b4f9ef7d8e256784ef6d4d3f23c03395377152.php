@@ -1,4 +1,31 @@
 <?php $__env->startSection('content'); ?>
+<style>
+    .emailSendBox {
+        position: relative;
+    }
+
+    button.emailSendButton {
+        position: absolute;
+        background-color: #ff2446;
+        padding: 4px 6px;
+        font-size: 14px;
+        color: #ffffff;
+        border-radius: 6px;
+        right: 2%;
+        bottom: 8%;
+        font-family: montserratLight;
+    }
+
+    .login-sec-box input,
+    .input-label-felids input {
+        width: 100%;
+    }
+
+    .remove-a-tag:hover {
+        color: #ffffff;
+    }
+</style>
+
 <div class="top-nav-height"></div>
 
     <!-- top-height end-->
@@ -13,28 +40,34 @@
             <div class="login-sec">
                 <div class="login-first-line">
                     <div class="login-welcome-heading">
-                        <h1>Change Your Email</h1>
+                        <h1>Enter new email</h1>
                     </div>
                 </div>
                 <div class="login-sec-box forget-section email-verification">
                     <div class="email_icon d-flex align-items-center">
-                        
-                        <h1>Enter New Email</h1>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <h1>We will send a one time code to your Email</h1>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <form action="<?php echo e(route('store-mobile')); ?>" id="email-verify" method="POST">
+                            <form action="" id="">
                                 <?php echo csrf_field(); ?>
                                 <div class="d-flex flex-column">
-                                    
-                                    <input type="text" class="mt2" id="contact" name="email" placeholder="Enter New Emial">
+                                    <input type="email" class="mt2" id="email" name="email"
+                                       >
+                                    <div class="emailSendBox">
+                                        <input type="text" class="mt2" id="verify_code" name="verify_code"
+                                            placeholder="Email Verification Code">
+                                        <button type="button" class="emailSendButton">Send</button>
+                                    </div>
+
                                 </div>
                                 <div class="pink-login-btn login-button small-device-width mt2">
                                     <button class="remove-a-tag" type="submit">
-                                    Change
+                                        Verify Code
                                     </button>
-                            </div>
-                         </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -47,6 +80,84 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        $('.emailSendButton').on('click', function() {
+            var email = $("#email").val();
+            console.log(email);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+                },
+                type: "POST",
+                url: "<?php echo e(route('verify-email')); ?>",
+                data: $('#email-verify').serialize(),
+
+                beforeSend: function() {
+                    $(".loader-bg").removeClass('loader-active');
+                },
+                success: function(response) {
+                    $(".loader-bg").addClass('loader-active');
+                    if (response.status == 501) {
+                        toastr.error('Invalid Email !');
+                    }
+                    if (response.status == 400) {
+                        $.each(response.errors, function(prefix, val) {
+                            toastr.error(val[0]);
+                        });
+                    }
+                    if (response.status == 200) {
+                        toastr.success('Please Check email to verify otp');
+                    }
+                },
+
+
+            });
+        });
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function() {
+        $("#email-verify").on('submit', function(e) {
+            e.preventDefault();
+            var form = $("#email-verify");
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+                },
+                type: "POST",
+                url: "<?php echo e(route('verify-mobile-otp')); ?>",
+                data: form.serialize(),
+                beforeSend: function() {
+                    $(".loader-bg").removeClass('loader-active');
+                },
+                success: function(response) {
+                    $(".loader-bg").addClass('loader-active');
+                    if (response.status == 502) {
+                        toastr.error('Incorrect OTP !');
+                    }
+                    if (response.status == 319) {
+                        toastr.error('Incorrect Email or OTP !');
+                    }
+                    if (response.status == 400) {
+                        $.each(response.errors, function(prefix, val) {
+                            toastr.error(val[0]);
+                        });
+                    }
+                    if (response.status == 200) {
+                        window.location.href = "<?php echo e(route('change-email')); ?>";
+                        toastr.success('Email verified Successfully');
+
+                    }
+                },
+            });
+        });
+    });
+</script>
+
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('frontend.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp2\htdocs\lotti\resources\views/user-dashboard/phone.blade.php ENDPATH**/ ?>

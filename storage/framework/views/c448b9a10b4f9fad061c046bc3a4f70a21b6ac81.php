@@ -537,6 +537,7 @@
         $('#final_price_pro').text("$".concat(localStorage.getItem("actual_total")))
         console.log(promo_delete)
     });
+
     $("#coupondiscount").click(function(e) {
         e.preventDefault();
         console.log(localStorage.getItem("coupon_code_store"))

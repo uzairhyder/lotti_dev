@@ -29,7 +29,7 @@ CREATE TABLE `attribute_values` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `attribute_values` */
 
@@ -42,7 +42,10 @@ insert  into `attribute_values`(`id`,`variant_id`,`attribute_value`,`slug`,`stat
 (6,'3','Large','large','1','2023-01-19 00:03:08','2023-01-19 00:03:08'),
 (7,'4','Dell','dell','1','2023-01-19 00:03:19','2023-01-19 00:03:19'),
 (8,'4','Intel','intel','1','2023-01-19 00:03:24','2023-01-19 00:03:24'),
-(9,'4','Lenovo','lenovo','1','2023-01-19 00:03:35','2023-01-19 00:03:35');
+(9,'4','Lenovo','lenovo','1','2023-01-19 00:03:35','2023-01-19 00:03:35'),
+(10,'1','26gb','26gb','1','2023-01-20 17:59:55','2023-01-20 17:59:55'),
+(11,'1','567gb','567gb','1','2023-01-20 17:59:55','2023-01-20 17:59:55'),
+(12,'1','76gb','76gb','1','2023-01-20 17:59:55','2023-01-20 17:59:55');
 
 /*Table structure for table `attributes` */
 
@@ -118,13 +121,14 @@ CREATE TABLE `billing_infos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `billing_infos` */
 
 insert  into `billing_infos`(`id`,`order_id`,`product_id`,`order_status`,`cancellation_status`,`cancelled_at`,`cancellation_reason`,`cancellation_comments`,`cancellation_image`,`product_variantion_id`,`attributes`,`attribute_values`,`delivery_fee`,`quantity`,`price`,`discounted_price`,`discount`,`total`,`shipping_address`,`billing_address`,`created_at`,`updated_at`) values 
 (1,'1','1','2','1','2023-01-19 20:56:09','2','for test',NULL,'2','1,5','Red,Medium',0,'1',386,174,212,174,'{\"id\":1,\"user_id\":\"3\",\"name\":\"Lev\",\"address\":\"Brody\",\"contact\":\"133\",\"landmark\":\"Mannix\",\"delivery_label\":\"1\",\"province\":\"1\",\"city\":\"1\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":null,\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":\"1\",\"created_at\":\"2023-01-13T20:47:42.000000Z\",\"updated_at\":\"2023-01-18T19:01:45.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Lev\",\"address\":\"Brody\",\"contact\":\"133\",\"landmark\":\"Mannix\",\"delivery_label\":\"1\",\"province\":\"1\",\"city\":\"1\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":null,\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":\"1\",\"created_at\":\"2023-01-13T20:47:42.000000Z\",\"updated_at\":\"2023-01-18T19:01:45.000000Z\"}','2023-01-19 07:26:18','2023-01-19 20:56:58'),
-(2,'2','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'1',500,NULL,NULL,500,'{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}','2023-01-19 20:51:50','2023-01-19 20:51:50');
+(2,'2','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'1',500,NULL,NULL,500,'{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}','2023-01-19 20:51:50','2023-01-19 20:51:50'),
+(3,'3','2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,'1',500,NULL,NULL,500,'{\"id\":1,\"user_id\":\"3\",\"name\":\"Naomi\",\"address\":\"Carla\",\"contact\":\"157\",\"landmark\":\"Carlos\",\"delivery_label\":\"1\",\"province\":\"9\",\"city\":\"100\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-20T16:36:40.000000Z\",\"updated_at\":\"2023-01-20T16:36:40.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Naomi\",\"address\":\"Carla\",\"contact\":\"157\",\"landmark\":\"Carlos\",\"delivery_label\":\"1\",\"province\":\"9\",\"city\":\"100\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-20T16:36:40.000000Z\",\"updated_at\":\"2023-01-20T16:36:40.000000Z\"}','2023-01-20 16:36:51','2023-01-20 16:36:51');
 
 /*Table structure for table `blogs` */
 
@@ -223,7 +227,7 @@ CREATE TABLE `carts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `carts` */
 
@@ -457,7 +461,7 @@ CREATE TABLE `coupons` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `product_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `product_variation_id` varchar(250) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sub_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `coupon_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `discount_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `coupon_amount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -476,9 +480,12 @@ CREATE TABLE `coupons` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `coupons` */
+
+insert  into `coupons`(`id`,`product_id`,`product_variation_id`,`sub_category_id`,`coupon_code`,`discount_type`,`coupon_amount`,`percentage`,`expiry_date`,`free_shipping`,`minimum_spend`,`maximum_spend`,`sale_items`,`allowed_emails`,`usage_limit_per_coupon`,`usage_limit_per_user`,`usage_limit_items`,`description`,`status`,`created_at`,`updated_at`) values 
+(2,NULL,NULL,'2','freecode-20','1',NULL,'5','2023-01-31 00:00:00',NULL,'1000','10000',NULL,'null','1','1',NULL,'<p>enjoy promo code&nbsp;</p>',1,'2023-01-20 18:58:39','2023-01-20 18:58:39');
 
 /*Table structure for table `define_product_variants` */
 
@@ -772,15 +779,9 @@ CREATE TABLE `order_notes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `order_notes` */
-
-insert  into `order_notes`(`id`,`order_id`,`order_comment`,`order_notes_status`,`status_changed_time`,`created_at`,`updated_at`) values 
-(1,'1',NULL,1,'2023-01-19 00:26:18','2023-01-19 07:26:18','2023-01-19 07:26:18'),
-(2,'2',NULL,1,'2023-01-19 20:51:50','2023-01-19 20:51:50','2023-01-19 20:51:50'),
-(3,'2','your order has been shipphed',2,'2023-01-19 20:57:41','2023-01-19 20:57:41','2023-01-19 20:57:41'),
-(4,'2','order has been deliverd\r\nThanks for shopping with lotti website',3,'2023-01-19 20:58:36','2023-01-19 20:58:36','2023-01-19 20:58:36');
 
 /*Table structure for table `order_notifications` */
 
@@ -792,7 +793,7 @@ CREATE TABLE `order_notifications` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `order_notifications` */
 
@@ -828,13 +829,9 @@ CREATE TABLE `orders` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `orders` */
-
-insert  into `orders`(`id`,`user_id`,`product_id`,`coupon_id`,`quantity`,`total_price`,`delivery_fee`,`coupon_status`,`product_count`,`order_status`,`cancel_order_count`,`billing_address`,`shipping_address`,`payment_method`,`payment_response`,`order_cancellation_reason`,`order_verification`,`processing_at`,`shipped_at`,`delivered_at`,`cancelled_at`,`verified_at`,`hold_at`,`comment`,`created_at`,`updated_at`) values 
-(1,'3',NULL,NULL,NULL,NULL,0,NULL,0,10,'1','{\"id\":1,\"user_id\":\"3\",\"name\":\"Lev\",\"address\":\"Brody\",\"contact\":\"133\",\"landmark\":\"Mannix\",\"delivery_label\":\"1\",\"province\":\"1\",\"city\":\"1\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":null,\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":\"1\",\"created_at\":\"2023-01-13T20:47:42.000000Z\",\"updated_at\":\"2023-01-18T19:01:45.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Lev\",\"address\":\"Brody\",\"contact\":\"133\",\"landmark\":\"Mannix\",\"delivery_label\":\"1\",\"province\":\"1\",\"city\":\"1\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":null,\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":\"1\",\"created_at\":\"2023-01-13T20:47:42.000000Z\",\"updated_at\":\"2023-01-18T19:01:45.000000Z\"}',1,NULL,'{\"orderIdHidden\":\"1\",\"cancel_product_id\":\"1\",\"cancel_order_id\":\"1\",\"cancellation_policy\":\"1\",\"cancelproduct\":[\"1\"],\"allorders\":null,\"reason\":\"2\",\"comment\":\"for test\",\"policy\":\"1\"}',NULL,'2023-01-19 07:26:18',NULL,NULL,NULL,NULL,NULL,'for test','2023-01-19 07:26:18','2023-01-19 20:56:58'),
-(2,'3',NULL,NULL,NULL,NULL,0,NULL,0,3,NULL,'{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}','{\"id\":1,\"user_id\":\"3\",\"name\":\"Uma Wheeler\",\"address\":\"Repellendus Consequ\",\"contact\":\"+1 (494) 934-7647\",\"landmark\":\"Autem eveniet simil\",\"delivery_label\":\"1\",\"province\":\"2\",\"city\":\"34\",\"village\":null,\"default_shipping\":\"1\",\"default_billing\":\"2\",\"shipping_active_address\":\"1\",\"billing_active_address\":\"2\",\"address_identifire\":1,\"created_at\":\"2023-01-19T20:35:39.000000Z\",\"updated_at\":\"2023-01-19T20:35:39.000000Z\"}',1,NULL,NULL,NULL,'2023-01-19 20:51:48','2023-01-19 20:57:41','2023-01-19 20:58:36',NULL,NULL,NULL,'order has been deliverd\r\nThanks for shopping with lotti website','2023-01-19 20:51:48','2023-01-19 20:58:36');
 
 /*Table structure for table `otp_verifications` */
 
@@ -847,17 +844,12 @@ CREATE TABLE `otp_verifications` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `otp_verifications` */
 
 insert  into `otp_verifications`(`id`,`email`,`otp`,`created_at`,`updated_at`) values 
-(1,'rano@mailinator.com','149569','2023-01-19 19:20:24','2023-01-19 19:20:24'),
-(2,'rano@mailinator.com','294296','2023-01-19 19:20:33','2023-01-19 19:20:33'),
-(3,'rano@mailinator.com','323572','2023-01-19 19:20:46','2023-01-19 19:20:46'),
-(4,'rano@mailinator.com','772051','2023-01-19 19:21:16','2023-01-19 19:21:16'),
-(5,'djoy62471@gmail.com','537283','2023-01-19 22:22:35','2023-01-19 22:22:35'),
-(6,'djoy621@gmail.com','861790','2023-01-19 22:49:07','2023-01-19 22:49:07');
+(1,'djoy62471@gmail.com','921982','2023-01-20 23:34:49','2023-01-20 23:34:49');
 
 /*Table structure for table `packages` */
 
@@ -1026,15 +1018,9 @@ CREATE TABLE `product_additional_attributes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `product_additional_attributes` */
-
-insert  into `product_additional_attributes`(`id`,`product_attribute_id`,`attribute_id`,`attribute`,`created_at`,`updated_at`) values 
-(1,'3','1','Red','2023-01-19 07:14:27','2023-01-19 07:14:27'),
-(2,'3','2','Blue','2023-01-19 07:14:27','2023-01-19 07:14:27'),
-(3,'4','4','Small','2023-01-19 07:14:27','2023-01-19 07:14:27'),
-(4,'4','5','Medium','2023-01-19 07:14:27','2023-01-19 07:14:27');
 
 /*Table structure for table `product_attributes` */
 
@@ -1050,13 +1036,9 @@ CREATE TABLE `product_attributes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `product_attributes` */
-
-insert  into `product_attributes`(`id`,`product_id`,`variant_id`,`variant`,`visible_product`,`used_for_variation`,`created_at`,`updated_at`) values 
-(3,'1','2','Color','1','2','2023-01-19 07:14:27','2023-01-19 07:14:27'),
-(4,'1','3','Size','1','2','2023-01-19 07:14:27','2023-01-19 07:14:27');
 
 /*Table structure for table `product_variantions` */
 
@@ -1094,15 +1076,9 @@ CREATE TABLE `product_variantions` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `product_variantions` */
-
-insert  into `product_variantions`(`id`,`parent_category_id`,`main_category_id`,`sub_category_id`,`product_id`,`define_product_variant_id`,`product_attribute_id`,`product_additional_attribute_id`,`variant_id`,`variant`,`attribute_id`,`attribute`,`image`,`regular_price`,`sale_price`,`discount`,`discount_percent`,`start_date`,`end_date`,`discount_status`,`quantity`,`sku`,`weight`,`length`,`width`,`height`,`stock`,`shipping`,`created_at`,`updated_at`) values 
-(1,'2','2','1','1',NULL,NULL,NULL,NULL,NULL,'1,4','Red,Small','167408773796.png','795','526','269','33.84',NULL,NULL,1,'757','Obcaecati similique','Debitis enim ducimus','Blanditiis deserunt','Est eveniet volupt','Exercitationem dolor','1',NULL,'2023-01-19 07:15:24','2023-01-19 07:22:17'),
-(2,'2','2','1','1',NULL,NULL,NULL,NULL,NULL,'1,5','Red,Medium','167408732439.png','386','174','212','54.92',NULL,NULL,1,'636','Sunt nihil ipsa rer','In quia est commodi','Aut quae id vitae ut','Molestiae quibusdam','Minus do labore eius','1',NULL,'2023-01-19 07:15:24','2023-01-19 07:22:17'),
-(3,'2','2','1','1',NULL,NULL,NULL,NULL,NULL,'2,4','Blue,Small','167408732489.png','277','130','147','53.07',NULL,NULL,1,'77','Aut nihil excepteur','Sit nihil magnam ut','Nostrum et ipsum qui','Eveniet velit recu','Vel nesciunt iure d','1',NULL,'2023-01-19 07:15:24','2023-01-19 07:22:17'),
-(4,'2','2','1','1',NULL,NULL,NULL,NULL,NULL,'2,5','Blue,Medium','167408732458.png','896','125','771','86.05',NULL,NULL,1,'751','Perspiciatis volupt','Consequatur qui aspe','Suscipit eveniet es','Voluptas fugit fugi','Sit sit ullam ut mo','1',NULL,'2023-01-19 07:15:24','2023-01-19 07:22:17');
 
 /*Table structure for table `products` */
 
@@ -1139,13 +1115,9 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `products` */
-
-insert  into `products`(`id`,`product_type`,`parent_category_id`,`main_category_id`,`sub_category_id`,`product_name`,`slug`,`price`,`sale_price`,`discounted_price`,`discount`,`discount_percent`,`sale_start`,`sale_end`,`discount_status`,`total_price`,`brand_id`,`sku`,`tags`,`image`,`multiple_image`,`quantity`,`stock`,`shipping`,`status`,`short_description`,`description`,`created_at`,`updated_at`) values 
-(1,'2','2','2','1','Athena Lancaster','athena-lancaster','724',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'724','2','Sed omnis rerum duci','[\"omnis\",\"vel\",\"sed\"]','1674087248.jpg',NULL,'151','1','8',1,'Numquam nulla volupt','<p>test</p>','2023-01-19 07:14:08','2023-01-19 07:26:18'),
-(2,'1','1','1','6','Headphone','headphone','500',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'500','2','lotti-1234','[\"headphone\",\"bluetooth\"]','1674087373.webp',NULL,'9','1','2',1,'Short DescriptionShort Description','<p>Product Description Product DescriptionProduct DescriptionProduct DescriptionProduct Description</p>','2023-01-19 07:16:13','2023-01-19 20:51:50');
 
 /*Table structure for table `reviews` */
 
@@ -1421,12 +1393,14 @@ CREATE TABLE `user_addresses` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `user_addresses` */
 
 insert  into `user_addresses`(`id`,`user_id`,`name`,`address`,`contact`,`landmark`,`delivery_label`,`province`,`city`,`village`,`default_shipping`,`default_billing`,`shipping_active_address`,`billing_active_address`,`address_identifire`,`created_at`,`updated_at`) values 
-(1,'3','Uma Wheeler','Repellendus Consequ','+1 (494) 934-7647','Autem eveniet simil','1','2','34',NULL,'1','2','1','2',1,'2023-01-19 20:35:39','2023-01-19 20:35:39');
+(1,'3','Brandon Schroeder','Quod excepteur tenet','+1 (291) 312-2362','Do veniam voluptate','1','10','121',NULL,'1','2','1','2',1,'2023-01-20 22:10:52','2023-01-20 22:11:27'),
+(2,'3','Jesse Shannon','Consequatur aliqua','+1 (302) 357-3014','Voluptate pariatur','1','12','152',NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-20 22:11:02','2023-01-20 22:11:27'),
+(3,'3','Dustin Finch','Enim enim sunt place','+1 (887) 342-7131','Consequatur Aut imp','2','4','58',NULL,NULL,NULL,NULL,NULL,NULL,'2023-01-20 22:11:13','2023-01-20 22:11:27');
 
 /*Table structure for table `users` */
 

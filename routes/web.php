@@ -58,15 +58,15 @@ use App\Http\Controllers\Backend\TermsConditionController;
 use App\Http\Controllers\Frontend\UserDashboardController;
 
 // Auth::routes();
-// 
+//
 Route::get('admin', function () {
     return view('auth.login');
 })->name('/');
 
 Route::get('filter', function(){
-    
+
     $variableProductQeury = Product::where('product_type',2);
-    
+
     $start = 5;
     $end = 500;
     $variableProductQeury->with('product_variations_filter', function($q) use ($start, $end){
@@ -77,7 +77,7 @@ Route::get('filter', function(){
 
     $array = array();
     foreach($queries as $q){
-        
+
         if(count($q->product_variations_filter) > 0){
             array_push($array , $q);
         }
@@ -85,7 +85,7 @@ Route::get('filter', function(){
     $collection = collect($array);
 
     return $collection;
-    
+
 
 });
 
@@ -143,7 +143,7 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
 
     Route::resource('shipping',ShippingController::class);
     Route::get('shipping-status/{id}',[ShippingController::class,'status'])->name('shipping-status');
-    
+
     Route::resource('shipping-method',ShippingMethodController::class);
     Route::get('shipping-method-status/{id}',[ShippingMethodController::class,'status'])->name('shipping-method-status');
 
@@ -152,8 +152,8 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
         Route::resource('configuration', ConfigurationController::class);
         // Route::get('shipping-status/{id}',[ConfigurationController::class,'status'])->name('shipping-status');
         Route::resource('social', SocialController::class);
-        
-        
+
+
 
     });
 
@@ -229,7 +229,7 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
      Route::get('get_last_attr',[ProductController::class,'last_att'])->name('get_last_attr');
      Route::get('save_qty',[ProductController::class,'saveqty'])->name('save_qty');
      Route::get('get_attr',[ProductController::class,'getattr'])->name('get_attr');
-     
+
 
      Route::post('product_variants',[ProductController::class,'product_variants'])->name('add.product_variants');
      Route::get('remove_product_variants',[ProductController::class,'remove_product_variants'])->name('remove.product_variants');
@@ -237,7 +237,7 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
      Route::get('product-attributes',[ProductController::class,'add_attribute'])->name('show.product_attributes');
      Route::post('define_product_variant',[ProductController::class,'define_product_variant'])->name('add.define_product_variant');
      Route::post('define_product_variant_edit/{id}',[ProductController::class,'define_product_variant_edit'])->name('edit.define_product_variant');
-     
+
 
     //  edit tabs
      Route::post('product/{id}',[ProductController::class,'updateproductdata'])->name('update-prevdata');
@@ -247,9 +247,9 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
      Route::get('edit-product-variation/{id}',[ProductController::class,'edit_product_variation'])->name('edit.product_variation');
      Route::get('delete-variation/{id}',[ProductController::class,'delete_variation'])->name('delete-variation');
      Route::get('remove-variation-session/{id}',[ProductController::class,'remove_session'])->name('remove-variation-session');
-     
+
      Route::get('product-attributes/edit/{id}',[ProductController::class,'edit_product_attr'])->name('edit.product_attributes');
-     
+
 
 
     // Coupon routes
@@ -289,7 +289,7 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
 
     // Pages route
     Route::get('page-status/{id}', [PageController::class, 'status'])->name('page-status');
-    
+
     // Review Routes
     Route::get('reviews',[ReviewController::class,'index'])->name('reviews');
     Route::get('reviews-detail/{id}',[ReviewController::class,'details'])->name('reviews-detail');
@@ -305,7 +305,7 @@ Route::group(['middleware' =>  ['preventBackHistory','adminmiddleware'],'prefix'
     Route::post('user-update/{id}', [UserController::class, 'update'])->name('user-update');
     Route::post('user-delete/{id}', [UserController::class, 'delete'])->name('user-delete');
     Route::get('user-status/{id}', [UserController::class, 'status'])->name('user-status');
-    
+
 
     // Subscription
     Route::get('subscription',[SubscriptionController::class,'index'])->name('subscription');
@@ -392,6 +392,7 @@ Route::middleware(['preventBackHistory','usermiddleware'])->group(function () {
     Route::post('update-password',[UserDashboardController::class,'updatepassword'])->name('update-password');
     Route::post('user-logout',[UserDashboardController::class,'userlogout'])->name('user-logout');
     Route::post('verify-mobile',[UserDashboardController::class,'verifymobile'])->name('verify-mobile');
+    Route::post('verify-email',[UserDashboardController::class,'verifyemail'])->name('verify-email');
     Route::post('verify-mobile-otp',[UserDashboardController::class,'verifymobileotp'])->name('verify-mobile-otp');
     Route::get('change-email',[UserDashboardController::class,'changeemail'])->name('change-email');
     Route::post('store-mobile',[UserDashboardController::class,'storemobile'])->name('store-mobile');

@@ -952,8 +952,7 @@ class FrontendController extends Controller
         $regular_price=$quantity_no_discount;
         $coupon_apply = $sale_price + $regular_price;
         $whole_coupon_amount= $coupon_apply * $coupon_amount;
-        // dd($whole_coupon_amount,$sale_price,$regular_price);
-// $cart_discount->sum('')
+
         $order_coupon=Order::where('coupon_id', $coupon_name->id)->get()->count();
         $order_user_coupon=Order::where('coupon_id', $coupon_name->id)->where('user_id', Auth::id())->get()->count();
         $coupon_email = Coupon::where('coupon_code', $request->coupon_code)->where('status',1)->whereJsonContains('allowed_emails', Auth::user()->email)->exists();
@@ -1231,7 +1230,7 @@ class FrontendController extends Controller
         $wishlist = Wishlist::where('user_id', Auth::id())->count();
         // $total_amount = Cart::where('user_id', Auth::id())->sum('total');
 
-        
+
         if(!session()->has('products_total_amount')){
             return redirect()->route('shipping');
         }

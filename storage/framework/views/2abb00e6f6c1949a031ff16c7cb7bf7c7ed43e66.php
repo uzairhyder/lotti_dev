@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('content'); ?>
     <?php
         $data_attributes = App\Models\BackendModels\Attribute::latest()->get();
@@ -7,7 +6,7 @@
                 ->latest()
                 ->get();
         }
-        
+
     ?>
     <style>
         .customer_records,
@@ -31,7 +30,7 @@
         button#pillsStockTab,
         button#pillsTagsTab,
         button#pillsImageTab,
-        button.cstm_buttons{
+        button.cstm_buttons {
             border: none;
             padding: 10px 30px;
             color: #000000;
@@ -45,6 +44,7 @@
             background-color: #ff2446 !important;
             color: #fff !important;
         }
+
         .active_btn {
             background-color: #ff2446 !important;
             color: #fff !important;
@@ -327,7 +327,7 @@
         }
 
 
-        .removeBtn{
+        .removeBtn {
             color: red;
             font-size: 14px !important;
         }
@@ -426,36 +426,37 @@
         }
     </style>
     <style>
-            textarea.textAreaValue {
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    resize: none;
-    border-radius: 0.25rem;
-    min-height: 150px;
-    max-height: 150px;
-}
-textarea.textAreaValue:focus {
-    outline-color: none !important;
-    border-color: #86b7fe;
-    outline: 0;
-    -webkit-box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+        textarea.textAreaValue {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            resize: none;
+            border-radius: 0.25rem;
+            min-height: 150px;
+            max-height: 150px;
+        }
 
-}
+        textarea.textAreaValue:focus {
+            outline-color: none !important;
+            border-color: #86b7fe;
+            outline: 0;
+            -webkit-box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+            box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+
+        }
     </style>
-  
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card tabsBox" id="tabs_id">
 
-                      
+
                     <ul class="nav nested nav-pills mb-3" id="pills-tab" role="tablist">
 
                         <li class="nav-item" role="presentation">
@@ -463,13 +464,13 @@ textarea.textAreaValue:focus {
                                 <button class="nav-link cstm_buttons">Product</button>
                             </a>
 
-                            
-                            
 
-                            
+
+
+
                         </li>
                         <?php if(session()->has('var_product_id') || session()->has('edit_product_id')): ?>
-                            <a href="<?php echo e(route('edit.product_attributes',['id' => $id])); ?>">
+                            <a href="<?php echo e(route('edit.product_attributes', ['id' => $id])); ?>">
                                 <button class="nav-link cstm_buttons">Attribute</button>
                             </a>
                         <?php else: ?>
@@ -488,171 +489,197 @@ textarea.textAreaValue:focus {
 
 
                     <div class="container">
-                        
-                        
+
+
                         <form action="<?php echo e(route('add.product_variation')); ?>" method="POST" enctype="multipart/form-data">
                             <?php echo csrf_field(); ?>
                             <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
                                 
                                 <input type="hidden" name="variations_id" value="<?php echo e(json_encode($variation_ids)); ?>">
                                 <?php $__currentLoopData = $product->product_variations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                
-                                <?php
-                                    $attribute_ids_array = explode(',',$item->attribute_id);
-                                ?>
-                                
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        
-                                        <?php if(!empty($product->product_variants)): ?>
-                                            <?php $__currentLoopData = $product->product_variants; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product_attribute): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <div class="select-dropdown selectDropdown">
-                                                <select class="form-control edit_attribute_<?php echo e($key); ?> detect_attribute_similarties" name="attributes[]" onchange="return edit_attribute('<?php echo e($key); ?>')">
-                                                    <?php $__currentLoopData = $product_attribute->product_attributes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $attr): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                    <option value="<?php echo e($attr->attribute_id); ?>"<?php echo e((in_array($attr->attribute_id, $attribute_ids_array)) ? 'selected' : ''); ?>><?php echo e($attr->attribute); ?></option>
-                                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                </select>
-                                            </div>                                            
-                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                        <?php endif; ?>
-                                        
-                                        
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-<?php echo e($key); ?>" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-<?php echo e($key); ?>">
+                                    <?php
+                                        $attribute_ids_array = explode(',', $item->attribute_id);
+                                    ?>
 
-                                        </button>
-                                        <button type="button" class="removeBtn"><a href="<?php echo e(route('delete-variation', ['id' => $item->id])); ?>" onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
-                                    </h2>
-                                    <div id="panelsStayOpen-<?php echo e($key); ?>" class="accordion-collapse collapse"
-                                        aria-labelledby="panelsStayOpen-<?php echo e($key); ?>">
-                                        <div class="accordion-body">
-                                            <div class="variationsBox">
-                                                <div class="row  mt-4 mb-4">
-                                                    <div class="col-lg-6">
-                                                        <div class="imageWrapper">
-                                                            <img class="image" src="<?php echo e($item->image ? asset('variations/'.$item->image) : asset('images/No-Image-Placeholder.svg')); ?>">
-                                                        </div>
-                                                        <button class="file-upload" type="button">
-                                                            <input type="file" class="file-input" name="image[]">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Regular price.*</label>
-                                                            <input type="text" class="form-control" name="regular_price[]" value="<?php echo e($item->regular_price); ?>" placeholder="Regular price">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale price.* <span
-                                                                    class="schedule">Schedule</span></label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Sale price" name="sale_price[]" value="<?php echo e($item->sale_price); ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Quantity.*</label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Quantity" name="quantity[]" value="<?php echo e($item->quantity); ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">SKU.*</label>
-                                                            <input type="text" name="sku[]" class="form-control" placeholder="SKU" value="<?php echo e($item->sku); ?>">
-                                                        </div>
-                                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
 
-                                                </div>
-                                                <div class="row mt-4 mb-4 data">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale start
-                                                                date.*</label>
-                                                            <input type="date" name="start_date[]" class="form-control sale_start"
-                                                                placeholder="Sale start date" value="<?php echo e(!empty($item->start_date) ? date_format(date_create($item->start_date), 'Y-m-d') : null); ?>">
+                                            <?php if(!empty($product->product_variants)): ?>
+                                                <?php $__currentLoopData = $product->product_variants; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product_attribute): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                    <div class="select-dropdown selectDropdown">
+                                                        <select
+                                                            class="form-control edit_attribute_<?php echo e($key); ?> detect_attribute_similarties"
+                                                            name="attributes[]"
+                                                            onchange="return edit_attribute('<?php echo e($key); ?>')">
+                                                            <?php $__currentLoopData = $product_attribute->product_attributes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $attr): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                                <option
+                                                                    value="<?php echo e($attr->attribute_id); ?>"<?php echo e(in_array($attr->attribute_id, $attribute_ids_array) ? 'selected' : ''); ?>>
+                                                                    <?php echo e($attr->attribute); ?></option>
+                                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                        </select>
+                                                    </div>
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            <?php endif; ?>
+                                            
+
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-<?php echo e($key); ?>" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-<?php echo e($key); ?>">
+
+                                            </button>
+                                            <button type="button" class="removeBtn"><a
+                                                    href="<?php echo e(route('delete-variation', ['id' => $item->id])); ?>"
+                                                    onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
+                                        </h2>
+                                        <div id="panelsStayOpen-<?php echo e($key); ?>" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-<?php echo e($key); ?>">
+                                            <div class="accordion-body">
+                                                <div class="variationsBox">
+                                                    <div class="row  mt-4 mb-4">
+                                                        <div class="col-lg-6">
+                                                            <div class="imageWrapper">
+                                                                <img class="image"
+                                                                    src="<?php echo e($item->image ? asset('variations/' . $item->image) : asset('images/No-Image-Placeholder.svg')); ?>">
+                                                            </div>
+                                                            <button class="file-upload" type="button">
+                                                                <input type="file" class="file-input" name="image[]">
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale end date.*</label>
-                                                            <input type="date" name="end_date[]" class="form-control sale_end"
-                                                                placeholder="Sale end date" value="<?php echo e(!empty($item->end_date) ? date_format(date_create($item->end_date), 'Y-m-d') : null); ?>">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Regular
+                                                                    price.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="regular_price[]"
+                                                                    value="<?php echo e($item->regular_price); ?>"
+                                                                    placeholder="Regular price">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale price.* <span
+                                                                        class="schedule">Schedule</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Sale price" name="sale_price[]"
+                                                                    value="<?php echo e($item->sale_price); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Quantity.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Quantity" name="quantity[]"
+                                                                    value="<?php echo e($item->quantity); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">SKU.*</label>
+                                                                <input type="text" name="sku[]" class="form-control"
+                                                                    placeholder="SKU" value="<?php echo e($item->sku); ?>">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4 mb-4 data">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale start
+                                                                    date.*</label>
+                                                                <input type="date" name="start_date[]"
+                                                                    class="form-control sale_start"
+                                                                    placeholder="Sale start date"
+                                                                    value="<?php echo e(!empty($item->start_date) ? date_format(date_create($item->start_date), 'Y-m-d') : null); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale end
+                                                                    date.*</label>
+                                                                <input type="date" name="end_date[]"
+                                                                    class="form-control sale_end"
+                                                                    placeholder="Sale end date"
+                                                                    value="<?php echo e(!empty($item->end_date) ? date_format(date_create($item->end_date), 'Y-m-d') : null); ?>">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Weight.*</label>
-                                                            <input type="text" name="weight[]" class="form-control"
-                                                                placeholder="Weight" value="<?php echo e($item->weight); ?>">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Weight.*</label>
+                                                                <input type="text" name="weight[]"
+                                                                    class="form-control" placeholder="Weight"
+                                                                    value="<?php echo e($item->weight); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Length.*</label>
+                                                                <input type="text" name="length[]"
+                                                                    class="form-control" placeholder="Length"
+                                                                    value="<?php echo e($item->length); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Width.*</label>
+                                                                <input type="text" name="width[]" class="form-control"
+                                                                    placeholder="Width" value="<?php echo e($item->width); ?>">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Height.*</label>
+                                                                <input type="text" name="height[]"
+                                                                    class="form-control" placeholder="Height"
+                                                                    value="<?php echo e($item->height); ?>">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Length.*</label>
-                                                            <input type="text" name="length[]" class="form-control"
-                                                                placeholder="Length" value="<?php echo e($item->length); ?>">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <label for="exampleFormControlInput10">Stock status.*</label>
+                                                            <div class="select-dropdown">
+                                                                <select class="form-control" name="stock[]">
+                                                                    
+                                                                    <option value="1"
+                                                                        <?php echo e($item->stock == 1 ? 'selected' : ''); ?>>In stock
+                                                                    </option>
+                                                                    <option value="2"
+                                                                        <?php echo e($item->stock == 2 ? 'selected' : ''); ?>>Out stock
+                                                                    </option>
+                                                                </select>
+                                                            </div>
                                                         </div>
+                                                        
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Width.*</label>
-                                                            <input type="text" name="width[]" class="form-control"
-                                                                placeholder="Width" value="<?php echo e($item->width); ?>">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Height.*</label>
-                                                            <input type="text" name="height[]" class="form-control"
-                                                                placeholder="Height" value="<?php echo e($item->height); ?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-3">
-                                                        <label for="exampleFormControlInput10">Stock status.*</label>
-                                                        <div class="select-dropdown">
-                                                            <select class="form-control" name="stock[]">
-                                                                <option value="" disabled selected>Stock status</option>
-                                                                <option value="1" <?php echo e($item->stock == 1 ? 'selected' : ''); ?>>In stock</option>
-                                                                <option value="2" <?php echo e($item->stock == 2 ? 'selected' : ''); ?>>Out stock</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             </div>
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="saveAndCancel">
-                                        
+
                                         <?php if(count($product->product_variations) > 0): ?>
-                                        <button type="submit" class="btn btn-success saveRedBtn plusButton mr-2"
-                                            data-bs-original-title="" title="">Save Attribute</button>    
-                                            
+                                            <button type="submit" class="btn btn-success saveRedBtn plusButton mr-2"
+                                                data-bs-original-title="" title="">Save Attribute</button>
+
                                             <button type="button" class="btn btn-success saveRedBtn plusButton"
-                                            data-bs-original-title="" title="">Cancel</button>
+                                                data-bs-original-title="" title="">Cancel</button>
                                         <?php else: ?>
-                                        <p>Variation(s) Not found!, go back and create it.</p>
+                                            <p>Variation(s) Not found!, go back and create it.</p>
                                         <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        
+
                     </div>
 
                 </div>
@@ -689,7 +716,7 @@ textarea.textAreaValue:focus {
                     jQuery('.data').toggle();
                 })
             });
-          
+
             $(function() {
                 $('.select').each(function() {
                     $(this).select2({
@@ -774,7 +801,7 @@ textarea.textAreaValue:focus {
                 }
             });
         </script>
-        
+
         <script>
             $(document).ready(function() {
                 $('#main-category_id').on('click', function() {
@@ -803,7 +830,7 @@ textarea.textAreaValue:focus {
             });
         </script>
 
-       
+
         <script>
             $(":input").on("keyup change", function(e) {
                 var price = $("#price").val();
@@ -818,7 +845,7 @@ textarea.textAreaValue:focus {
 
 
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<script>
+        <script>
             function selectRefresh() {
                 $('.select_2').select2({
                     tags: true,
@@ -827,19 +854,21 @@ textarea.textAreaValue:focus {
                     width: '100%'
                 });
             }
-            function selectAll(id){
-                    $(`.select_${id} > option`).prop("selected", "selected");
-                    $(`.select_${id}`).trigger("change");
-               
+
+            function selectAll(id) {
+                $(`.select_${id} > option`).prop("selected", "selected");
+                $(`.select_${id}`).trigger("change");
+
             }
-            function unselectAll(id){
+
+            function unselectAll(id) {
                 $(`.select_${id}`).val("-1").trigger("change");
             }
-         
-            
+
+
             $(document).ready(function() {
-            selectRefresh();
-            
+                selectRefresh();
+
             });
 
 
@@ -847,7 +876,7 @@ textarea.textAreaValue:focus {
 
 
             // add variant
-            function addVariant(){
+            function addVariant() {
                 selectRefresh();
                 var variant = $("#variants").val();
                 var product_id = "<?php echo e(session()->get('var_product_id')); ?>";
@@ -859,8 +888,8 @@ textarea.textAreaValue:focus {
                     url: "<?php echo e(route('add.product_variants')); ?>",
                     data: {
                         _token: '<?php echo e(csrf_token()); ?>',
-                        product_id : product_id,
-                        variant : variant,
+                        product_id: product_id,
+                        variant: variant,
                     },
                     beforeSend: function() {
                         $(".loader-bg").removeClass('loader-active');
@@ -872,17 +901,17 @@ textarea.textAreaValue:focus {
                     }
                 });
             }
-            
-            function removeVariant(variant_id, attribute_id){
+
+            function removeVariant(variant_id, attribute_id) {
                 alert(variant_id)
 
                 $.ajax({
                     type: "GET",
                     url: "<?php echo e(route('remove.product_variants')); ?>",
                     data: {
-                         _token: '<?php echo e(csrf_token()); ?>',
-                         variant_id:variant_id,
-                         attribute_id:attribute_id
+                        _token: '<?php echo e(csrf_token()); ?>',
+                        variant_id: variant_id,
+                        attribute_id: attribute_id
                     },
                     beforeSend: function() {
                         $(".loader-bg").removeClass('loader-active');
@@ -894,15 +923,15 @@ textarea.textAreaValue:focus {
                     }
                 });
             }
-            
+
             // attribute tab
 
 
-            $(document).ready(function(){
+            $(document).ready(function() {
 
                 let total_attr_count = $(".detect_attribute_similarties").length;
                 let attr_total_arr = [];
-                $.each($(".detect_attribute_similarties"), function (indexInArray, valueOfElement) { 
+                $.each($(".detect_attribute_similarties"), function(indexInArray, valueOfElement) {
                     // console.log($(this).val())
                     attr_total_arr.push($(this).val());
                 });
@@ -916,72 +945,109 @@ textarea.textAreaValue:focus {
                     return res;
                 }
 
-                
+
                 // console.log(sliceIntoChunks(attr_total_arr, 2));
 
 
                 // console.log(attr_total_arr.chunk(2))
 
             });
-            
+
+            add_variation=[];
             // attribute validation
-            function edit_attribute(key){
-                
-                let row_attr_length = $('.edit_attribute_'+key).length;
+            function edit_attribute(key) {
+
+                // let row_attr_length = $('.edit_attribute_' + key).length;
+                // let total_attr_count = $(".detect_attribute_similarties").length;
+                // let attr_total_arr = [];
+                // let row_attr_ids = [];
+
+
+                let row_attr_length = $('.edit_attribute_' + key).length;
+                let val = $('.edit_attribute_' + key);
+
                 let total_attr_count = $(".detect_attribute_similarties").length;
                 let attr_total_arr = [];
                 let row_attr_ids = [];
-                
+                option = [];
 
-                $.each($(".detect_attribute_similarties"), function (indexInArray, valueOfElement) { 
-                    attr_total_arr.push($(this).val());
+                $.each($(val), function(indexInArray, valueOfElement) {
+                    option.push($(this).val());
                 });
-                
-                function sliceIntoChunks(arr, chunkSize) {
-                    const res = [];
-                    for (let i = 0; i < arr.length; i += chunkSize) {
-                        const chunk = arr.slice(i, i + chunkSize);
-                        res.push(chunk);
+                $.each($(add_variation), function(indexInArray, valueOfElement) {
+                    console.log(indexInArray, valueOfElement, 'as', add_variation)
+                    if (valueOfElement.key == key) {
+                        console.log(valueOfElement.key, key, 'abc')
+                        delete add_variation.key;
+
+                    } else if (valueOfElement.key != key) {
+
+                        console.log(disable = JSON.stringify(valueOfElement.option) === JSON.stringify(option))
+                        if (disable) {
+                            console.log(valueOfElement.key, key, 'def', valueOfElement.option, option)
+                            // console.log('variation already exist')
+                        }
                     }
-                    return res;
-                }
-                
-                
-                
-                
-                
-                
-                $.each($('.edit_attribute_'+key), function (indexInArray, valueOfElement) { 
-                    row_attr_ids.push($(this).val());
-                    // console.log($(this).val())
                 });
-                
-                let all_attr_arr_chunks = sliceIntoChunks(attr_total_arr, row_attr_length);
-                // console.log(all_attr_arr_chunks)
-                // console.log(row_attr_ids)
+
+                var arr = {
+                    'key': key,
+                    "option": option
+                };
+                add_variation.push(arr);
 
 
 
-                var array1 = [4,8,9,10];
-                var array2 = [4,8,9,10];
+                // old code by tofique
+                // $.each($(".detect_attribute_similarties"), function (indexInArray, valueOfElement) {
+                //     attr_total_arr.push($(this).val());
+                // });
 
-                for(let i = 0; i < all_attr_arr_chunks.length; i++){
+                // function sliceIntoChunks(arr, chunkSize) {
+                //     const res = [];
+                //     for (let i = 0; i < arr.length; i += chunkSize) {
+                //         const chunk = arr.slice(i, i + chunkSize);
+                //         res.push(chunk);
+                //     }
+                //     return res;
+                // }
 
-                    var is_same = row_attr_ids.length == all_attr_arr_chunks[i].length && row_attr_ids.every(function(element, index) {
-                        return element === all_attr_arr_chunks[i][index]; 
-                    });
-
-                    console.log(is_same);
-
-                }
 
 
-                
+
+
+
+                // $.each($('.edit_attribute_'+key), function (indexInArray, valueOfElement) {
+                //     row_attr_ids.push($(this).val());
+                //     // console.log($(this).val())
+                // });
+
+                // let all_attr_arr_chunks = sliceIntoChunks(attr_total_arr, row_attr_length);
+                // // console.log(all_attr_arr_chunks)
+                // // console.log(row_attr_ids)
+
+
+
+                // var array1 = [4,8,9,10];
+                // var array2 = [4,8,9,10];
+
+                // for(let i = 0; i < all_attr_arr_chunks.length; i++){
+
+                //     var is_same = row_attr_ids.length == all_attr_arr_chunks[i].length && row_attr_ids.every(function(element, index) {
+                //         return element === all_attr_arr_chunks[i][index];
+                //     });
+
+                //     console.log(is_same);
+
+                // }
+
+
+
 
                 // console.log(is_same);
 
-                
-                
+
+
             }
 
             // $(".edit_attribute").on("change", function(){
@@ -996,7 +1062,7 @@ textarea.textAreaValue:focus {
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0');
             var yyyy = today.getFullYear();
-        
+
             today = yyyy + '-' + mm + '-' + dd;
             $('.sale_start').attr('min', today);
             $('.sale_end').attr('min', today);

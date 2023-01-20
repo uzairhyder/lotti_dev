@@ -303,7 +303,8 @@
                         </div>
 
                         <div class="couponDetails" style="display: none">
-                            <span ><strong>Promo Code:</strong><span id="promo_delete" >N/A </span></span><span><i class="fa fa-trash-o" aria-hidden="true" id="delete_promo"></i></span></span>
+                            <span><strong>Promo Code:</strong><span id="promo_delete">N/A </span></span><span><i
+                                    class="fa fa-trash-o" aria-hidden="true" id="delete_promo"></i></span></span>
                             <p>You are getting the best price we have got.</p>
                         </div>
                         <div class="orderSummaryTotal">
@@ -324,6 +325,13 @@
                             @else
                                 <span>Free Shipping</span>
                             @endif
+
+                        </div>
+
+
+                        <div class="orderSummaryTotal">
+                            <span>Delivery Time</span>
+                            <span>4-7 Days</span>
                         </div>
                         {{-- <div class="orderSummaryTotal">
                             <span>Total Payment</span>
@@ -331,17 +339,17 @@
                         </div> --}}
                         <div class="orderSummaryTotal">
                             <span>Total:</span><span id="final_price_pro">
-                            @if (count($user_shippings) > 0)
-                                <span>$. {{ number_format($total + $user_shippings[0]->shipping_fee, 2) }}</span>
-                                @php
-                                    session()->put('products_total_amount', $total + $user_shippings[0]->shipping_fee);
-                                @endphp
-                            @else
-                                <span>$. {{ number_format($total + 0, 2) }}</span>
-                                @php
-                                    session()->put('products_total_amount', $total + 0);
-                                @endphp
-                            @endif
+                                @if (count($user_shippings) > 0)
+                                    <span>$. {{ number_format($total + $user_shippings[0]->shipping_fee, 2) }}</span>
+                                    @php
+                                        session()->put('products_total_amount', $total + $user_shippings[0]->shipping_fee);
+                                    @endphp
+                                @else
+                                    <span>$. {{ number_format($total + 0, 2) }}</span>
+                                    @php
+                                        session()->put('products_total_amount', $total + 0);
+                                    @endphp
+                                @endif
                             </span>
                         </div>
 
@@ -383,7 +391,7 @@
                     </div>
 
 
-             {{-- <div class="d-flex justify-content-between for-label-style">
+                    {{-- <div class="d-flex justify-content-between for-label-style">
                 <div class="d-flex  align-items-normal">
                     <input class="form-check-input payment-buttons" type="radio" name="payment"
                         value="1" id="cash-on-delivery">
@@ -400,8 +408,8 @@
                 </div>
              </div> --}}
                     <div class="cartButton orderPlace">
-                        <a href="{{ route('payment') }}"><button>Payment</button></a>
-                        
+                        <a href="{{ route('payment') }}" class="payment_btn"><button>Payment</button></a>
+
                         <div id="payment-buttons"></div>
                     </div>
                 </div>
@@ -1151,15 +1159,15 @@
     });
 </script>
 <script>
-    if(localStorage.getItem("coupon_code_store")){
+    if (localStorage.getItem("coupon_code_store")) {
         $('.couponDetails').show();
         $('.couponBox').hide()
-        actual=localStorage.getItem("actual_total");
-        whole_amount=localStorage.getItem("whole_coupon_amount");
-        var test_amount="$".concat(actual-whole_amount)
+        actual = localStorage.getItem("actual_total");
+        whole_amount = localStorage.getItem("whole_coupon_amount");
+        var test_amount = "$".concat(actual - whole_amount)
         $('#final_price_pro').text(test_amount)
         $('#promo_delete').text(localStorage.getItem("coupon_code_store"));
-    }else{
+    } else {
         $('.couponDetails').hide();
         $('#couponDetails').show()
         $('#coupon_code').val(localStorage.getItem("coupon_code_store2"))
@@ -1171,10 +1179,10 @@
         $('.couponBox').show()
 
         $('#promo_delete').text('N/A');
-        promo_delete=document.querySelector("#promo_delete");
-        actual_total= localStorage.getItem("actual_total");
-        whole_coupon_amount= localStorage.getItem("whole_coupon_amount");
-        var amount="$".concat(actual_total-whole_coupon_amount)
+        promo_delete = document.querySelector("#promo_delete");
+        actual_total = localStorage.getItem("actual_total");
+        whole_coupon_amount = localStorage.getItem("whole_coupon_amount");
+        var amount = "$".concat(actual_total - whole_coupon_amount)
         $('#final_price_pro').text("$".concat(localStorage.getItem("actual_total")))
 
     });
@@ -1183,7 +1191,7 @@
 
         var checkout_final_price_hidden = $("#checkout_final_price_hidden").val();
         var coupon_code = $("#coupon_code").val();
-        console.log(localStorage.setItem("coupon_code_store2",coupon_code))
+        console.log(localStorage.setItem("coupon_code_store2", coupon_code))
         if (coupon_code == '') {
             toastr.error("Please Enter coupon code !");
             return false;
@@ -1208,18 +1216,18 @@
                     });
                 }
                 if (response.status == 200) {
-                    coupon_amount=response.coupon_amount
-                    actual_total=response.final_price_hidden
-                    whole_coupon_amount=response.whole_coupon_amount
+                    coupon_amount = response.coupon_amount
+                    actual_total = response.final_price_hidden
+                    whole_coupon_amount = response.whole_coupon_amount
                     localStorage.setItem("actual_total", actual_total);
                     localStorage.setItem("whole_coupon_amount", whole_coupon_amount);
-                    var amount="$".concat(actual_total-whole_coupon_amount)
+                    var amount = "$".concat(actual_total - whole_coupon_amount)
                     $('#final_price_pro').text(amount)
                     localStorage.setItem("coupon_code_store", coupon_code);
                     $('.promoCodeTitle').click()
                     $('#promo_delete').text(coupon_code);
                     //    $('#promo_delete').attr('disabled',true);
-                    promo_delete=document.querySelector("#promo_delete");
+                    promo_delete = document.querySelector("#promo_delete");
                     $('.couponDetails').show();
                     $('.couponBox').hide()
                 }
@@ -1261,39 +1269,48 @@
 
 
     // payment buttons
-    $(".payment-buttons").on("click", function(){
-        var shipping_address_count = '{{ count($shipping_addresses) }}';
+    // $(".payment-buttons").on("click", function(){
+    //     var shipping_address_count = '{{ count($shipping_addresses) }}';
 
-        $("#payment-buttons").html("");
-        var html = '';
-        if(shipping_address_count > 0){
-            let paymentButtons = $(this).val();
+    //     $("#payment-buttons").html("");
+    //     var html = '';
+    //     if(shipping_address_count > 0){
+    //         let paymentButtons = $(this).val();
 
-            // 1) cash on delivery
-            if(paymentButtons == 1){
-                html = `<a href="{{ route('cash_on_delivery') }}"><button>Place Order</button></a>`;
-            }else{
-                // 2) pay with cards
-                html = `<a href="{{ route('payment') }}"><button>Payment</button></a>`;
-            }
-        }else{
-            html = `<button data-bs-toggle="modal" data-bs-target="#add-address">Payment</button>`;
-        }
-        $("#payment-buttons").html(html);
+    //         // 1) cash on delivery
+    //         if(paymentButtons == 1){
+    //             html = `<a href="{{ route('cash_on_delivery') }}"><button>Place Order</button></a>`;
+    //         }else{
+    //             // 2) pay with cards
+    //             html = `<a href="{{ route('payment') }}"><button>Payment</button></a>`;
+    //         }
+    //     }else{
+    //         html = `<button data-bs-toggle="modal" data-bs-target="#add-address">Payment</button>`;
+    //     }
+    //     $("#payment-buttons").html(html);
 
-    });
+    // });
+
+    var shipping_address_count = '{{ count($shipping_addresses) }}';
+    if (shipping_address_count > 0) {
+        $(".payment_btn").addClass("remove_none");
+    } else {
+        $(".payment_btn").addClass("display_none");
+        $("#payment-buttons").html(
+            `<button data-bs-toggle="modal" data-bs-target="#add-address" id="address_btn">Payment</button>`);
+    }
 </script>
 
 <script>
-    if(localStorage.getItem("coupon_code_store")){
+    if (localStorage.getItem("coupon_code_store")) {
         $('.couponDetails').show();
         $('.couponBox').hide()
-        actual=localStorage.getItem("actual_total");
-        whole_amount=localStorage.getItem("whole_coupon_amount");
-        var test_amount="$".concat(actual-whole_amount)
+        actual = localStorage.getItem("actual_total");
+        whole_amount = localStorage.getItem("whole_coupon_amount");
+        var test_amount = "$".concat(actual - whole_amount)
         $('#final_price_pro').text(test_amount)
         $('#promo_delete').text(localStorage.getItem("coupon_code_store"));
-    }else{
+    } else {
         $('.couponDetails').hide();
         $('#couponDetails').show()
         $('#coupon_code').val(localStorage.getItem("coupon_code_store2"))
@@ -1305,10 +1322,10 @@
         $('.couponBox').show()
 
         $('#promo_delete').text('N/A');
-        promo_delete=document.querySelector("#promo_delete");
-        actual_total= localStorage.getItem("actual_total");
-        whole_coupon_amount= localStorage.getItem("whole_coupon_amount");
-        var amount="$".concat(actual_total-whole_coupon_amount)
+        promo_delete = document.querySelector("#promo_delete");
+        actual_total = localStorage.getItem("actual_total");
+        whole_coupon_amount = localStorage.getItem("whole_coupon_amount");
+        var amount = "$".concat(actual_total - whole_coupon_amount)
         $('#final_price_pro').text("$".concat(localStorage.getItem("actual_total")))
 
     });
@@ -1317,7 +1334,7 @@
 
         var checkout_final_price_hidden = $("#checkout_final_price_hidden").val();
         var coupon_code = $("#coupon_code").val();
-        console.log(localStorage.setItem("coupon_code_store2",coupon_code))
+        console.log(localStorage.setItem("coupon_code_store2", coupon_code))
         if (coupon_code == '') {
             toastr.error("Please Enter coupon code !");
             return false;
@@ -1342,18 +1359,18 @@
                     });
                 }
                 if (response.status == 200) {
-                    coupon_amount=response.coupon_amount
-                    actual_total=response.final_price_hidden
-                    whole_coupon_amount=response.whole_coupon_amount
+                    coupon_amount = response.coupon_amount
+                    actual_total = response.final_price_hidden
+                    whole_coupon_amount = response.whole_coupon_amount
                     localStorage.setItem("actual_total", actual_total);
                     localStorage.setItem("whole_coupon_amount", whole_coupon_amount);
-                    var amount="$".concat(actual_total-whole_coupon_amount)
+                    var amount = "$".concat(actual_total - whole_coupon_amount)
                     $('#final_price_pro').text(amount)
                     localStorage.setItem("coupon_code_store", coupon_code);
                     $('.promoCodeTitle').click()
                     $('#promo_delete').text(coupon_code);
                     //    $('#promo_delete').attr('disabled',true);
-                    promo_delete=document.querySelector("#promo_delete");
+                    promo_delete = document.querySelector("#promo_delete");
                     $('.couponDetails').show();
                     $('.couponBox').hide()
                 }

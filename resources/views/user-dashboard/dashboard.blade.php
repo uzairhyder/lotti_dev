@@ -240,47 +240,54 @@ width: 30%;
         color: #ffc700 !important;
     }
 
-    {{-- update work 12 --}}
-    .cancelation-reason{
+    {{-- update work 12 --}} .cancelation-reason {
         padding: 8px 0px;
     }
-    .cancelation-reason .lotti-retail-review p{
+
+    .cancelation-reason .lotti-retail-review p {
         border-bottom: 2px solid #b5b5b5;
         font-size: 16px;
         padding-bottom: 5px;
     }
-    .cancelation-reason .lotti-retail-review h4{
+
+    .cancelation-reason .lotti-retail-review h4 {
         font-size: 15px;
         margin-top: 5px;
         color: #ff2446;
         margin-bottom: 0px;
         font-family: montserratSemiBold;
     }
-    .tracking-class{
+
+    .tracking-class {
         font-family: montserratSemiBold;
         font-size: 20px;
     }
-    .tracking-style-dot .processing{
+
+    .tracking-style-dot .processing {
         text-align: center;
     }
-    .tracking-style-dot .dark-grey-span span{
+
+    .tracking-style-dot .dark-grey-span span {
         font-size: 14px;
         color: #4d4d4d;
         font-family: montserratSemiBold;
         margin: 0px 6px;
     }
-    .tracking-style-dot span{
+
+    .tracking-style-dot span {
         font-size: 14px;
         color: #4d4d4d;
         font-family: montserratMedium;
     }
-    .tracking-style-dot .dark-grey-span{
+
+    .tracking-style-dot .dark-grey-span {
         width: fit-content;
         margin: auto;
     }
-    .for-box-shadow{
+
+    .for-box-shadow {
         box-shadow: 0px 0px 10px 0px #81818191;
-        padding: 4px 10px ;
+        padding: 4px 10px;
         border-radius: 4px;
     }
 </style>
@@ -305,9 +312,9 @@ width: 30%;
         <div class="collapse multi-collapse for-custom-height" id="multiCollapseExample1">
             <ul class="nav nav-pills mt0 flex-column" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="remove-btn-css remove-li-active-class  font-bold-style active removecanceled" id="home-tabs" data-bs-toggle="pill"
-                        data-bs-target="#my-account" type="button" role="tab" aria-controls="pills-home"
-                        aria-selected="true">Manage My Account</button>
+                    <button class="remove-btn-css remove-li-active-class  font-bold-style active removecanceled"
+                        id="home-tabs" data-bs-toggle="pill" data-bs-target="#my-account" type="button" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Manage My Account</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="remove-btn-css removecanceled" id="pills-profile-tab" data-bs-toggle="pill"
@@ -315,40 +322,40 @@ width: 30%;
                         aria-selected="false">My Profile</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="remove-btn-css removecanceled add-li-active-class" id="pills-contact-tab" data-bs-toggle="pill"
-                        data-bs-target="#address-book" type="button" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">Address Book</button>
+                    <button class="remove-btn-css removecanceled add-li-active-class" id="pills-contact-tab"
+                        data-bs-toggle="pill" data-bs-target="#address-book" type="button" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">Address Book</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="remove-btn-css removecanceled" id="pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#my-payment" type="button" role="tab" aria-controls="pills-profile"
                         aria-selected="false">My Payment Options</button>
                 </li>
-                    </li> -->
+                </li> -->
                 <li class="nav-item" role="presentation">
-                    <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-home-tab" data-bs-toggle="pill"
-                        data-bs-target="#my-order" type="button" role="tab" aria-controls="pills-home"
-                        aria-selected="true">My Orders</button>
+                    <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-home-tab"
+                        data-bs-toggle="pill" data-bs-target="#my-order" type="button" role="tab"
+                        aria-controls="pills-home" aria-selected="true">My Orders</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="remove-btn-css returnprocess" id="pills-profile-tab" data-bs-toggle="pill"
                         data-bs-target="#my-return" type="button" role="tab" aria-controls="pills-profile"
                         aria-selected="false">My Return</button>
                 </li>
-                <li class="nav-item" role="presentation" >
+                <li class="nav-item" role="presentation">
                     <button class="remove-btn-css mycancel" id="pills-contact-tab" data-bs-toggle="pill"
                         data-bs-target="#my-cancel" type="button" role="tab" aria-controls="pills-contact"
                         aria-selected="false">My Cancellations</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-profile-tab" data-bs-toggle="pill"
-                        data-bs-target="#my-reviews" type="button" role="tab" aria-controls="pills-profile"
-                        aria-selected="false">My Reviews</button>
+                    <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-profile-tab"
+                        data-bs-toggle="pill" data-bs-target="#my-reviews" type="button" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">My Reviews</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="remove-btn-css font-bold-style mt0 removecanceled" id="pills-contact-tab" data-bs-toggle="pill"
-                        data-bs-target="#my-wishlist" type="button" role="tab" aria-controls="pills-contact"
-                        aria-selected="false">My Wishlist</button>
+                    <button class="remove-btn-css font-bold-style mt0 removecanceled" id="pills-contact-tab"
+                        data-bs-toggle="pill" data-bs-target="#my-wishlist" type="button" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">My Wishlist</button>
                 </li>
 
             </ul>
@@ -363,41 +370,42 @@ width: 30%;
                     <h1 class="user-name">Hello, {{ Auth::user()->name }}</h1>
                     <ul class="nav nav-pills mt0 flex-column" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="remove-btn-css remove-li-active-class font-bold-style active removecanceled" id="home-tabs" data-bs-toggle="pill"
-                                data-bs-target="#my-account" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">Manage My Account</button>
+                            <button class="remove-btn-css remove-li-active-class font-bold-style active removecanceled"
+                                id="home-tabs" data-bs-toggle="pill" data-bs-target="#my-account" type="button"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Manage My
+                                Account</button>
                         </li>
                         {{-- update work 16 --}}
                         <li class="nav-item" role="presentation">
                             <button class="remove-btn-css " id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile " type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">My Profile </button>
+                                data-bs-target="#pills-profile " type="button" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">My Profile </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="remove-btn-css add-li-active-class removecanceled" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#address-book" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">Address Book</button>
+                            <button class="remove-btn-css add-li-active-class removecanceled" id="pills-contact-tab"
+                                data-bs-toggle="pill" data-bs-target="#address-book" type="button" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">Address Book</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="remove-btn-css removecanceled" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#my-payment" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">My Payment Options</button>
+                            <button class="remove-btn-css removecanceled" id="pills-profile-tab"
+                                data-bs-toggle="pill" data-bs-target="#my-payment" type="button" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">My Payment Options</button>
                         </li>
-                       
+
                         <li class="nav-item" role="presentation">
-                            <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#my-order" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">My Orders</button>
+                            <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-home-tab"
+                                data-bs-toggle="pill" data-bs-target="#my-order" type="button" role="tab"
+                                aria-controls="pills-home" aria-selected="true">My Orders</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="remove-btn-css returnprocess" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#my-return" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">My Return</button>
+                                data-bs-target="#my-return" type="button" role="tab"
+                                aria-controls="pills-profile" aria-selected="false">My Return</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="remove-btn-css cancelprocess" id="pills-contact-tab" data-bs-toggle="pill"
-                                data-bs-target="#my-cancel" type="button" role="tab" aria-controls="pills-contact"
-                                aria-selected="false">My Cancellations</button>
+                                data-bs-target="#my-cancel" type="button" role="tab"
+                                aria-controls="pills-contact" aria-selected="false">My Cancellations</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="remove-btn-css font-bold-style mt1 removecanceled" id="pills-profile-tab"
@@ -433,7 +441,8 @@ width: 30%;
                                     <div class="profile-box short-box">
                                         <div class="d-flex align-items-center">
                                             <h3>Personal Profile</h3>
-                                            <a class="" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                                            <a class="" data-bs-toggle="modal" href="#exampleModalToggle"
+                                                role="button">
                                                 <h4>
                                                     EDIT
                                                 </h4>
@@ -452,9 +461,9 @@ width: 30%;
                                             <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                                                 data-bs-dismiss="modal">
                                                 @if (@$subscription_list->status == 1)
-                                                Unsubscribe from our Newsletter
+                                                    Unsubscribe from our Newsletter
                                                 @else
-                                                Subscribe To Our Newsletter
+                                                    Subscribe To Our Newsletter
                                                 @endif
                                             </a>
                                         </div>
@@ -468,20 +477,19 @@ width: 30%;
                                         <div class="d-flex align-items-center">
                                             <h3>Address Book</h3>
                                             @if ($shipping_condtion === null)
-                                            <a class="" data-bs-toggle="modal" href="#exampleModalToggle2"
-                                                role="button">
-                                                <h4>
-                                                    Add
-                                                </h4>
-                                            </a>
-                                        @else
-                                            <a class="edit_address">
-                                                <h4>
-                                                    Edit
-                                                </h4>
-                                            </a>
-
-                                        @endif
+                                                <a class="" data-bs-toggle="modal" href="#exampleModalToggle2"
+                                                    role="button">
+                                                    <h4>
+                                                        Add
+                                                    </h4>
+                                                </a>
+                                            @else
+                                                <a class="edit_address">
+                                                    <h4>
+                                                        Edit
+                                                    </h4>
+                                                </a>
+                                            @endif
                                         </div>
                                         <div class="d-flex justify-content-between">
                                             <div class="div-line box-inner-width">
@@ -513,7 +521,8 @@ width: 30%;
 
                     </div>
 
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                        aria-labelledby="pills-profile-tab">
                         <h1 class="tab-main-heading">My Profile </h1>
                         <div class="top-margin">
                             <div class="profile-box box-full-height">
@@ -559,8 +568,7 @@ width: 30%;
                                     <div class="col-lg-4 mt1">
                                         <div class="profile-data">
                                             <label>Birthday</label>
-                                            <span>{{ Auth::user()->month }}/{{ Auth::user()->day }}/{{
-                                                Auth::user()->year }}</span>
+                                            <span>{{ Auth::user()->month }}/{{ Auth::user()->day }}/{{ Auth::user()->year }}</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 mt1">
@@ -574,11 +582,12 @@ width: 30%;
                                     <!-- <a href="">
                                             Subscribe To Our Newsletter
                                         </a> -->
-                                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="modal">
+                                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        data-bs-dismiss="modal">
                                         @if (@$subscription_list->status == 1)
-                                        Unsubscribe from our Newsletter
+                                            Unsubscribe from our Newsletter
                                         @else
-                                        Subscribe To Our Newsletter
+                                            Subscribe To Our Newsletter
                                         @endif
                                     </a>
                                 </div>
@@ -591,7 +600,7 @@ width: 30%;
                                         </a>
                                     </div>
                                     <div class="pink-login-btn login-button">
-                                        
+
                                         <a class="for-forget-btn">
                                             <div>
                                                 Change Password
@@ -628,7 +637,8 @@ width: 30%;
                                                         <div class="row">
                                                             <div class="col-lg-6">
                                                                 <div class="d-flex flex-column input-label-felids">
-                                                                    <label for="" class="font-famil-change">First
+                                                                    <label for=""
+                                                                        class="font-famil-change">First
                                                                         Name</label>
                                                                     <input type="text" name="name"
                                                                         placeholder="First Name" id="name">
@@ -638,23 +648,26 @@ width: 30%;
                                                                 <div class="d-flex flex-column input-label-felids">
                                                                     <label for=""
                                                                         class="font-famil-change">Address</label>
-                                                                    <input type="text" name="address" id="address"
-                                                                        placeholder="Address">
+                                                                    <input type="text" name="address"
+                                                                        id="address" placeholder="Address">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="d-flex flex-column input-label-felids">
-                                                                    <label for="" class="font-famil-change">Mobile
+                                                                    <label for=""
+                                                                        class="font-famil-change">Mobile
                                                                         Number</label>
-                                                                    <input type="text" name="contact" id="contact"
-                                                                        placeholder="Mobile Number">
+                                                                    <input type="text" name="contact"
+                                                                        id="contact" placeholder="Mobile Number">
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="d-flex flex-column input-label-felids">
-                                                                    <label for="" class="font-famil-change">Landmark
+                                                                    <label for=""
+                                                                        class="font-famil-change">Landmark
                                                                         (Optional)</label>
-                                                                    <input type="text" name="landmark" id="landmark"
+                                                                    <input type="text" name="landmark"
+                                                                        id="landmark"
                                                                         placeholder="Landmark (Optional)">
                                                                 </div>
                                                             </div>
@@ -665,9 +678,9 @@ width: 30%;
                                                                     <select name="province" id="editprovince">
                                                                         <option selected="">Select</option>
                                                                         @foreach ($states as $data)
-                                                                        <option value="{{ $data->id }}">
-                                                                            {{ $data->state }}
-                                                                        </option>
+                                                                            <option value="{{ $data->id }}">
+                                                                                {{ $data->state }}
+                                                                            </option>
                                                                         @endforeach
 
                                                                     </select>
@@ -675,7 +688,8 @@ width: 30%;
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="d-flex flex-column input-label-felids">
-                                                                    <label for="" class="font-famil-change">Select a
+                                                                    <label for=""
+                                                                        class="font-famil-change">Select a
                                                                         label for
                                                                         effective
                                                                         delivery</label>
@@ -683,12 +697,14 @@ width: 30%;
                                                                         <input type="hidden" name="delivery_lable"
                                                                             id="edit_delivery">
                                                                         <button type="button" id="edit_home"
-                                                                            class="choose_button" value="1" id="home"><i
+                                                                            class="choose_button" value="1"
+                                                                            id="home"><i
                                                                                 class="fa fa-check-square"
                                                                                 aria-hidden="true"></i>Home</button>
                                                                         <button type="button" id="edit_office"
                                                                             class="choose_button" value="2"
-                                                                            id="office"><i class="fa fa-check-square"
+                                                                            id="office"><i
+                                                                                class="fa fa-check-square"
                                                                                 aria-hidden="true"></i>Office</button>
                                                                     </div>
                                                                 </div>
@@ -699,9 +715,9 @@ width: 30%;
                                                                         class="font-famil-change">City/Municipality</label>
                                                                     <select name="city" id="allcities">
                                                                         @foreach ($cities as $city)
-                                                                        <option value="{{ $city->id }}">
-                                                                            {{ $city->city }}
-                                                                        </option>
+                                                                            <option value="{{ $city->id }}">
+                                                                                {{ $city->city }}
+                                                                            </option>
                                                                         @endforeach
                                                                     </select>
 
@@ -723,7 +739,8 @@ width: 30%;
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="d-flex flex-column input-label-felids">
-                                                                    <label for="" class="font-famil-change">Select a
+                                                                    <label for=""
+                                                                        class="font-famil-change">Select a
                                                                         label for
                                                                         effective
                                                                         delivery</label>
@@ -732,7 +749,8 @@ width: 30%;
                                                                             <div class="form-group">
                                                                                 <input type="checkbox"
                                                                                     id="edit_shipping_checkbox"
-                                                                                    name="default_shipping" value="1">
+                                                                                    name="default_shipping"
+                                                                                    value="1">
                                                                                 <label for="edit_shipping_checkbox"
                                                                                     class="d-flex align-items-start">Default
                                                                                     shipping
@@ -746,7 +764,8 @@ width: 30%;
                                                                                 --}}
                                                                                 <input type="checkbox"
                                                                                     id="edit_billing_checkbox"
-                                                                                    name="default_billing" value="2">
+                                                                                    name="default_billing"
+                                                                                    value="2">
                                                                                 <label for="edit_billing_checkbox"
                                                                                     class="d-flex align-items-start">Default
                                                                                     billing
@@ -784,7 +803,8 @@ width: 30%;
                         </div>
                     </div>
 
-                    <div class="tab-pane addcstm-open fade" id="address-book" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane addcstm-open fade" id="address-book" role="tabpanel"
+                        aria-labelledby="pills-contact-tab">
                         <h1 class="tab-main-heading">Address Book</h1>
                         <div class="top-margin">
                             <div class="profile-box box-full-height">
@@ -793,55 +813,61 @@ width: 30%;
                                     <!-- Modal body -->
                                     <div class="modal-body modalBody">
                                         <div class="row">
-                                            <input type="hidden" name="shipping" value="1" class="card-input-element" />
+                                            <input type="hidden" name="shipping" value="1"
+                                                class="card-input-element" />
                                             @if (!empty($shipping_addresses))
-                                            @foreach ($shipping_addresses as $shipping_addresse)
-                                          
-                                            <div class="col-lg-6">
-                                                <label class="label">
-                                                    <input type="radio" name="address_id"
-                                                        value="{{ $shipping_addresse->id }}" class="card-input-element"
-                                                        {{ $shipping_addresse->shipping_active_address == 1 ? 'checked'
-                                                    : '' }} />
-                                                    <div class="panel panel-default card-input">
-                                                        <div class="deliveryAddressDetail">
-                                                            <div class="deliveryAddressName">
-                                                                <p>{{ $shipping_addresse->name }}</p>
-                                                                <a href="javascript::void(0)" data-bs-toggle="modal"
-                                                                    data-bs-target="#myModalEditInner"
-                                                                    onclick="edit_address('{{ $shipping_addresse->id }}')">
-                                                                    <p>Edit</p>
-                                                                </a>
+                                                @foreach ($shipping_addresses as $shipping_addresse)
+                                                    <div class="col-lg-6">
+                                                        <label class="label">
+                                                            <input type="radio" name="address_id"
+                                                                value="{{ $shipping_addresse->id }}"
+                                                                class="card-input-element"
+                                                                {{ $shipping_addresse->shipping_active_address == 1 ? 'checked' : '' }} />
+                                                            <div class="panel panel-default card-input">
+                                                                <div class="deliveryAddressDetail">
+                                                                    <div class="deliveryAddressName">
+                                                                        <p>{{ $shipping_addresse->name }}</p>
+                                                                        <a href="javascript::void(0)"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#myModalEditInner"
+                                                                            onclick="edit_address('{{ $shipping_addresse->id }}')">
+                                                                            <p>Edit</p>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="deliveryPhoneAddress">
+                                                                        <p>{{ $shipping_addresse->contact }}</p>
+                                                                        <p>{{ $shipping_addresse->get_state->state ?? '' }},{{ $shipping_addresse->get_city->city ?? '' }}
+                                                                            -
+                                                                            {{ $shipping_addresse->landmark }},{{ $shipping_addresse->address }}
+                                                                        </p>
+                                                                        {{-- @if ($shipping_addresse->default_shipping == 1 || $shipping_addresse->default_billing == 2) --}}
+                                                                        @if ($shipping_addresse->delivery_label == 1)
+                                                                            <span>Home</span>
+                                                                        @endif
+                                                                        @if ($shipping_addresse->delivery_label == 2)
+                                                                            <span>Office</span>
+                                                                        @endif
+                                                                        {{-- @endif --}}
+                                                                        @if ($shipping_addresse->shipping_active_address == 1)
+                                                                            <span>Default Shipping Address </span>
+                                                                        @endif
+
+                                                                        @if ($shipping_addresse->billing_active_address == 2)
+                                                                            <span>Default Billing Address</span>
+                                                                        @endif
+
+
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="deliveryPhoneAddress">
-                                                                <p>{{ $shipping_addresse->contact }}</p>
-                                                                <p>{{ $shipping_addresse->get_state->state ?? '' }},{{
-                                                                    $shipping_addresse->get_city->city ?? '' }}
-                                                                    -
-                                                                    {{ $shipping_addresse->landmark }},{{
-                                                                    $shipping_addresse->address }}
-                                                                </p>
-                                                                @if ($shipping_addresse->shipping_active_address == 1)
-                                                                <span>Default Shipping Address</span>
-                                                                @endif
-
-                                                                @if ($shipping_addresse->billing_active_address == 2)
-                                                                <span>Default Billing Address</span>
-                                                                @endif
-
-
-                                                            </div>
-                                                        </div>
+                                                        </label>
                                                     </div>
-                                                </label>
-                                            </div>
-                                           
-                                            @endforeach
+                                                @endforeach
                                             @endif
                                         </div>
                                     </div>
 
-                                  
+
                                 </form>
                                 <div class="d-flex add-address justify-content-end">
                                     <div class="pink-login-btn login-button mt6">
@@ -856,7 +882,8 @@ width: 30%;
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="address-book" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade" id="address-book" role="tabpanel"
+                        aria-labelledby="pills-contact-tab">
                         <h1 class="tab-main-heading">Address Book</h1>
                         <div class="top-margin">
                             <div class="profile-box box-full-height">
@@ -864,50 +891,50 @@ width: 30%;
                                     @csrf
                                     <div class="modal-body modalBody">
                                         <div class="row">
-                                            <input type="hidden" name="billing" value="2" class="card-input-element" />
+                                            <input type="hidden" name="billing" value="2"
+                                                class="card-input-element" />
                                             @if (!empty($shipping_addresses))
-                                            @foreach ($shipping_addresses as $shipping_addresse)
-                                            @if ($shipping_addresse->address_identifire == 2)
-                                            <div class="col-lg-6">
-                                                <label class="label">
+                                                @foreach ($shipping_addresses as $shipping_addresse)
+                                                    @if ($shipping_addresse->address_identifire == 2)
+                                                        <div class="col-lg-6">
+                                                            <label class="label">
 
-                                                    <input type="radio" name="address_id"
-                                                        value="{{ $shipping_addresse->id }}" class="card-input-element"
-                                                        {{ $shipping_addresse->billing_active_address == 2 ? 'checked' :
-                                                    '' }} />
-                                                    <div class="panel panel-default card-input">
-                                                        <div class="deliveryAddressDetail">
-                                                            <div class="deliveryAddressName">
-                                                                <p>Tofique Ahmed</p>
-                                                                <a href="javascript::void(0)" data-bs-toggle="modal"
-                                                                    data-bs-target="#myModalEditInner"
-                                                                    onclick="edit_address('{{ $shipping_addresse->id }}')">
-                                                                    <p>Edit</p>
-                                                                </a>
-                                                            </div>
-                                                            <div class="deliveryPhoneAddress">
-                                                                <p>{{ $shipping_addresse->contact }}</p>
-                                                                <p>{{ $shipping_addresse->province }},{{
-                                                                    $shipping_addresse->city }}
-                                                                    -
-                                                                    {{ $shipping_addresse->landmark }},{{
-                                                                    $shipping_addresse->address }}
-                                                                </p>
-                                                                @if ($shipping_addresse->billing_active_address == 2)
-                                                                <span>Default Billing Address</span>
-                                                                @endif
-                                                            </div>
+                                                                <input type="radio" name="address_id"
+                                                                    value="{{ $shipping_addresse->id }}"
+                                                                    class="card-input-element"
+                                                                    {{ $shipping_addresse->billing_active_address == 2 ? 'checked' : '' }} />
+                                                                <div class="panel panel-default card-input">
+                                                                    <div class="deliveryAddressDetail">
+                                                                        <div class="deliveryAddressName">
+                                                                            <p>Tofique Ahmed</p>
+                                                                            <a href="javascript::void(0)"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#myModalEditInner"
+                                                                                onclick="edit_address('{{ $shipping_addresse->id }}')">
+                                                                                <p>Edit</p>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="deliveryPhoneAddress">
+                                                                            <p>{{ $shipping_addresse->contact }}</p>
+                                                                            <p>{{ $shipping_addresse->province }},{{ $shipping_addresse->city }}
+                                                                                -
+                                                                                {{ $shipping_addresse->landmark }},{{ $shipping_addresse->address }}
+                                                                            </p>
+                                                                            @if ($shipping_addresse->billing_active_address == 2)
+                                                                                <span>Default Billing Address</span>
+                                                                            @endif
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
                                                         </div>
-                                                    </div>
-                                                </label>
-                                            </div>
-                                            @endif
-                                            @endforeach
+                                                    @endif
+                                                @endforeach
                                             @endif
                                         </div>
                                     </div>
 
-                                  
+
                                 </form>
                                 <div class="d-flex add-address justify-content-end">
                                     <div class="pink-login-btn login-button mt6">
@@ -928,7 +955,8 @@ width: 30%;
                             <div class="profile-box box-full-height">
                                 <div class="for-margin-payment-box">
                                     <div class="payment-recipt">
-                                        <img src="{{ asset('front_assets/images/payment-recipt.webp') }}" alt="">
+                                        <img src="{{ asset('front_assets/images/payment-recipt.webp') }}"
+                                            alt="">
                                     </div>
                                     <div class="span-user font-size text-center">
                                         <span>No payment options</span>
@@ -945,7 +973,8 @@ width: 30%;
                                 <div class="active-wallet-box">
                                     <div class="active-wallet-heading">
                                         <div class="wallet-icon">
-                                            <img src="{{ asset('front_assets/images/wallet-icon.webp') }}" alt="">
+                                            <img src="{{ asset('front_assets/images/wallet-icon.webp') }}"
+                                                alt="">
                                         </div>
                                         <div class="active-content-heading text-center">
                                             <h1>Activate Our Wallet</h1>
@@ -1242,7 +1271,7 @@ width: 30%;
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
@@ -1272,72 +1301,73 @@ width: 30%;
                                 <div class="profile-box review-box-padding box-full-height mt1">
                                     @if ($to_pay_count > 0)
 
-                                    @foreach ($orders as $order)
-                                    @if ($order->order_status == null && count($order->carts) > 0)
-                                    <div class="profile-box review-box-padding box-full-height">
-                                        <div class="mt0">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="lotti-retail-div">
-                                                    {{-- <p>Order<a href="">#{{ $order->id }}</a></p>
+                                        @foreach ($orders as $order)
+                                            @if ($order->order_status == null && count($order->carts) > 0)
+                                                <div class="profile-box review-box-padding box-full-height">
+                                                    <div class="mt0">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="lotti-retail-div">
+                                                                {{-- <p>Order<a href="">#{{ $order->id }}</a></p>
                                                     <span>Placed On
                                                         {{ date_format($order->created_at, 'd/M/Y') }}</span> --}}
-                                                </div>
-                                                
-                                            </div>
-                                            <div
-                                                class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                                <div
-                                                    class="d-flex align-items-center {{ $order->order_status != null ? 'for-pay-btn for-pay-btn-cursor' : '' }}">
-                                                    <div class="product-review-img">
-                                                        <img src="{{ asset('order/order-pack.webp') }}" alt="">
-                                                    </div>
-                                                    <div class="lotti-retail-review">
-                                                       
-                                                        {{-- <span>Storage Capacity:128GB, Color:Green,
+                                                            </div>
+
+                                                        </div>
+                                                        <div
+                                                            class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                            <div
+                                                                class="d-flex align-items-center {{ $order->order_status != null ? 'for-pay-btn for-pay-btn-cursor' : '' }}">
+                                                                <div class="product-review-img">
+                                                                    <img src="{{ asset('order/order-pack.webp') }}"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="lotti-retail-review">
+
+                                                                    {{-- <span>Storage Capacity:128GB, Color:Green,
                                                             Quantity:01</span> --}}
-                                                        <p>Order#{{ $order->id }}</p>
-                                                        <span>Placed On
-                                                            {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                                    <p>Order#{{ $order->id }}</p>
+                                                                    <span>Placed On
+                                                                        {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="lotti-review">
+                                                                <a href="{{ route('cart') }}">
+                                                                    <button class="order-tracking-btn status_pay_to">
+                                                                        <span>
+                                                                            Pay Now
+                                                                        </span>
+                                                                    </button>
+                                                                </a>
+                                                                @if ($order->order_status != null)
+                                                                    <button
+                                                                        class="for-ship-btn order-tracking-btn order_tracking_status"
+                                                                        onclick="orderTracking('{{ $order->id }}')">
+                                                                        <span>
+                                                                            Track Order
+                                                                        </span>
+                                                                    </button>
+                                                                @endif
+                                                            </div>
+
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="lotti-review">
-                                                    <a href="{{ route('cart') }}">
-                                                        <button class="order-tracking-btn status_pay_to">
-                                                            <span>
-                                                                Pay Now
-                                                            </span>
-                                                        </button>
-                                                    </a>
-                                                    @if ($order->order_status != null)
-                                                    <button
-                                                        class="for-ship-btn order-tracking-btn order_tracking_status"
-                                                        onclick="orderTracking('{{ $order->id }}')">
-                                                        <span>
-                                                            Track Order
-                                                        </span>
-                                                    </button>
-                                                    @endif
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endif
-                                    @endforeach
+                                            @endif
+                                        @endforeach
                                     @else
-                                    <div class="for-margin-payment-box order-placed-btn">
-                                        <div class="span-user font-size text-center">
-                                            <span>There are no orders in the cart yet.</span>
-                                        </div>
-                                        <div class="activate-btn-center">
-                                            <a href="{{ route('home') }}">
-                                                <div class="pink-login-btn activate-btn mt1">
-                                                    CONTINUE SHOPPING
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <div class="for-margin-payment-box order-placed-btn">
+                                            <div class="span-user font-size text-center">
+                                                <span>There are no orders in the cart yet.</span>
+                                            </div>
+                                            <div class="activate-btn-center">
+                                                <a href="{{ route('home') }}">
+                                                    <div class="pink-login-btn activate-btn mt1">
+                                                        CONTINUE SHOPPING
+                                                    </div>
+                                                </a>
+                                            </div>
 
-                                    </div>
+                                        </div>
                                     @endif
                                 </div>
 
@@ -1347,59 +1377,60 @@ width: 30%;
                                 <div class="profile-box review-box-padding box-full-height mt1">
                                     @if ($shipping_count > 0)
 
-                                    @foreach ($orders as $order)
-                                    @if ($order->order_status == 2)
-                                    <div class="profile-box review-box-padding box-full-height ==">
-                                        <div class="mt0">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="lotti-retail-div">
+                                        @foreach ($orders as $order)
+                                            @if ($order->order_status == 2)
+                                                <div class="profile-box review-box-padding box-full-height ==">
+                                                    <div class="mt0">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="lotti-retail-div">
 
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                                <div class="d-flex align-items-center for-pay-btn for-pay-btn-cursor"
-                                                    onclick="orderDetails('{{ $order->id }}','cancellation')">
-                                                    <div class="product-review-img">
-                                                        <img src="{{ asset('order/order-pack.webp') }}" alt="">
-                                                    </div>
-                                                    <div class="lotti-retail-review">
-                                                       
-                                                        {{-- <span>Storage Capacity:128GB, Color:Green,
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                            <div class="d-flex align-items-center for-pay-btn for-pay-btn-cursor"
+                                                                onclick="orderDetails('{{ $order->id }}','cancellation')">
+                                                                <div class="product-review-img">
+                                                                    <img src="{{ asset('order/order-pack.webp') }}"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="lotti-retail-review">
+
+                                                                    {{-- <span>Storage Capacity:128GB, Color:Green,
                                                             Quantity:01</span> --}}
-                                                        <p>Order#{{ $order->id }}</p>
-                                                        <span>Placed On
-                                                            {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                                    <p>Order#{{ $order->id }}</p>
+                                                                    <span>Placed On
+                                                                        {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="lotti-review">
+                                                                <button
+                                                                    class="for-ship-btn order-tracking-btn order_tracking_status"
+                                                                    onclick="orderTracking('{{ $order->id }}')">
+                                                                    <span>
+                                                                        Track Order
+                                                                    </span></button>
+                                                            </div>
+
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="lotti-review">
-                                                    <button
-                                                        class="for-ship-btn order-tracking-btn order_tracking_status"
-                                                        onclick="orderTracking('{{ $order->id }}')">
-                                                        <span>
-                                                            Track Order
-                                                        </span></button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endif
-                                    @endforeach
+                                            @endif
+                                        @endforeach
                                     @else
-                                    <div class="for-margin-payment-box order-placed-btn">
-                                        <div class="span-user font-size text-center">
-                                            <span>There are no orders shipped yet.</span>
-                                        </div>
-                                        <div class="activate-btn-center">
-                                            <a href="{{ route('home') }}">
-                                                <div class="pink-login-btn activate-btn mt1">
-                                                    CONTINUE SHOPPING
-                                                </div>
-                                            </a>
-                                        </div>
+                                        <div class="for-margin-payment-box order-placed-btn">
+                                            <div class="span-user font-size text-center">
+                                                <span>There are no orders shipped yet.</span>
+                                            </div>
+                                            <div class="activate-btn-center">
+                                                <a href="{{ route('home') }}">
+                                                    <div class="pink-login-btn activate-btn mt1">
+                                                        CONTINUE SHOPPING
+                                                    </div>
+                                                </a>
+                                            </div>
 
-                                    </div>
+                                        </div>
                                     @endif
 
 
@@ -1410,87 +1441,90 @@ width: 30%;
 
                                 @if ($delivered > 0)
 
-                                @foreach ($orders as $order)
-                                @if ($order->order_status == 3)
-                                <div class="profile-box review-box-padding box-full-height ==">
-                                    <div class="mt0">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="lotti-retail-div">
-                                              
-                                            </div>
-                                          
-                                        </div>
-                                        <div
-                                            class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                            <div class="d-flex align-items-center for-pay-btn for-pay-btn-cursor"
-                                                onclick="orderDetails('{{ $order->id }}','')">
-                                                <div class="product-review-img">
-                                                    <img src="{{ asset('order/order-pack.webp') }}" alt="">
-                                                </div>
-                                                <div class="lotti-retail-review">
-                                                    {{-- <p>{{ $product->product_name }}</p> --}}
-                                                    {{-- <span>Storage Capacity:128GB, Color:Green,
+                                    @foreach ($orders as $order)
+                                        @if ($order->order_status == 3)
+                                            <div class="profile-box review-box-padding box-full-height ==">
+                                                <div class="mt0">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="lotti-retail-div">
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div
+                                                        class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                        <div class="d-flex align-items-center for-pay-btn for-pay-btn-cursor"
+                                                            onclick="orderDetails('{{ $order->id }}','')">
+                                                            <div class="product-review-img">
+                                                                <img src="{{ asset('order/order-pack.webp') }}"
+                                                                    alt="">
+                                                            </div>
+                                                            <div class="lotti-retail-review">
+                                                                {{-- <p>{{ $product->product_name }}</p> --}}
+                                                                {{-- <span>Storage Capacity:128GB, Color:Green,
                                                         Quantity:01</span> --}}
-                                                    <p>Order#{{ $order->id }}</p>
-                                                    <span>Placed On
-                                                        {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                                <p>Order#{{ $order->id }}</p>
+                                                                <span>Placed On
+                                                                    {{ date('d/M/Y', strtotime($order->created_at)) }}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="lotti-review">
+                                                            @if ($order->order_verification == null)
+                                                                <span class="verify-html-{{ $order->id }}">
+                                                                    <button class="order-tracking-btn unverify"
+                                                                        id="verify-{{ $order->id }}"
+                                                                        onclick="orderVerify('{{ $order->id }}')">
+                                                                        <span>
+                                                                            Unreceived
+                                                                        </span>
+                                                                    </button>
+                                                                </span>
+                                                            @else
+                                                                <button class="order-tracking-btn status_verification">
+                                                                    <img src="{{ asset('icons/verified.png') }}"
+                                                                        alt="verified" width="16px">
+                                                                    <span>
+                                                                        Received
+                                                                    </span>
+                                                                </button>
+                                                            @endif
+
+                                                            <button
+                                                                class="for-ship-btn order-tracking-btn order_tracking_status"
+                                                                onclick="orderTracking('{{ $order->id }}')">
+                                                                <span>
+                                                                    Track Order
+                                                                </span></button>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="lotti-review">
-                                                @if ($order->order_verification == null)
-                                                <span class="verify-html-{{ $order->id }}">
-                                                    <button class="order-tracking-btn unverify"
-                                                        id="verify-{{ $order->id }}"
-                                                        onclick="orderVerify('{{ $order->id }}')">
-                                                        <span>
-                                                            Unreceived
-                                                        </span>
-                                                    </button>
-                                                </span>
-                                                @else
-                                                <button class="order-tracking-btn status_verification">
-                                                    <img src="{{ asset('icons/verified.png') }}" alt="verified"
-                                                        width="16px">
-                                                    <span>
-                                                        Received
-                                                    </span>
-                                                </button>
-                                                @endif
-
-                                                <button class="for-ship-btn order-tracking-btn order_tracking_status"
-                                                    onclick="orderTracking('{{ $order->id}}')">
-                                                    <span>
-                                                        Track Order
-                                                    </span></button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                @endif
-                                @endforeach
+                                        @endif
+                                    @endforeach
                                 @else
-                                <div class="profile-box review-box-padding box-full-height mt1">
-                                    <div class="for-margin-payment-box order-placed-btn">
-                                        <div class="span-user font-size text-center">
-                                            <span>There are no completed orders yet.</span>
-                                        </div>
-                                        <div class="activate-btn-center">
-                                            <a href="{{ route('home') }}">
-                                                <div class="pink-login-btn activate-btn mt1">
-                                                    CONTINUE SHOPPING
-                                                </div>
-                                            </a>
+                                    <div class="profile-box review-box-padding box-full-height mt1">
+                                        <div class="for-margin-payment-box order-placed-btn">
+                                            <div class="span-user font-size text-center">
+                                                <span>There are no completed orders yet.</span>
+                                            </div>
+                                            <div class="activate-btn-center">
+                                                <a href="{{ route('home') }}">
+                                                    <div class="pink-login-btn activate-btn mt1">
+                                                        CONTINUE SHOPPING
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endif
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="tab-pane fade test" id="my-cancel" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade test" id="my-cancel" role="tabpanel"
+                        aria-labelledby="pills-contact-tab">
                         <h1 class="tab-main-heading mycancel">My Cancellations</h1>
 
                         {{-- <div class="shipspan noPrint newshipspan">
@@ -1502,25 +1536,21 @@ width: 30%;
 
 
                         <div class="top-margin">
-                      
+
                             <div class="profile-box review-box-padding box-full-height mt1">
                                 <div id="testcancel"></div>
                                 @if (count($orders) > 0)
-                                {{-- @include('user-dashboard.partials.filters') --}}
-                                 @foreach ($orders as $order)
-
-
-                                @endforeach
-
-
+                                    {{-- @include('user-dashboard.partials.filters') --}}
+                                    @foreach ($orders as $order)
+                                    @endforeach
                                 @else
-                                <div class="for-margin-payment-box order-placed-btn">
-                                    <div class="span-user font-size text-center">
-                                        <span>There are no cancellation  yet.</span>
-                                    </div>
-                           
+                                    <div class="for-margin-payment-box order-placed-btn">
+                                        <div class="span-user font-size text-center">
+                                            <span>There are no cancellation yet.</span>
+                                        </div>
 
-                                </div>
+
+                                    </div>
                                 @endif
 
 
@@ -1530,18 +1560,18 @@ width: 30%;
                     </div>
 
                     {{-- update work 13 --}}
-                      <div class="tab-pane fade" id="my-return" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            <h1 class="tab-main-heading">My Return</h1>
-                            <div class="top-margin">
+                    <div class="tab-pane fade" id="my-return" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <h1 class="tab-main-heading">My Return</h1>
+                        <div class="top-margin">
 
-                                <div class="profile-box review-box-padding box-full-height mt1">
-                                     <div id="refunddata"></div>
-
-                                </div>
+                            <div class="profile-box review-box-padding box-full-height mt1">
+                                <div id="refunddata"></div>
 
                             </div>
 
                         </div>
+
+                    </div>
 
                     {{-- update work 13 --}}
 
@@ -1570,138 +1600,144 @@ width: 30%;
                             <div class="tab-pane fade show active" id="pills-To-Be-reviewed" role="tabpanel"
                                 aria-labelledby="pills-home-tab">
                                 @if (!empty($not_reviewed))
-                                @php
-                                $reviews_ids = [];
-                                @endphp
-
-                                @foreach ($not_reviewed as $product_review)
-                                @foreach ($product_review->reviews_items as $item)
-                                @php
-                               
-                                array_push($reviews_ids, $item->order_id . ',' . $item->product_id . ',' .
-                                $item->product_variation_id);
-                                @endphp
-                                @endforeach
-
-
-
-                                <div class="profile-box review-box-padding box-full-height mt1">
-                                    @foreach ($product_review->purchased_items as $val)
-                                    {{-- {{ dd($val->reviews_items) }} --}}
                                     @php
-                                    $with_rev_item = $val->order_id . ',' . $val->product_id . ',' .
-                                    $val->product_variantion_id;
+                                        $reviews_ids = [];
                                     @endphp
 
-                                    @if (in_array($with_rev_item, $reviews_ids))
-                                    @continue
-                                    @endif
+                                    @foreach ($not_reviewed as $product_review)
+                                        @foreach ($product_review->reviews_items as $item)
+                                            @php
 
-                                    {{-- ----------- {{ $with_rev_item }} --}}
+                                                array_push($reviews_ids, $item->order_id . ',' . $item->product_id . ',' . $item->product_variation_id);
+                                            @endphp
+                                        @endforeach
 
-                                    <div class="mt0">
-                                        {{-- {{dd(json_decode($val->attribute_values)[0])}} --}}
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="lotti-retail-div">
-                                                <p>Lotti Retail Seller</p>
-                                                <span>Purchased On
-                                                    {{ $val->created_at->format('m-d-Y') }}</span>
-                                            </div>
-                                            {{-- update work 16 --}}
-                                            <a class="for-review-hover hide-div" onclick="reviewproduct('{{ $val->id }}')">
-                                                <div class="lotti-review">
-                                                    <span>
-                                                        Review
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <a class="for-review-hover hide-div" onclick="reviewproduct('{{ $val->id }}')">
-                                            <div
-                                                class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                                <div class="d-flex align-items-center product_review">
-                                                    @if (!empty(@$val->product->image) || @$val->variations->image)
-                                                    <div class="product-review-img">
-                                                        <img src="{{ asset(!empty($val->product_variantion_id) ? 'variations/' . $val->variations->image : 'products/' . $val->product->image) ?? '' }}"
-                                                            alt="Image">
 
-                                                    </div>
-                                                    @endif
 
-                                                    <div class="lotti-retail-review">
-                                                        <p>{{ $val->product->product_name ?? '' }}
-                                                    
-                                                        </p>
+                                        <div class="profile-box review-box-padding box-full-height mt1">
+                                            @foreach ($product_review->purchased_items as $val)
+                                                {{-- {{ dd($val->reviews_items) }} --}}
+                                                @php
+                                                    $with_rev_item = $val->order_id . ',' . $val->product_id . ',' . $val->product_variantion_id;
+                                                @endphp
 
-                                                        {{ $val->attribute_values }}
-                                                    </div>
-                                                </div>
-                                                <div class="lotti-review">
-                                                    <span>
-                                                        @if ($product_review->order_status == null)
-                                                        <a href="{{ route('cart') }}">
-                                                            <button class="order-tracking-btn status_pay_to">
+                                                @if (in_array($with_rev_item, $reviews_ids))
+                                                    @continue
+                                                @endif
+
+                                                {{-- ----------- {{ $with_rev_item }} --}}
+
+                                                <div class="mt0">
+                                                    {{-- {{dd(json_decode($val->attribute_values)[0])}} --}}
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="lotti-retail-div">
+                                                            <p>Lotti Retail Seller</p>
+                                                            <span>Purchased On
+                                                                {{ $val->created_at->format('m-d-Y') }}</span>
+                                                        </div>
+                                                        {{-- update work 16 --}}
+                                                        <a class="for-review-hover hide-div"
+                                                            onclick="reviewproduct('{{ $val->id }}')">
+                                                            <div class="lotti-review">
                                                                 <span>
-                                                                    Pay Now
+                                                                    Review
                                                                 </span>
-                                                            </button>
+                                                            </div>
                                                         </a>
-                                                        @endif
-                                                        @if ($product_review->order_status == 1)
-                                                        <button class="order-tracking-btn status_pending">
-                                                            <span>
-                                                                Processing
-                                                            </span>
-                                                        </button>
-                                                        @endif
-                                                        @if ($product_review->order_status == 2)
-                                                        <button class="order-tracking-btn status_dispatched">
-                                                            <span>
-                                                                Dispatched
-                                                            </span>
-                                                        </button>
-                                                        @endif
-                                                        @if ($product_review->order_status == 3)
-                                                        <button class="order-tracking-btn status_dispatched">
-                                                            <span>
-                                                                Delivered
-                                                            </span>
-                                                        </button>
-                                                        @endif
-                                                        @if ($product_review->order_status == 4)
-                                                        <button class="order-tracking-btn status_dispatched">
-                                                            <span>
-                                                                Cancelled
-                                                            </span>
-                                                        </button>
-                                                        @endif
-                                                        @if ($product_review->order_status == 5)
-                                                        <button class="order-tracking-btn status_dispatched">
-                                                            <span>
-                                                                On Hold
-                                                            </span>
-                                                        </button>
-                                                        @endif
-                                                    </span>
+                                                    </div>
+                                                    <a class="for-review-hover hide-div"
+                                                        onclick="reviewproduct('{{ $val->id }}')">
+                                                        <div
+                                                            class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                            <div class="d-flex align-items-center product_review">
+                                                                @if (!empty(@$val->product->image) || @$val->variations->image)
+                                                                    <div class="product-review-img">
+                                                                        <img src="{{ asset(!empty($val->product_variantion_id) ? 'variations/' . $val->variations->image : 'products/' . $val->product->image) ?? '' }}"
+                                                                            alt="Image">
+
+                                                                    </div>
+                                                                @endif
+
+                                                                <div class="lotti-retail-review">
+                                                                    <p>{{ $val->product->product_name ?? '' }}
+
+                                                                    </p>
+
+                                                                    {{ $val->attribute_values }}
+                                                                </div>
+                                                            </div>
+                                                            <div class="lotti-review">
+                                                                <span>
+                                                                    @if ($product_review->order_status == null)
+                                                                        <a href="{{ route('cart') }}">
+                                                                            <button
+                                                                                class="order-tracking-btn status_pay_to">
+                                                                                <span>
+                                                                                    Pay Now
+                                                                                </span>
+                                                                            </button>
+                                                                        </a>
+                                                                    @endif
+                                                                    @if ($product_review->order_status == 1)
+                                                                        <button
+                                                                            class="order-tracking-btn status_pending">
+                                                                            <span>
+                                                                                Processing
+                                                                            </span>
+                                                                        </button>
+                                                                    @endif
+                                                                    @if ($product_review->order_status == 2)
+                                                                        <button
+                                                                            class="order-tracking-btn status_dispatched">
+                                                                            <span>
+                                                                                Dispatched
+                                                                            </span>
+                                                                        </button>
+                                                                    @endif
+                                                                    @if ($product_review->order_status == 3)
+                                                                        <button
+                                                                            class="order-tracking-btn status_dispatched">
+                                                                            <span>
+                                                                                Delivered
+                                                                            </span>
+                                                                        </button>
+                                                                    @endif
+                                                                    @if ($product_review->order_status == 4)
+                                                                        <button
+                                                                            class="order-tracking-btn status_dispatched">
+                                                                            <span>
+                                                                                Cancelled
+                                                                            </span>
+                                                                        </button>
+                                                                    @endif
+                                                                    @if ($product_review->order_status == 5)
+                                                                        <button
+                                                                            class="order-tracking-btn status_dispatched">
+                                                                            <span>
+                                                                                On Hold
+                                                                            </span>
+                                                                        </button>
+                                                                    @endif
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </a>
                                                 </div>
+                                            @endforeach
 
-                                            </div>
-                                        </a>
-                                    </div>
+                                        </div>
                                     @endforeach
-
-                                </div>
-                                @endforeach
-                               
                                 @else
-                                <div class="profile-box box-full-height mt1">
-                                    <div class="payment-recipt sad-icon">
-                                        <img src="{{ asset('front_assets/images/sad-icon.webp') }}" alt="">
+                                    <div class="profile-box box-full-height mt1">
+                                        <div class="payment-recipt sad-icon">
+                                            <img src="{{ asset('front_assets/images/sad-icon.webp') }}"
+                                                alt="">
+                                        </div>
+                                        <div class="span-user font-size text-center">
+                                            <span>You haven't purchased any product</span>
+                                        </div>
                                     </div>
-                                    <div class="span-user font-size text-center">
-                                        <span>You haven't purchased any product</span>
-                                    </div>
-                                </div>
                                 @endif
                             </div>
                             <div class="tab-pane fade" id="pills-History" role="tabpanel"
@@ -1709,59 +1745,61 @@ width: 30%;
                                 <div class="profile-box box-full-height mt1">
                                     <div class="">
                                         @if (!empty($reviews))
-                                        @foreach ($reviews as $values)
-                                        <a class="for-review-hover hide-div"
-                                            onclick="editreviewproduct('{{ $values->id }}')">
+                                            @foreach ($reviews as $values)
+                                                <a class="for-review-hover hide-div"
+                                                    onclick="editreviewproduct('{{ $values->id }}')">
 
-                                            <div
-                                                class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                                <div class="d-flex align-items-center">
-                                                 
+                                                    <div
+                                                        class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                        <div class="d-flex align-items-center">
 
-                                                    @if (!empty($values->variations->image))
-                                                    @endif
 
-                                                    @if (!empty($values->variations))
-                                                    <div class="product-review-img">
-                                                        <img src="{{ url('public/variations/' . $values->variations->image) }}"
-                                                            alt="">
-                                                    </div>
-                                                    @else
-                                                    <div class="product-review-img">
-                                                        <img src="{{ url('public/products/' . $values->get_product->image) }}"
-                                                            alt="">
-                                                    </div>
-                                                    @endif
+                                                            @if (!empty($values->variations->image))
+                                                            @endif
 
-                                                    <div class="lotti-retail-review">
-                                                        <p>{{ $values->get_product->product_name ?? '' }}</p>
-                                                        <small>{{ $values->variations->attribute ?? '' }}</small>
-                                                        <span>{!! Str::limit($values->comments, 100) !!}</span>
-                                                    </div>
-                                                </div>
-                                                <div class="lotti-review">
-                                                    <span>
-                                                        @php
-                                                        $num = 5 - $values->reviews;
-                                                        @endphp
-                                                        @for ($x = 1; $x <= $values->reviews; $x++)
-                                                            <i class="fa fa-star goldenstar "></i>
-                                                            @endfor
+                                                            @if (!empty($values->variations))
+                                                                <div class="product-review-img">
+                                                                    <img src="{{ url('public/variations/' . $values->variations->image) }}"
+                                                                        alt="">
+                                                                </div>
+                                                            @else
+                                                                <div class="product-review-img">
+                                                                    <img src="{{ url('public/products/' . $values->get_product->image) }}"
+                                                                        alt="">
+                                                                </div>
+                                                            @endif
 
-                                                            @for ($x = 1; $x <= $num; $x++) <i class="fa fa-star"></i>
+                                                            <div class="lotti-retail-review">
+                                                                <p>{{ $values->get_product->product_name ?? '' }}</p>
+                                                                <small>{{ $values->variations->attribute ?? '' }}</small>
+                                                                <span>{!! Str::limit($values->comments, 100) !!}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="lotti-review">
+                                                            <span>
+                                                                @php
+                                                                    $num = 5 - $values->reviews;
+                                                                @endphp
+                                                                @for ($x = 1; $x <= $values->reviews; $x++)
+                                                                    <i class="fa fa-star goldenstar "></i>
                                                                 @endfor
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        @endforeach
+
+                                                                @for ($x = 1; $x <= $num; $x++)
+                                                                    <i class="fa fa-star"></i>
+                                                                @endfor
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            @endforeach
                                         @else
-                                        <div class="payment-recipt sad-icon">
-                                            <img src="{{ asset('front_assets/images/sad-icon.webp') }}" alt="">
-                                        </div>
-                                        <div class="span-user font-size text-center">
-                                            <span>You haven't written any review</span>
-                                        </div>
+                                            <div class="payment-recipt sad-icon">
+                                                <img src="{{ asset('front_assets/images/sad-icon.webp') }}"
+                                                    alt="">
+                                            </div>
+                                            <div class="span-user font-size text-center">
+                                                <span>You haven't written any review</span>
+                                            </div>
                                         @endif
 
                                     </div>
@@ -1772,7 +1810,7 @@ width: 30%;
                     <div class="tab-pane fade" id="my-wishlist" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <h1 class="tab-main-heading">My Wishlist</h1>
                         <div class="top-margin">
-                         
+
                             <div class="reviews-feilds profile-box box-full-height">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -1818,38 +1856,38 @@ width: 30%;
                                             </div>
                                         </div>
                                         @foreach ($getwishlist as $products)
-                                        <a class="for-review-hover">
+                                            <a class="for-review-hover">
 
-                                            <div
-                                                class="d-flex justify-content-between for-background-color-review align-items-baseline">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="product-review-img">
-                                                        <img src="{{ url('public/products/' . $products->get_product_name->image ?? '') }}"
-                                                            alt="">
+                                                <div
+                                                    class="d-flex justify-content-between for-background-color-review align-items-baseline">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="product-review-img">
+                                                            <img src="{{ url('public/products/' . $products->get_product_name->image ?? '') }}"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="lotti-retail-review">
+                                                            <p>{{ $products->get_product_name->product_name ?? '' }}
+                                                            </p>
+                                                            <span>{!! Str::limit($products->get_product_name->description, 30) ?? '' !!}</span>
+                                                        </div>
                                                     </div>
-                                                    <div class="lotti-retail-review">
-                                                        <p>{{ $products->get_product_name->product_name ?? '' }}
-                                                        </p>
-                                                        <span>{!! Str::limit($products->get_product_name->description,
-                                                            30) ?? '' !!}</span>
-                                                    </div>
+                                                    <a
+                                                        href="{{ route('product', $products->get_product_name->slug) }}">
+                                                        <div class="lotti-review add-cart-icons">
+                                                            <span>
+                                                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+
                                                 </div>
-                                                <a href="{{ route('product', $products->get_product_name->slug) }}">
-                                                    <div class="lotti-review add-cart-icons">
-                                                        <span>
-                                                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                                                        </span>
-                                                    </div>
-                                                </a>
 
-                                            </div>
-
-                                        </a>
+                                            </a>
                                         @endforeach
                                     </div>
 
                                 </div>
-                              
+
                             </div>
                             <div class="tab-pane fade" id="pills-PastPurchases" role="tabpanel"
                                 aria-labelledby="pills-profile-tab">
@@ -1892,7 +1930,7 @@ width: 30%;
                         </div>
                     </div>
 
-                 
+
 
                 </div>
                 <!-- <div class="login-page mac-responsive"> -->
@@ -1912,7 +1950,8 @@ width: 30%;
                         <div class="login-sec-box position-relative">
                             <button class="remove-btn-css noPrint">
                                 <div class="red-back-btn">
-                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="order-image">
+                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}"
+                                        alt="order-image">
                                 </div>
                             </button>
                             <button class="remove-btn-css noPrint" onclick="window.print();">
@@ -2072,7 +2111,8 @@ width: 30%;
                             <div class="login-sec-box position-relative">
                                 <button class="remove-btn-css" type="button">
                                     <div class="red-back-btn">
-                                        <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="">
+                                        <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}"
+                                            alt="">
                                     </div>
                                 </button>
                                 <div
@@ -2107,8 +2147,8 @@ width: 30%;
                                                                     id="cancel_product_id" value>
                                                                 <input type="hidden" name="cancel_order_id"
                                                                     id="cancel_order_id" value>
-                                                                    {{-- update work 16 --}}
-                                                                    <input type="checkbox" name="cancellation_policy"
+                                                                {{-- update work 16 --}}
+                                                                <input type="checkbox" name="cancellation_policy"
                                                                     id="cancellation_policy">
                                                                 <label for="cancellation_policy"
                                                                     class="d-flex align-items-start margin-top-zer0 flex-column">
@@ -2155,11 +2195,12 @@ width: 30%;
                                     </div>
                                     <h2>Customer Comments and Packaging Information (mandatory)</h2>
                                     <div class="select-reason cstm-select-width">
-                                        <select name="reason" class="form-select" aria-label="Default select example">
+                                        <select name="reason" class="form-select"
+                                            aria-label="Default select example">
                                             <option value="" selected disabled>Select a Reason</option>
                                             <option value="Change/combine order">Change/combine order</option>
                                             @foreach ($cancellation_policy as $value)
-                                            <option value="{{ $value->id }}">{{ $value->reason }}</option>
+                                                <option value="{{ $value->id }}">{{ $value->reason }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -2193,30 +2234,31 @@ width: 30%;
                     </form>
                 </div>
 
-                  {{-- update work 13 --}}
+                {{-- update work 13 --}}
 
-                  <div class="shipspan noPrint">
+                <div class="shipspan noPrint">
                     <h1 class="tab-main-heading" id="hiderefundtext">Refund Details</h1>
                     <div id="refunddetails"></div>
 
                 </div>
 
-            <div class="cancelspan noPrint" id="refundorderrequest">
+                <div class="cancelspan noPrint" id="refundorderrequest">
                     <h1 class="tab-main-heading">Refund Request</h1>
-                    <form id="requestRefund" action="{{route('order_refund')}}" method="POST" enctype="multipart/form-data">
+                    <form id="requestRefund" action="{{ route('order_refund') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="refundorderIdHidden" id="refundorderIdHidden">
                         {{-- update work 16 --}}
                         <div class="top-margin">
                             <div class="login-sec-box position-relative">
-                              <div class="">
-                                <button class="remove-btn-css">
-                                    {{-- <div class="red-back-btn">
+                                <div class="">
+                                    <button class="remove-btn-css">
+                                        {{-- <div class="red-back-btn">
                                         <img src="../assets/images/red-colr-arrow.webp" alt="">
                                     </div> --}}
-                                </button>
-                            </div>
-                            {{-- <div class="payment-return for-background-color-review">
+                                    </button>
+                                </div>
+                                {{-- <div class="payment-return for-background-color-review">
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <select name="number" id="paragraphSpaceOPtion">
@@ -2252,7 +2294,8 @@ width: 30%;
 
                                 <button class="remove-btn-css" type="button">
                                     <div class="red-back-btn">
-                                        <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="">
+                                        <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}"
+                                            alt="">
                                     </div>
                                 </button>
                                 <div
@@ -2287,8 +2330,8 @@ width: 30%;
                                                                     id="refund_product_id" value>
                                                                 <input type="hidden" name="refund_order_id"
                                                                     id="refund_order_id" value>
-                                                                    {{-- update work 16 --}}
-                                                                    <input type="checkbox" name="refund_policy"
+                                                                {{-- update work 16 --}}
+                                                                <input type="checkbox" name="refund_policy"
                                                                     id="refund_policy">
                                                                 <label for="refund_policy"
                                                                     class="d-flex align-items-start margin-top-zer0 flex-column">
@@ -2335,11 +2378,12 @@ width: 30%;
                                     </div>
                                     <h2>Customer Comments and Packaging Information (mandatory)</h2>
                                     <div class="select-reason cstm-select-width">
-                                        <select name="reason" class="form-select" aria-label="Default select example">
+                                        <select name="reason" class="form-select"
+                                            aria-label="Default select example">
                                             <option value="" selected disabled>Select a Reason</option>
                                             <option value="Change/combine order">Change/combine order</option>
                                             @foreach ($cancellation_policy as $value)
-                                            <option value="{{ $value->id }}">{{ $value->reason }}</option>
+                                                <option value="{{ $value->id }}">{{ $value->reason }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -2347,9 +2391,10 @@ width: 30%;
                                         <textarea name="comment" id="" cols="30" rows="10"
                                             placeholder="e.g. My phone has missing headphones Package seal was opened/not opened Packaging condition was Damaged/Not Damaged"></textarea>
                                     </div>
-                                     <div class="cancel-comments">
+                                    <div class="cancel-comments">
                                         <label>Upload Image</label>
-                                        <input type="file" id="cancellation_image" name="cancellation_image[]" multiple>
+                                        <input type="file" id="cancellation_image" name="cancellation_image[]"
+                                            multiple>
                                     </div>
                                 </div>
                                 <div class="mt1 cancel-comments-box for-background-color-review">
@@ -2365,7 +2410,8 @@ width: 30%;
                                 {{-- update work 5 --}}
                                 <div class="d-flex">
                                     <div class="form-group">
-                                        <input type="checkbox" name="refunded_policy" value="2" id="refunded_policy">
+                                        <input type="checkbox" name="refunded_policy" value="2"
+                                            id="refunded_policy">
                                         <label for="refunded_policy" class="d-flex align-items-start"> I
                                             have
                                             read and
@@ -2381,19 +2427,21 @@ width: 30%;
                         </div>
                     </form>
                 </div>
-                  {{-- update work 13 --}}
+                {{-- update work 13 --}}
                 <div class="forget-password noPrint">
                     <h1 class="tab-main-heading">Change Password</h1>
                     <div class="top-margin">
                         <div class="login-sec-box position-relative">
                             <button class="remove-btn-css">
                                 <div class="red-back-btn">
-                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="">
+                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}"
+                                        alt="">
                                 </div>
                             </button>
                             <div class="row">
                                 <div class="col-lg-7">
-                                    <form action="{{ route('update-password') }}" method="POST" id="password_form">
+                                    <form action="{{ route('update-password') }}" method="POST"
+                                        id="password_form">
                                         @csrf
                                         <div class="password-container d-flex flex-column mt1">
                                             <label for="">Current Password*</label>
@@ -2428,13 +2476,14 @@ width: 30%;
 
             </div>
             <!-- Start Modal -->
-            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-                tabindex="-1">
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered modal-xl">
                     <div class="modal-content">
                         <div class="modal-header modal-cstm-header">
                             <h5 class="modal-title" id="exampleModalToggleLabel2">Edit Profile</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="edit-sec-box margin-top-zero ">
                             <div class="">
@@ -2445,19 +2494,19 @@ width: 30%;
                                             <div class="d-flex flex-column input-label-felids">
                                                 <label for="" class="font-famil-change">Full
                                                     Name</label>
-                                                <input type="text" placeholder="Full Name" id="myInput" name="name"
-                                                    value="{{ Auth::user()->name }}">
-                                              
+                                                <input type="text" placeholder="Full Name" id="myInput"
+                                                    name="name" value="{{ Auth::user()->name }}">
+
 
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                       
+
                                             <div class="d-flex flex-column input-label-felids">
                                                 <label for="" class="font-famil-change">Email Address
                                                 </label>
-                                                <input type="text" placeholder="emailaddress@gmail.com" name="email"
-                                                    value="{{ Auth::user()->email }}" readonly>
+                                                <input type="text" placeholder="emailaddress@gmail.com"
+                                                    name="email" value="{{ Auth::user()->email }}" readonly>
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -2488,46 +2537,46 @@ width: 30%;
                                                 <div class="custom-select selector-width mt0">
                                                     <select name="month" id="Month">
                                                         <option value="none">Month</option>
-                                                        <option value="01" {{ Auth::user()->month == 1 ? 'selected' : ''
-                                                            }}>
+                                                        <option value="01"
+                                                            {{ Auth::user()->month == 1 ? 'selected' : '' }}>
                                                             January
                                                         </option>
-                                                        <option value="02" {{ Auth::user()->month == 2 ? 'selected' : ''
-                                                            }}>
+                                                        <option value="02"
+                                                            {{ Auth::user()->month == 2 ? 'selected' : '' }}>
                                                             February
                                                         </option>
-                                                        <option value="03" {{ Auth::user()->month == 3 ? 'selected' : ''
-                                                            }}>March
+                                                        <option value="03"
+                                                            {{ Auth::user()->month == 3 ? 'selected' : '' }}>March
                                                         </option>
-                                                        <option value="04" {{ Auth::user()->month == 4 ? 'selected' : ''
-                                                            }}>April
+                                                        <option value="04"
+                                                            {{ Auth::user()->month == 4 ? 'selected' : '' }}>April
                                                         </option>
-                                                        <option value="05" {{ Auth::user()->month == 5 ? 'selected' : ''
-                                                            }}>May
+                                                        <option value="05"
+                                                            {{ Auth::user()->month == 5 ? 'selected' : '' }}>May
                                                         </option>
-                                                        <option value="06" {{ Auth::user()->month == 6 ? 'selected' : ''
-                                                            }}>June
+                                                        <option value="06"
+                                                            {{ Auth::user()->month == 6 ? 'selected' : '' }}>June
                                                         </option>
-                                                        <option value="07" {{ Auth::user()->month == 7 ? 'selected' : ''
-                                                            }}>July
+                                                        <option value="07"
+                                                            {{ Auth::user()->month == 7 ? 'selected' : '' }}>July
                                                         </option>
-                                                        <option value="08" {{ Auth::user()->month == 8 ? 'selected' : ''
-                                                            }}>August
+                                                        <option value="08"
+                                                            {{ Auth::user()->month == 8 ? 'selected' : '' }}>August
                                                         </option>
-                                                        <option value="09" {{ Auth::user()->month == 9 ? 'selected' : ''
-                                                            }}>
+                                                        <option value="09"
+                                                            {{ Auth::user()->month == 9 ? 'selected' : '' }}>
                                                             September
                                                         </option>
-                                                        <option value="10" {{ Auth::user()->month == 10 ? 'selected' :
-                                                            '' }}>
+                                                        <option value="10"
+                                                            {{ Auth::user()->month == 10 ? 'selected' : '' }}>
                                                             October
                                                         </option>
-                                                        <option value="11" {{ Auth::user()->month == 11 ? 'selected' :
-                                                            '' }}>
+                                                        <option value="11"
+                                                            {{ Auth::user()->month == 11 ? 'selected' : '' }}>
                                                             November
                                                         </option>
-                                                        <option value="12" {{ Auth::user()->month == 12 ? 'selected' :
-                                                            '' }}>
+                                                        <option value="12"
+                                                            {{ Auth::user()->month == 12 ? 'selected' : '' }}>
                                                             December
                                                         </option>
                                                     </select>
@@ -2536,98 +2585,98 @@ width: 30%;
                                                 <div class="custom-select selector-width mt0">
                                                     <select name="day" id="Day">
                                                         <option value="none">Day</option>
-                                                        <option value="01" {{ Auth::user()->day == 1 ? 'selected' : ''
-                                                            }}>01
+                                                        <option value="01"
+                                                            {{ Auth::user()->day == 1 ? 'selected' : '' }}>01
                                                         </option>
-                                                        <option value="02" {{ Auth::user()->day == 2 ? 'selected' : ''
-                                                            }}>02
+                                                        <option value="02"
+                                                            {{ Auth::user()->day == 2 ? 'selected' : '' }}>02
                                                         </option>
-                                                        <option value="03" {{ Auth::user()->day == 3 ? 'selected' : ''
-                                                            }}>03
+                                                        <option value="03"
+                                                            {{ Auth::user()->day == 3 ? 'selected' : '' }}>03
                                                         </option>
-                                                        <option value="04" {{ Auth::user()->day == 4 ? 'selected' : ''
-                                                            }}>04
+                                                        <option value="04"
+                                                            {{ Auth::user()->day == 4 ? 'selected' : '' }}>04
                                                         </option>
-                                                        <option value="05" {{ Auth::user()->day == 5 ? 'selected' : ''
-                                                            }}>05
+                                                        <option value="05"
+                                                            {{ Auth::user()->day == 5 ? 'selected' : '' }}>05
                                                         </option>
-                                                        <option value="06" {{ Auth::user()->day == 6 ? 'selected' : ''
-                                                            }}>06
+                                                        <option value="06"
+                                                            {{ Auth::user()->day == 6 ? 'selected' : '' }}>06
                                                         </option>
-                                                        <option value="07" {{ Auth::user()->day == 7 ? 'selected' : ''
-                                                            }}>07
+                                                        <option value="07"
+                                                            {{ Auth::user()->day == 7 ? 'selected' : '' }}>07
                                                         </option>
-                                                        <option value="08" {{ Auth::user()->day == 8 ? 'selected' : ''
-                                                            }}>08
+                                                        <option value="08"
+                                                            {{ Auth::user()->day == 8 ? 'selected' : '' }}>08
                                                         </option>
-                                                        <option value="09" {{ Auth::user()->day == 9 ? 'selected' : ''
-                                                            }}>09
+                                                        <option value="09"
+                                                            {{ Auth::user()->day == 9 ? 'selected' : '' }}>09
                                                         </option>
-                                                        <option value="10" {{ Auth::user()->day == 10 ? 'selected' : ''
-                                                            }}>10
+                                                        <option value="10"
+                                                            {{ Auth::user()->day == 10 ? 'selected' : '' }}>10
                                                         </option>
-                                                        <option value="11" {{ Auth::user()->day == 11 ? 'selected' : ''
-                                                            }}>11
+                                                        <option value="11"
+                                                            {{ Auth::user()->day == 11 ? 'selected' : '' }}>11
                                                         </option>
-                                                        <option value="12" {{ Auth::user()->day == 12 ? 'selected' : ''
-                                                            }}>12
+                                                        <option value="12"
+                                                            {{ Auth::user()->day == 12 ? 'selected' : '' }}>12
                                                         </option>
-                                                        <option value="13" {{ Auth::user()->day == 13 ? 'selected' : ''
-                                                            }}>13
+                                                        <option value="13"
+                                                            {{ Auth::user()->day == 13 ? 'selected' : '' }}>13
                                                         </option>
-                                                        <option value="14" {{ Auth::user()->day == 14 ? 'selected' : ''
-                                                            }}>14
+                                                        <option value="14"
+                                                            {{ Auth::user()->day == 14 ? 'selected' : '' }}>14
                                                         </option>
-                                                        <option value="15" {{ Auth::user()->day == 15 ? 'selected' : ''
-                                                            }}>15
+                                                        <option value="15"
+                                                            {{ Auth::user()->day == 15 ? 'selected' : '' }}>15
                                                         </option>
-                                                        <option value="16" {{ Auth::user()->day == 16 ? 'selected' : ''
-                                                            }}>16
+                                                        <option value="16"
+                                                            {{ Auth::user()->day == 16 ? 'selected' : '' }}>16
                                                         </option>
-                                                        <option value="17" {{ Auth::user()->day == 17 ? 'selected' : ''
-                                                            }}>17
+                                                        <option value="17"
+                                                            {{ Auth::user()->day == 17 ? 'selected' : '' }}>17
                                                         </option>
-                                                        <option value="18" {{ Auth::user()->day == 18 ? 'selected' : ''
-                                                            }}>18
+                                                        <option value="18"
+                                                            {{ Auth::user()->day == 18 ? 'selected' : '' }}>18
                                                         </option>
-                                                        <option value="19" {{ Auth::user()->day == 19 ? 'selected' : ''
-                                                            }}>19
+                                                        <option value="19"
+                                                            {{ Auth::user()->day == 19 ? 'selected' : '' }}>19
                                                         </option>
-                                                        <option value="20" {{ Auth::user()->day == 20 ? 'selected' : ''
-                                                            }}>20
+                                                        <option value="20"
+                                                            {{ Auth::user()->day == 20 ? 'selected' : '' }}>20
                                                         </option>
-                                                        <option value="21" {{ Auth::user()->day == 21 ? 'selected' : ''
-                                                            }}>21
+                                                        <option value="21"
+                                                            {{ Auth::user()->day == 21 ? 'selected' : '' }}>21
                                                         </option>
-                                                        <option value="22" {{ Auth::user()->day == 22 ? 'selected' : ''
-                                                            }}>22
+                                                        <option value="22"
+                                                            {{ Auth::user()->day == 22 ? 'selected' : '' }}>22
                                                         </option>
-                                                        <option value="23" {{ Auth::user()->day == 23 ? 'selected' : ''
-                                                            }}>23
+                                                        <option value="23"
+                                                            {{ Auth::user()->day == 23 ? 'selected' : '' }}>23
                                                         </option>
-                                                        <option value="24" {{ Auth::user()->day == 24 ? 'selected' : ''
-                                                            }}>24
+                                                        <option value="24"
+                                                            {{ Auth::user()->day == 24 ? 'selected' : '' }}>24
                                                         </option>
-                                                        <option value="25" {{ Auth::user()->day == 25 ? 'selected' : ''
-                                                            }}>
+                                                        <option value="25"
+                                                            {{ Auth::user()->day == 25 ? 'selected' : '' }}>
                                                             25</option>
-                                                        <option value="26" {{ Auth::user()->day == 26 ? 'selected' : ''
-                                                            }}>26
+                                                        <option value="26"
+                                                            {{ Auth::user()->day == 26 ? 'selected' : '' }}>26
                                                         </option>
-                                                        <option value="27" {{ Auth::user()->day == 27 ? 'selected' : ''
-                                                            }}>27
+                                                        <option value="27"
+                                                            {{ Auth::user()->day == 27 ? 'selected' : '' }}>27
                                                         </option>
-                                                        <option value="28" {{ Auth::user()->day == 28 ? 'selected' : ''
-                                                            }}>28
+                                                        <option value="28"
+                                                            {{ Auth::user()->day == 28 ? 'selected' : '' }}>28
                                                         </option>
-                                                        <option value="29" {{ Auth::user()->day == 29 ? 'selected' : ''
-                                                            }}>29
+                                                        <option value="29"
+                                                            {{ Auth::user()->day == 29 ? 'selected' : '' }}>29
                                                         </option>
-                                                        <option value="30" {{ Auth::user()->day == 30 ? 'selected' : ''
-                                                            }}>30
+                                                        <option value="30"
+                                                            {{ Auth::user()->day == 30 ? 'selected' : '' }}>30
                                                         </option>
-                                                        <option value="31" {{ Auth::user()->day == 31 ? 'selected' : ''
-                                                            }}>31
+                                                        <option value="31"
+                                                            {{ Auth::user()->day == 31 ? 'selected' : '' }}>31
                                                         </option>
                                                     </select>
                                                     <span class="custom-arrow"></span>
@@ -2635,248 +2684,248 @@ width: 30%;
                                                 <div class="custom-select selector-width mt0">
                                                     <select name="year" id="Year">
                                                         <option>Year</option>
-                                                        <option value="2030" {{ Auth::user()->year == 2030 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2030"
+                                                            {{ Auth::user()->year == 2030 ? 'selected' : '' }}>
                                                             2030
                                                         </option>
-                                                        <option value="2029" {{ Auth::user()->year == 2029 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2029"
+                                                            {{ Auth::user()->year == 2029 ? 'selected' : '' }}>
                                                             2029
                                                         </option>
-                                                        <option value="2028" {{ Auth::user()->year == 2028 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2028"
+                                                            {{ Auth::user()->year == 2028 ? 'selected' : '' }}>
                                                             2028
                                                         </option>
-                                                        <option value="2027" {{ Auth::user()->year == 2027 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2027"
+                                                            {{ Auth::user()->year == 2027 ? 'selected' : '' }}>
                                                             2027
                                                         </option>
-                                                        <option value="2026" {{ Auth::user()->year == 2026 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2026"
+                                                            {{ Auth::user()->year == 2026 ? 'selected' : '' }}>
                                                             2026
                                                         </option>
-                                                        <option value="2025" {{ Auth::user()->year == 2025 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2025"
+                                                            {{ Auth::user()->year == 2025 ? 'selected' : '' }}>
                                                             2025
                                                         </option>
-                                                        <option value="2024" {{ Auth::user()->year == 2024 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2024"
+                                                            {{ Auth::user()->year == 2024 ? 'selected' : '' }}>
                                                             2024
                                                         </option>
-                                                        <option value="2023" {{ Auth::user()->year == 2023 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2023"
+                                                            {{ Auth::user()->year == 2023 ? 'selected' : '' }}>
                                                             2023
                                                         </option>
-                                                        <option value="2022" {{ Auth::user()->year == 2022 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2022"
+                                                            {{ Auth::user()->year == 2022 ? 'selected' : '' }}>
                                                             2022
                                                         </option>
-                                                        <option value="2021" {{ Auth::user()->year == 2021 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2021"
+                                                            {{ Auth::user()->year == 2021 ? 'selected' : '' }}>
                                                             2021
                                                         </option>
-                                                        <option value="2020" {{ Auth::user()->year == 2020 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2020"
+                                                            {{ Auth::user()->year == 2020 ? 'selected' : '' }}>
                                                             2020
                                                         </option>
-                                                        <option value="2019" {{ Auth::user()->year == 2019 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2019"
+                                                            {{ Auth::user()->year == 2019 ? 'selected' : '' }}>
                                                             2019
                                                         </option>
-                                                        <option value="2018" {{ Auth::user()->year == 2018 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2018"
+                                                            {{ Auth::user()->year == 2018 ? 'selected' : '' }}>
                                                             2018
                                                         </option>
-                                                        <option value="2017" {{ Auth::user()->year == 2017 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2017"
+                                                            {{ Auth::user()->year == 2017 ? 'selected' : '' }}>
                                                             2017
                                                         </option>
-                                                        <option value="2016" {{ Auth::user()->year == 2030 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2016"
+                                                            {{ Auth::user()->year == 2030 ? 'selected' : '' }}>
                                                             2016
                                                         </option>
-                                                        <option value="2015" {{ Auth::user()->year == 2015 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2015"
+                                                            {{ Auth::user()->year == 2015 ? 'selected' : '' }}>
                                                             2015
                                                         </option>
-                                                        <option value="2014" {{ Auth::user()->year == 2014 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2014"
+                                                            {{ Auth::user()->year == 2014 ? 'selected' : '' }}>
                                                             2014
                                                         </option>
-                                                        <option value="2013" {{ Auth::user()->year == 2013 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2013"
+                                                            {{ Auth::user()->year == 2013 ? 'selected' : '' }}>
                                                             2013
                                                         </option>
-                                                        <option value="2012" {{ Auth::user()->year == 2012 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2012"
+                                                            {{ Auth::user()->year == 2012 ? 'selected' : '' }}>
                                                             2012
                                                         </option>
-                                                        <option value="2011" {{ Auth::user()->year == 2011 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2011"
+                                                            {{ Auth::user()->year == 2011 ? 'selected' : '' }}>
                                                             2011
                                                         </option>
-                                                        <option value="2010" {{ Auth::user()->year == 2010 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2010"
+                                                            {{ Auth::user()->year == 2010 ? 'selected' : '' }}>
                                                             2010
                                                         </option>
-                                                        <option value="2009" {{ Auth::user()->year == 2009 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2009"
+                                                            {{ Auth::user()->year == 2009 ? 'selected' : '' }}>
                                                             2009
                                                         </option>
-                                                        <option value="2008" {{ Auth::user()->year == 2008 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2008"
+                                                            {{ Auth::user()->year == 2008 ? 'selected' : '' }}>
                                                             2008
                                                         </option>
-                                                        <option value="2007" {{ Auth::user()->year == 2007 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2007"
+                                                            {{ Auth::user()->year == 2007 ? 'selected' : '' }}>
                                                             2007
                                                         </option>
-                                                        <option value="2006" {{ Auth::user()->year == 2006 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2006"
+                                                            {{ Auth::user()->year == 2006 ? 'selected' : '' }}>
                                                             2006
                                                         </option>
-                                                        <option value="2005" {{ Auth::user()->year == 2005 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2005"
+                                                            {{ Auth::user()->year == 2005 ? 'selected' : '' }}>
                                                             2005
                                                         </option>
-                                                        <option value="2004" {{ Auth::user()->year == 2004 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2004"
+                                                            {{ Auth::user()->year == 2004 ? 'selected' : '' }}>
                                                             2004
                                                         </option>
-                                                        <option value="2003" {{ Auth::user()->year == 2003 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2003"
+                                                            {{ Auth::user()->year == 2003 ? 'selected' : '' }}>
                                                             2003
                                                         </option>
-                                                        <option value="2002" {{ Auth::user()->year == 2002 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2002"
+                                                            {{ Auth::user()->year == 2002 ? 'selected' : '' }}>
                                                             2002
                                                         </option>
-                                                        <option value="2001" {{ Auth::user()->year == 2001 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2001"
+                                                            {{ Auth::user()->year == 2001 ? 'selected' : '' }}>
                                                             2001
                                                         </option>
-                                                        <option value="2000" {{ Auth::user()->year == 2000 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="2000"
+                                                            {{ Auth::user()->year == 2000 ? 'selected' : '' }}>
                                                             2000
                                                         </option>
-                                                        <option value="1999" {{ Auth::user()->year == 1999 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1999"
+                                                            {{ Auth::user()->year == 1999 ? 'selected' : '' }}>
                                                             1999
                                                         </option>
-                                                        <option value="1998" {{ Auth::user()->year == 1998 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1998"
+                                                            {{ Auth::user()->year == 1998 ? 'selected' : '' }}>
                                                             1998
                                                         </option>
-                                                        <option value="1997" {{ Auth::user()->year == 1997 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1997"
+                                                            {{ Auth::user()->year == 1997 ? 'selected' : '' }}>
                                                             1997
                                                         </option>
-                                                        <option value="1996" {{ Auth::user()->year == 1996 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1996"
+                                                            {{ Auth::user()->year == 1996 ? 'selected' : '' }}>
                                                             1996
                                                         </option>
-                                                        <option value="1995" {{ Auth::user()->year == 1995 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1995"
+                                                            {{ Auth::user()->year == 1995 ? 'selected' : '' }}>
                                                             1995
                                                         </option>
-                                                        <option value="1994" {{ Auth::user()->year == 1994 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1994"
+                                                            {{ Auth::user()->year == 1994 ? 'selected' : '' }}>
                                                             1994
                                                         </option>
-                                                        <option value="1993" {{ Auth::user()->year == 1993 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1993"
+                                                            {{ Auth::user()->year == 1993 ? 'selected' : '' }}>
                                                             1993
                                                         </option>
-                                                        <option value="1992" {{ Auth::user()->year == 1992 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1992"
+                                                            {{ Auth::user()->year == 1992 ? 'selected' : '' }}>
                                                             1992
                                                         </option>
-                                                        <option value="1991" {{ Auth::user()->year == 1991 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1991"
+                                                            {{ Auth::user()->year == 1991 ? 'selected' : '' }}>
                                                             1991
                                                         </option>
-                                                        <option value="1990" {{ Auth::user()->year == 1990 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1990"
+                                                            {{ Auth::user()->year == 1990 ? 'selected' : '' }}>
                                                             1990
                                                         </option>
-                                                        <option value="1989" {{ Auth::user()->year == 1989 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1989"
+                                                            {{ Auth::user()->year == 1989 ? 'selected' : '' }}>
                                                             1989
                                                         </option>
-                                                        <option value="1988" {{ Auth::user()->year == 1988 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1988"
+                                                            {{ Auth::user()->year == 1988 ? 'selected' : '' }}>
                                                             1988
                                                         </option>
-                                                        <option value="1987" {{ Auth::user()->year == 1987 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1987"
+                                                            {{ Auth::user()->year == 1987 ? 'selected' : '' }}>
                                                             1987
                                                         </option>
-                                                        <option value="1986" {{ Auth::user()->year == 1986 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1986"
+                                                            {{ Auth::user()->year == 1986 ? 'selected' : '' }}>
                                                             1986
                                                         </option>
-                                                        <option value="1985" {{ Auth::user()->year == 1985 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1985"
+                                                            {{ Auth::user()->year == 1985 ? 'selected' : '' }}>
                                                             1985
                                                         </option>
-                                                        <option value="1984" {{ Auth::user()->year == 1984 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1984"
+                                                            {{ Auth::user()->year == 1984 ? 'selected' : '' }}>
                                                             1984
                                                         </option>
-                                                        <option value="1983" {{ Auth::user()->year == 1983 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1983"
+                                                            {{ Auth::user()->year == 1983 ? 'selected' : '' }}>
                                                             1983
                                                         </option>
-                                                        <option value="1982" {{ Auth::user()->year == 1982 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1982"
+                                                            {{ Auth::user()->year == 1982 ? 'selected' : '' }}>
                                                             1982
                                                         </option>
-                                                        <option value="1981" {{ Auth::user()->year == 1981 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1981"
+                                                            {{ Auth::user()->year == 1981 ? 'selected' : '' }}>
                                                             1981
                                                         </option>
-                                                        <option value="1980" {{ Auth::user()->year == 1980 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1980"
+                                                            {{ Auth::user()->year == 1980 ? 'selected' : '' }}>
                                                             1980
                                                         </option>
-                                                        <option value="1979" {{ Auth::user()->year == 1979 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1979"
+                                                            {{ Auth::user()->year == 1979 ? 'selected' : '' }}>
                                                             1979
                                                         </option>
-                                                        <option value="1978" {{ Auth::user()->year == 1978 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1978"
+                                                            {{ Auth::user()->year == 1978 ? 'selected' : '' }}>
                                                             1978
                                                         </option>
-                                                        <option value="1977" {{ Auth::user()->year == 1977 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1977"
+                                                            {{ Auth::user()->year == 1977 ? 'selected' : '' }}>
                                                             1977
                                                         </option>
-                                                        <option value="1976" {{ Auth::user()->year == 1976 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1976"
+                                                            {{ Auth::user()->year == 1976 ? 'selected' : '' }}>
                                                             1976
                                                         </option>
-                                                        <option value="1975" {{ Auth::user()->year == 1975 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1975"
+                                                            {{ Auth::user()->year == 1975 ? 'selected' : '' }}>
                                                             1975
                                                         </option>
-                                                        <option value="1974" {{ Auth::user()->year == 1974 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1974"
+                                                            {{ Auth::user()->year == 1974 ? 'selected' : '' }}>
                                                             1974
                                                         </option>
-                                                        <option value="1973" {{ Auth::user()->year == 1973 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1973"
+                                                            {{ Auth::user()->year == 1973 ? 'selected' : '' }}>
                                                             1973
                                                         </option>
-                                                        <option value="1972" {{ Auth::user()->year == 1972 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1972"
+                                                            {{ Auth::user()->year == 1972 ? 'selected' : '' }}>
                                                             1972
                                                         </option>
-                                                        <option value="1971" {{ Auth::user()->year == 1971 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1971"
+                                                            {{ Auth::user()->year == 1971 ? 'selected' : '' }}>
                                                             1971
                                                         </option>
-                                                        <option value="1970" {{ Auth::user()->year == 1970 ? 'selected'
-                                                            : '' }}>
+                                                        <option value="1970"
+                                                            {{ Auth::user()->year == 1970 ? 'selected' : '' }}>
                                                             1970
                                                         </option>
                                                     </select>
@@ -2889,16 +2938,16 @@ width: 30%;
                                             <div class="custom-select mt0">
                                                 <select name="gender" id="gender">
                                                     <option value="none">Select</option>
-                                                    <option value="male" {{ Auth::user()->gender == 'male' ? 'selected'
-                                                        : '' }}>
+                                                    <option value="male"
+                                                        {{ Auth::user()->gender == 'male' ? 'selected' : '' }}>
                                                         Male
                                                     </option>
-                                                    <option value="female" {{ Auth::user()->gender == 'female' ?
-                                                        'selected' : '' }}>
+                                                    <option value="female"
+                                                        {{ Auth::user()->gender == 'female' ? 'selected' : '' }}>
                                                         Female
                                                     </option>
-                                                    <option value="other" {{ Auth::user()->gender == 'other' ?
-                                                        'selected' : '' }}>
+                                                    <option value="other"
+                                                        {{ Auth::user()->gender == 'other' ? 'selected' : '' }}>
                                                         other
                                                     </option>
                                                 </select>
@@ -2933,14 +2982,15 @@ width: 30%;
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
 
                     <div class="modal-content">
                         <div class="modal-header modal-cstm-header">
                             <h5 class="modal-title" id="exampleModalToggleLabel2">Newsletter Subscription</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body modal-cstm-body">
                             <p> I have read and understood <a href="{{ route('privacy-policy') }}">Privacy
@@ -2948,24 +2998,24 @@ width: 30%;
                             </p>
                         </div>
                         @if (@$subscription_list->status == 1)
-                        <form action="{{ route('cancel-subscription') }}" method="POST">
-                            @csrf
-                            <div class="modal-footer modal-cstm-footer">
-                                <input  type="hidden" name="id" value="{{$subscription_list->id}}">
-                                <button type="button" id="forcancel" class="subcribe-btn"
-                                    data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="subcribe-btn">UNSUBSCRIBE</button>
-                            </div>
-                        </form>
+                            <form action="{{ route('cancel-subscription') }}" method="POST">
+                                @csrf
+                                <div class="modal-footer modal-cstm-footer">
+                                    <input type="hidden" name="id" value="{{ $subscription_list->id }}">
+                                    <button type="button" id="forcancel" class="subcribe-btn"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="subcribe-btn">UNSUBSCRIBE</button>
+                                </div>
+                            </form>
                         @else
-                        <form action="{{ route('user-subscription') }}" method="POST">
-                            @csrf
-                            <div class="modal-footer modal-cstm-footer">
-                                <button type="button" id="forcancel" class="subcribe-btn"
-                                    data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="subcribe-btn">SUBSCRIBE</button>
-                            </div>
-                        </form>
+                            <form action="{{ route('user-subscription') }}" method="POST">
+                                @csrf
+                                <div class="modal-footer modal-cstm-footer">
+                                    <button type="button" id="forcancel" class="subcribe-btn"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="subcribe-btn">SUBSCRIBE</button>
+                                </div>
+                            </form>
                         @endif
 
                     </div>
@@ -2979,7 +3029,8 @@ width: 30%;
                             <!-- <button type="button" class="btn-close" data-bs-toggle="modal" href="#exampleModalToggle4"
                                 role="button">
                             </button> -->
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="edit-sec-box margin-top-zero ">
                             <div class="input-border-cstm">
@@ -2991,8 +3042,8 @@ width: 30%;
                                             <div class="d-flex flex-column input-label-felids">
                                                 <label for="" class="font-famil-change">Full
                                                     Name</label>
-                                                <input type="text" name="name" placeholder="First Name" id="myInput"
-                                                    value="{{ Auth::user()->name }}">
+                                                <input type="text" name="name" placeholder="First Name"
+                                                    id="myInput" value="{{ Auth::user()->name }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -3014,8 +3065,9 @@ width: 30%;
                                             <div class="d-flex flex-column input-label-felids">
                                                 <label for="" class="font-famil-change">Landmark
                                                     (Optional)</label>
-                                                <input type="text" name="landmark" placeholder="Landmark (Optional)"
-                                                    id="myInput" value="{{ Auth::user()->landmark }}">
+                                                <input type="text" name="landmark"
+                                                    placeholder="Landmark (Optional)" id="myInput"
+                                                    value="{{ Auth::user()->landmark }}">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -3024,9 +3076,9 @@ width: 30%;
                                                 <select name="province" id="province">
                                                     <option selected="">Select</option>
                                                     @foreach ($states as $data)
-                                                    <option value="{{ $data->id }}">
-                                                        {{ $data->state }}
-                                                    </option>
+                                                        <option value="{{ $data->id }}">
+                                                            {{ $data->state }}
+                                                        </option>
                                                     @endforeach
 
                                                 </select>
@@ -3040,11 +3092,11 @@ width: 30%;
                                                     delivery</label>
                                                 <div class="d-flex justify-content-between">
                                                     <input type="hidden" name="delivery_lable" id="delivery">
-                                                    <button type="button" class="choose_button" value="1" id="home"><i
-                                                            class="fa fa-check-square"
+                                                    <button type="button" class="choose_button" value="1"
+                                                        id="home"><i class="fa fa-check-square"
                                                             aria-hidden="false"></i>Home</button>
-                                                    <button type="button" class="choose_button" value="2" id="office"><i
-                                                            class="fa fa-check-square"
+                                                    <button type="button" class="choose_button" value="2"
+                                                        id="office"><i class="fa fa-check-square"
                                                             aria-hidden="false"></i>Office</button>
 
                                                 </div>
@@ -3052,7 +3104,8 @@ width: 30%;
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="d-flex flex-column input-label-felids">
-                                                <label for="" class="font-famil-change">City/Municipality</label>
+                                                <label for=""
+                                                    class="font-famil-change">City/Municipality</label>
                                                 <select name="city" id="state-dd">
 
                                                 </select>
@@ -3077,18 +3130,20 @@ width: 30%;
                                                 <div class="confirming-address">
                                                     <div class="d-flex">
                                                         <div class="form-group">
-                                                            <input type="checkbox" id="offers" name="default_shipping"
-                                                                value="1">
-                                                            <label for="offers" class="d-flex align-items-start">Default
+                                                            <input type="checkbox" id="offers"
+                                                                name="default_shipping" value="1">
+                                                            <label for="offers"
+                                                                class="d-flex align-items-start">Default
                                                                 shipping
                                                                 address</label>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex mt0">
                                                         <div class="form-group">
-                                                            <input type="checkbox" id="html2" name="default_billing"
-                                                                value="2">
-                                                            <label for="html2" class="d-flex align-items-start">Default
+                                                            <input type="checkbox" id="html2"
+                                                                name="default_billing" value="2">
+                                                            <label for="html2"
+                                                                class="d-flex align-items-start">Default
                                                                 billing
                                                                 address</label>
                                                         </div>
@@ -3106,103 +3161,105 @@ width: 30%;
                                             <button class="remove-a-tag">
                                                 <div class="pink-login-btn save-button">
                                                     {{-- <a href="#" --}} {{-- <button type="submit"> --}}
-                                                        <div>
-                                                            Save
-                                                        </div>
-                                                        {{--
+                                                    <div>
+                                                        Save
+                                                    </div>
+                                                    {{--
                                             </button> --}}
-                                            {{-- </a> --}}
+                                                    {{-- </a> --}}
+                                                </div>
+                                            </button>
                                         </div>
-                                        </button>
                                     </div>
+                                </form>
                             </div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="exampleModalToggle3" aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header modal-cstm-header">
+                            <h5 class="modal-title" id="exampleModalToggle3">Change Password</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="edit-sec-box margin-top-zero ">
+                            <form>
+                                <div class="input-border-cstm">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="d-flex flex-column input-label-felids">
+                                                <label for="" class="font-famil-change">Current
+                                                    password</label>
+                                                <input type="password"
+                                                    placeholder="Please Enter Your Current Password" id="myInput">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex flex-column input-label-felids">
+                                                <label for="" class="font-famil-change">New
+                                                    password</label>
+                                                <input type="password"
+                                                    placeholder="Minimum 6 character with a number and a letter"
+                                                    id="myInput">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex flex-column input-label-felids">
+                                                <label for="" class="font-famil-change">Retype
+                                                    password</label>
+                                                <input type="password" placeholder="Please ReType Your Password"
+                                                    id="myInput">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="save-changes-btn mt0">
+                                        <div class="d-flex add-address justify-content-center">
+                                            <div class="pink-login-btn login-button">
+                                                <a href=""
+                                                    onclick="document.getElementById('password_form').submit(); return false;">
+                                                    <div>
+                                                        Save Chnges
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button class="btn btn-primary" >Open second modal</button>
+                    </div> -->
+                </div>
+            </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-            tabindex="-1">
+        <div class="modal fade for-cstm-modal-show" id="exampleModalToggle4" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header modal-cstm-header">
-                        <h5 class="modal-title" id="exampleModalToggle3">Change Password</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalToggle4">Discard your address card?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="edit-sec-box margin-top-zero ">
-                        <form>
-                            <div class="input-border-cstm">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="d-flex flex-column input-label-felids">
-                                            <label for="" class="font-famil-change">Current
-                                                password</label>
-                                            <input type="password" placeholder="Please Enter Your Current Password"
-                                                id="myInput">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="d-flex flex-column input-label-felids">
-                                            <label for="" class="font-famil-change">New
-                                                password</label>
-                                            <input type="password"
-                                                placeholder="Minimum 6 character with a number and a letter"
-                                                id="myInput">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="d-flex flex-column input-label-felids">
-                                            <label for="" class="font-famil-change">Retype
-                                                password</label>
-                                            <input type="password" placeholder="Please ReType Your Password"
-                                                id="myInput">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="save-changes-btn mt0">
-                                    <div class="d-flex add-address justify-content-center">
-                                        <div class="pink-login-btn login-button">
-                                            <a href=""
-                                                onclick="document.getElementById('password_form').submit(); return false;">
-                                                <div>
-                                                    Save Chnges
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                        </form>
+                    <div class="modal-body modal-cstm-body">
+                        <p> You haven’t finished your address card yet.
+                            Are you sure you want to leave and discard
+                            your inputs?</p>
                     </div>
-                </div>
-                <!-- <div class="modal-footer">
-                        <button class="btn btn-primary" >Open second modal</button>
-                    </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="modal fade for-cstm-modal-show" id="exampleModalToggle4" data-bs-backdrop="static"
-        data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header modal-cstm-header">
-                    <h5 class="modal-title" id="exampleModalToggle4">Discard your address card?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body modal-cstm-body">
-                    <p> You haven’t finished your address card yet.
-                        Are you sure you want to leave and discard
-                        your inputs?</p>
-                </div>
-                <div class="modal-footer modal-cstm-footer">
-                    <button type="button" class="subcribe-btn" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="subcribe-btn">SUBSCRIBE</button>
+                    <div class="modal-footer modal-cstm-footer">
+                        <button type="button" class="subcribe-btn" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="subcribe-btn">SUBSCRIBE</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- End Modal -->
     </div>
-    <!-- End Modal -->
-</div>
 </div>
 </div>
 
@@ -3427,7 +3484,7 @@ width: 30%;
 
                 console.log(response.cancellation.id);
                 var html = "";
-                $.each(response.cancellation.purchased_items,function(value,index){
+                $.each(response.cancellation.purchased_items, function(value, index) {
                     {{-- console.log(index.id); --}}
                     $("#cancellation_policy").val(response.cancellation.id);
                     $("#allorders").val(response.cancellation.id);
@@ -3481,18 +3538,18 @@ width: 30%;
     //update work 13
 
 
-        function refundOrder(order_id, created_at){
+    function refundOrder(order_id, created_at) {
 
-             $(".shipspan").removeClass("actives");
-            $(".cancelspan").addClass("actives");
+        $(".shipspan").removeClass("actives");
+        $(".cancelspan").addClass("actives");
 
-            $("#refundorderDate").html("");
-            $("#refundorderDate").html(created_at);
-            $("#refundorderId").html("");
-            $("#refundorderId").html(`Order#` + order_id);
-            $("#refundorderIdHidden").val(order_id);
+        $("#refundorderDate").html("");
+        $("#refundorderDate").html(created_at);
+        $("#refundorderId").html("");
+        $("#refundorderId").html(`Order#` + order_id);
+        $("#refundorderIdHidden").val(order_id);
 
-            $.ajax({
+        $.ajax({
             url: "{{ 'refund_order_request' }}",
             type: "GET",
             data: {
@@ -3510,7 +3567,7 @@ width: 30%;
                 $("#hidecanceldiv").hide();
                 console.log(response.refund.id);
                 var html = "";
-                $.each(response.refund.purchased_items,function(value,index){
+                $.each(response.refund.purchased_items, function(value, index) {
 
                     $("#refund_policy").val(response.refund.id);
                     $("#refundallorders").val(response.refund.id);
@@ -3553,7 +3610,7 @@ width: 30%;
 
             }
         });
-        }
+    }
 
 
 
@@ -3577,12 +3634,12 @@ width: 30%;
             success: function(response) {
                 $(".loader-bg").addClass('loader-active');
                 // console.log(response);
-                 $("#cancelall").html("");
-                 // update work 16
+                $("#cancelall").html("");
+                // update work 16
                 $("#refunddetails").html("");
-                 $("#refunddata").html("");
-                 $("#hiderefundtext").hide();
-                 $('.hidecancel').hide();
+                $("#refunddata").html("");
+                $("#hiderefundtext").hide();
+                $('.hidecancel').hide();
                 $("#orderDetailsHTML").html("");
                 $("#orderDetailsHTML").html(`
                 <div class="login-sec-box position-relative">
@@ -3746,7 +3803,7 @@ width: 30%;
 
     $("#my_form").on("submit", function(e) {
         e.preventDefault();
-        
+
         // alert("here")
         // return false;
 
@@ -3875,7 +3932,7 @@ width: 30%;
     $(".no_formate").number(true, 2);
 
 
-    function orderDetails(orderId,order_status=null) {
+    function orderDetails(orderId, order_status = null) {
 
 
 
@@ -3931,7 +3988,7 @@ width: 30%;
                 $("#invoiceTbody").html("");
                 let tbody = '';
                 for (let x = 0; x < response.purchased_items.length; x++) {
-                console.log(response.order.purchased_items[x].product.product_type);
+                    console.log(response.order.purchased_items[x].product.product_type);
 
 
                     tbody += `
@@ -3961,16 +4018,17 @@ width: 30%;
 
 
                 $("#invoiceTbody").html(tbody);
-                    for (let x = 0; x < response.purchased_items.length; x++) {
-                        if(response.order.purchased_items[x].order_status == 2 || response.order.purchased_items[x].order_status == 3){
-                            var unitprice  = response.purchased_items[x].total * response.purchased_items[x].qty;
-                            var finalprice  = response.purchased_items_sum_price  - unitprice;
-                            console.log(finalprice);
-                        }
+                for (let x = 0; x < response.purchased_items.length; x++) {
+                    if (response.order.purchased_items[x].order_status == 2 || response.order
+                        .purchased_items[x].order_status == 3) {
+                        var unitprice = response.purchased_items[x].total * response.purchased_items[x].qty;
+                        var finalprice = response.purchased_items_sum_price - unitprice;
+                        console.log(finalprice);
+                    }
 
 
-                    {{-- console.log(unitprice); --}}
-                $("#summary_amount").html(`
+            
+                    $("#summary_amount").html(`
 
                         <div class="invoice-email justify-content-end">
                             <label for="">Sub Total :</label>
@@ -3991,7 +4049,7 @@ width: 30%;
                             `<p class="tabel-line text-end">$${response.canceltotal}</p>` : `<p class="tabel-line text-end">$${response.total}</p>` }
                         </div>
                 `);
-             }
+                }
 
 
 
@@ -4306,6 +4364,10 @@ width: 30%;
     });
 </script>
 <script>
+    $(".choose_button").on("click", function() {
+        $("#edit_delivery").val($(this).val());
+    });
+
     function edit_address(address_id) {
         $("#addressId").val(address_id);
         $.ajax({
@@ -4324,10 +4386,12 @@ width: 30%;
                 if (response.user_address.delivery_label == 1) {
                     $("#edit_office").removeClass("active");
                     $("#edit_home").addClass("active");
+
                 }
                 if (response.user_address.delivery_label == 2) {
                     $("#edit_home").removeClass("active");
                     $("#edit_office").addClass("active");
+
                 }
 
                 $("#edit_shipping_checkbox").removeAttr("checked");
@@ -4487,25 +4551,25 @@ width: 30%;
     var selectAllItems = "#cancellation_policy";
     var checkboxItem = ":checkbox";
 
-$(selectAllItems).click(function() {
+    $(selectAllItems).click(function() {
 
-    if (this.checked) {
-        $(checkboxItem).each(function(index,val) {
-            this.checked = true;
-        });
-    } else {
-        $(checkboxItem).each(function(index,val) {
-            this.checked = false;
-        });
-    }
+        if (this.checked) {
+            $(checkboxItem).each(function(index, val) {
+                this.checked = true;
+            });
+        } else {
+            $(checkboxItem).each(function(index, val) {
+                this.checked = false;
+            });
+        }
 
-    let bulkCheckboxAll = null;
-    this.checked ? bulkCheckboxAll = 1 : bulkCheckboxAll = 0;
-
-
+        let bulkCheckboxAll = null;
+        this.checked ? bulkCheckboxAll = 1 : bulkCheckboxAll = 0;
 
 
-});
+
+
+    });
 </script>
 
 
@@ -4513,47 +4577,47 @@ $(selectAllItems).click(function() {
     var selectRefundItems = "#refund_policy";
     var checkboxRefundItem = ":checkbox";
 
-$(selectRefundItems).click(function() {
+    $(selectRefundItems).click(function() {
 
-    if (this.checked) {
-        $(checkboxRefundItem).each(function(index,val) {
-            this.checked = true;
-        });
-    } else {
-        $(checkboxRefundItem).each(function(index,val) {
-            this.checked = false;
-        });
-    }
+        if (this.checked) {
+            $(checkboxRefundItem).each(function(index, val) {
+                this.checked = true;
+            });
+        } else {
+            $(checkboxRefundItem).each(function(index, val) {
+                this.checked = false;
+            });
+        }
 
-    let bulkCheckboxRefundAll = null;
-    this.checked ? bulkCheckboxRefundAll = 1 : bulkCheckboxRefundAll = 0;
-
-
+        let bulkCheckboxRefundAll = null;
+        this.checked ? bulkCheckboxRefundAll = 1 : bulkCheckboxRefundAll = 0;
 
 
-});
+
+
+    });
 </script>
 
 
 <script>
-$('.returnprocess').on('click',function(){
+    $('.returnprocess').on('click', function() {
 
-    $.ajax({
-                type: "GET",
-                url: "{{ route('order_refund_data') }}",
-                beforeSend: function() {
-                    $(".loader-bg").removeClass('loader-active');
-                },
-                success: function(response) {
-                    $(".loader-bg").addClass('loader-active');
-                     $("#hiderefundtext").show();
-                    $("#refunddata").html("");
+        $.ajax({
+            type: "GET",
+            url: "{{ route('order_refund_data') }}",
+            beforeSend: function() {
+                $(".loader-bg").removeClass('loader-active');
+            },
+            success: function(response) {
+                $(".loader-bg").addClass('loader-active');
+                $("#hiderefundtext").show();
+                $("#refunddata").html("");
 
-                    var html = '';
-                    $.each(response.refund_orders,function(value,index){
+                var html = '';
+                $.each(response.refund_orders, function(value, index) {
 
-                           const today = new Date(index.updated_at);
-                       html+=`
+                    const today = new Date(index.updated_at);
+                    html += `
                       <div class="d-flex justify-content-between for-background-color-review align-items-baseline cancelorder">
                         <div class="d-flex align-items-center">
                             <div class="product-review-img">
@@ -4586,14 +4650,14 @@ $('.returnprocess').on('click',function(){
 
                         </div>
                                 `;
-                        $("#refunddata").html(html);
-                }
-            )}
+                    $("#refunddata").html(html);
+                })
+            }
 
-            });
-});
+        });
+    });
 
- function getRefundOrders(order_id){
+    function getRefundOrders(order_id) {
         $.ajax({
             url: "{{ 'get_refunded_all' }}",
             type: "GET",
@@ -4608,21 +4672,21 @@ $('.returnprocess').on('click',function(){
                 console.log(response);
                 $(".loader-bg").addClass('loader-active');
                 $("#cancelall").html("");
-                 $("#testcancel").html("");
+                $("#testcancel").html("");
                 $("#orderDetailsHTML").html("");
                 $('.hidecancel').hide();
                 $('.hideorderdetail').hide();
                 $('.cancelprintall').addClass('actives');
-                    console.log(response.allrefund[0].cancellation_status);
-                    $("#refunddetails").html("");
-                    const today1 = new Date(response.allrefund[0].updated_at);
-                     const today2 = new Date(response.allrefund[0].cancelled_at);
-                    html+=
+                console.log(response.allrefund[0].cancellation_status);
+                $("#refunddetails").html("");
+                const today1 = new Date(response.allrefund[0].updated_at);
+                const today2 = new Date(response.allrefund[0].cancelled_at);
+                html +=
                     `<div class="top-margin">
                         <div class="login-sec-box position-relative">
                             <button class="remove-btn-css" onclick="order_cancel_detail_arrow()">
                                 <div class="red-back-btn">
-                                    <img src="{{asset('front_assets/images/red-colr-arrow.webp')}}" alt="">
+                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="">
                                 </div>
                             </button>
                             <div class="mt0 for-background-color-review">
@@ -4689,7 +4753,7 @@ $('.returnprocess').on('click',function(){
                              <div class="mt2 for-background-color-review">
                              <h3 class="tracking-class">Company Refund Address</h3>
                             <div class="lotti-retail-review mt1">
-                                            <label for="">{{$config->address}}</label>
+                                            <label for="">{{ $config->address }}</label>
                             </div>
                             </div>
 
@@ -4699,11 +4763,11 @@ $('.returnprocess').on('click',function(){
                 $("#refunddetails").html(html);
 
                 $("#appended_refund_form").html("");
-                    var html = '';
+                var html = '';
 
-                $.each(response.allrefund,function(value,index){
+                $.each(response.allrefund, function(value, index) {
 
-                     html+=`
+                    html += `
                             ${index.product.product_type == 2 ?
                            ` <div class="d-flex justify-content-between for-box-shadow align-items-baseline">
                                 <div class="d-flex align-items-center">
@@ -4746,37 +4810,34 @@ $('.returnprocess').on('click',function(){
                         </div>
                        `;
                 });
-                    $("#appended_refund_form").html(html);
-                     $(".tab-content").removeClass("active");
-                    $(".payspan").removeClass("actives");
-                    $(".shipspan").addClass("actives");
+                $("#appended_refund_form").html(html);
+                $(".tab-content").removeClass("active");
+                $(".payspan").removeClass("actives");
+                $(".shipspan").addClass("actives");
 
 
             }
 
         });
     }
-
 </script>
 
 <script>
+    $('.cancelprocess').on('click', function() {
+        $.ajax({
+            type: "GET",
+            url: "{{ route('order_cancel_data') }}",
+            beforeSend: function() {
+                $(".loader-bg").removeClass('loader-active');
+            },
+            success: function(response) {
+                $(".loader-bg").addClass('loader-active');
+                $("#testcancel").html("");
+                var html = '';
 
-
-        $('.cancelprocess').on('click',function(){
-            $.ajax({
-                type: "GET",
-                url: "{{ route('order_cancel_data') }}",
-                beforeSend: function() {
-                    $(".loader-bg").removeClass('loader-active');
-                },
-                success: function(response) {
-                    $(".loader-bg").addClass('loader-active');
-                    $("#testcancel").html("");
-                    var html = '';
-
-                    $.each(response.check_orders,function(value,index){
-                           const today = new Date(index.updated_at);
-                       html+=`
+                $.each(response.check_orders, function(value, index) {
+                    const today = new Date(index.updated_at);
+                    html += `
                       <div class="d-flex justify-content-between for-background-color-review align-items-baseline cancelorder">
                         <div class="d-flex align-items-center">
                             <div class="product-review-img">
@@ -4812,15 +4873,15 @@ $('.returnprocess').on('click',function(){
 
                         </div>
                                 `;
-                        $("#testcancel").html(html);
-                }
-            )}
+                    $("#testcancel").html(html);
+                })
+            }
 
-            });
+        });
     });
 
 
-    function getCancelledOrders(order_id){
+    function getCancelledOrders(order_id) {
         $.ajax({
             url: "{{ 'get_cancelled_all' }}",
             type: "GET",
@@ -4834,7 +4895,7 @@ $('.returnprocess').on('click',function(){
             success: function(response) {
                 console.log(response);
                 $(".loader-bg").addClass('loader-active');
-                 $("#appended_refund_form").html("");
+                $("#appended_refund_form").html("");
                 $("#refunddetails").html("");
                 $("#orderDetailsHTML").html("");
                 $('.hideorderdetail').hide();
@@ -4842,16 +4903,16 @@ $('.returnprocess').on('click',function(){
                 $("#hiderefundtext").hide();
                 $('.hidecancel').show();
                 $('.cancelprintall').addClass('actives');
-                    console.log(response.allcancelled[0].cancellation_status);
-                    $("#cancelall").html("");
-                    const today1 = new Date(response.allcancelled[0].updated_at);
-                     const today2 = new Date(response.allcancelled[0].cancelled_at);
-                    html+=
+                console.log(response.allcancelled[0].cancellation_status);
+                $("#cancelall").html("");
+                const today1 = new Date(response.allcancelled[0].updated_at);
+                const today2 = new Date(response.allcancelled[0].cancelled_at);
+                html +=
                     `<div class="top-margin">
                         <div class="login-sec-box position-relative">
                             <button class="remove-btn-css" onclick="order_cancel_detail_arrow()">
                                 <div class="red-back-btn">
-                                    <img src="{{asset('front_assets/images/red-colr-arrow.webp')}}" alt="">
+                                    <img src="{{ asset('front_assets/images/red-colr-arrow.webp') }}" alt="">
                                 </div>
                             </button>
                             <div class="mt0 for-background-color-review">
@@ -4922,11 +4983,11 @@ $('.returnprocess').on('click',function(){
                 $("#cancelall").html(html);
 
                 $("#appended_cancel_form").html("");
-                    var html = '';
+                var html = '';
 
-                $.each(response.allcancelled,function(value,index){
+                $.each(response.allcancelled, function(value, index) {
 
-                     html+=`
+                    html += `
                             ${index.product.product_type == 2 ?
                            ` <div class="d-flex justify-content-between for-box-shadow align-items-baseline">
                                 <div class="d-flex align-items-center">
@@ -4969,10 +5030,10 @@ $('.returnprocess').on('click',function(){
                         </div>
                        `;
                 });
-                    $("#appended_cancel_form").html(html);
-                     $(".tab-content").removeClass("active");
-                    $(".payspan").removeClass("actives");
-                    $(".shipspan").addClass("actives");
+                $("#appended_cancel_form").html(html);
+                $(".tab-content").removeClass("active");
+                $(".payspan").removeClass("actives");
+                $(".shipspan").addClass("actives");
 
 
             }
@@ -4980,28 +5041,28 @@ $('.returnprocess').on('click',function(){
         });
     }
 
-     function order_cancel_detail_arrow() {
+    function order_cancel_detail_arrow() {
         $(".shipspan").removeClass("actives");
         $("#pills-tabContent").addClass("active");
     }
-    $('.removecanceled').on('click',function(){
+    $('.removecanceled').on('click', function() {
         $('.cancelorder').removeClass("canceled");
     });
-
 </script>
 
-  {{-- update work 16 --}}
+{{-- update work 16 --}}
 
 <script>
-    $(".content-input").removeClass().addClass("content-input option-no-" + $('#paragraphSpaceOPtion').find('option:selected').val());
-    $("#paragraphSpaceOPtion").on("change", function () {
+    $(".content-input").removeClass().addClass("content-input option-no-" + $('#paragraphSpaceOPtion').find(
+        'option:selected').val());
+    $("#paragraphSpaceOPtion").on("change", function() {
         var val = $(this).find('option:selected').val();
         $(".content-input").removeClass().addClass("content-input option-no-" + val);
     });
 </script>
 
 <script>
-    $('.addclassactive').on('click',function(){
+    $('.addclassactive').on('click', function() {
         alert('test');
     });
 </script>

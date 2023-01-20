@@ -7,7 +7,7 @@
                 ->latest()
                 ->get();
         }
-        
+
     @endphp
     <style>
         .customer_records,
@@ -31,7 +31,7 @@
         button#pillsStockTab,
         button#pillsTagsTab,
         button#pillsImageTab,
-        button.cstm_buttons{
+        button.cstm_buttons {
             border: none;
             padding: 10px 30px;
             color: #000000;
@@ -45,6 +45,7 @@
             background-color: #ff2446 !important;
             color: #fff !important;
         }
+
         .active_btn {
             background-color: #ff2446 !important;
             color: #fff !important;
@@ -327,7 +328,7 @@
         }
 
 
-        .removeBtn{
+        .removeBtn {
             color: red;
             font-size: 14px !important;
         }
@@ -426,36 +427,37 @@
         }
     </style>
     <style>
-            textarea.textAreaValue {
-    width: 100%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    border: 1px solid #ced4da;
-    resize: none;
-    border-radius: 0.25rem;
-    min-height: 150px;
-    max-height: 150px;
-}
-textarea.textAreaValue:focus {
-    outline-color: none !important;
-    border-color: #86b7fe;
-    outline: 0;
-    -webkit-box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+        textarea.textAreaValue {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            resize: none;
+            border-radius: 0.25rem;
+            min-height: 150px;
+            max-height: 150px;
+        }
 
-}
+        textarea.textAreaValue:focus {
+            outline-color: none !important;
+            border-color: #86b7fe;
+            outline: 0;
+            -webkit-box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+            box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+
+        }
     </style>
-      
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card tabsBox" id="tabs_id">
 
-                      
+
                     <ul class="nav nested nav-pills mb-3" id="pills-tab" role="tablist">
 
                         <li class="nav-item" role="presentation">
@@ -463,13 +465,14 @@ textarea.textAreaValue:focus {
                                 <button class="nav-link cstm_buttons">Product</button>
                             </a>
 
-                            
-                            
 
-                            
+
+
+
                         </li>
                         @if (session()->has('var_product_id'))
-                            <a href="{{ route('edit.product_attributes',['id' => session()->get('var_product_id') ?? $id]) }}">
+                            <a
+                                href="{{ route('edit.product_attributes', ['id' => session()->get('var_product_id') ?? $id]) }}">
                                 <button class="nav-link cstm_buttons">Attribute</button>
                             </a>
                         @else
@@ -479,7 +482,7 @@ textarea.textAreaValue:focus {
                         @endif
 
                         <li class="nav-item" role="presentation">
-                            
+
 
                             <button class="nav-link active cstm_buttons">Variations</button>
                         </li>
@@ -490,141 +493,168 @@ textarea.textAreaValue:focus {
                     <div class="container">
                         <form action="{{ route('add.product_variation') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                        <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
+                            <div class="accordion mb-3" id="accordionPanelsStayOpenExample">
 
-                            
-                            {{-- in data exist variations --}}
-                            <input type="hidden" name="variations_id" value="{{ json_encode($variation_ids) }}">
-                            @foreach ($product->product_variations as $key => $item)
-                                @php
-                                    $attribute_ids_array = explode(',',$item->attribute_id);
-                                @endphp
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        
-                                        @if (!empty($product->product_variants))
-                                            @foreach ($product->product_variants as $product_attribute)
-                                            <div class="select-dropdown selectDropdown">
-                                                <select class="form-control edit_attribute_e_{{ $key }} detect_attribute_similarties" name="attributes[]" onchange="return edit_attribute('{{ $key }}')">
-                                                    @foreach ($product_attribute->product_attributes as $attr)
-                                                    <option value="{{ $attr->attribute_id }}"{{ (in_array($attr->attribute_id, $attribute_ids_array)) ? 'selected' : '' }}>{{ $attr->attribute }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>                                            
-                                            @endforeach
-                                        @endif
-                                        {{-- {{ in_array($attr->attribute_id,$attribute_values_array) == true ? 'selected' : ''}} --}}
-                                        
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#panelsStayOpen-e-{{ $key }}" aria-expanded="true"
-                                            aria-controls="panelsStayOpen-e-{{ $key }}">
 
-                                        </button>
-                                        <button type="button" class="removeBtn"><a href="{{ route('delete-variation', ['id' => $item->id]) }}" onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
-                                    </h2>
-                                    <div id="panelsStayOpen-e-{{ $key }}" class="accordion-collapse collapse"
-                                        aria-labelledby="panelsStayOpen-e-{{ $key }}">
-                                        <div class="accordion-body">
-                                            <div class="variationsBox">
-                                                <div class="row  mt-4 mb-4">
-                                                    <div class="col-lg-6">
-                                                        <div class="imageWrapper">
-                                                            <img class="image" src="{{ $item->image ? asset('variations/'.$item->image) : asset('images/No-Image-Placeholder.svg') }}">
-                                                        </div>
-                                                        <button class="file-upload" type="button">
-                                                            <input type="file" class="file-input" name="image[]">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Regular price.*</label>
-                                                            <input type="text" class="form-control" name="regular_price[]" value="{{ $item->regular_price }}" placeholder="Regular price">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale price.* <span
-                                                                    class="schedule">Schedule</span></label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Sale price" name="sale_price[]" value="{{ $item->sale_price }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Quantity.*</label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Quantity" name="quantity[]" value="{{ $item->quantity }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">SKU.*</label>
-                                                            <input type="text" name="sku[]" class="form-control" placeholder="SKU" value="{{ $item->sku }}">
-                                                        </div>
-                                                    </div>
+                                {{-- in data exist variations --}}
+                                <input type="hidden" name="variations_id" value="{{ json_encode($variation_ids) }}">
+                                @foreach ($product->product_variations as $key => $item)
+                                    @php
+                                        $attribute_ids_array = explode(',', $item->attribute_id);
+                                    @endphp
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
 
-                                                </div>
-                                                <div class="row mt-4 mb-4 data">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale start
-                                                                date.*</label>
-                                                            <input type="date" name="start_date[]" class="form-control sale_start"
-                                                                placeholder="Sale start date" value="{{ !empty($item->start_date) ? date_format(date_create($item->start_date), 'Y-m-d') : null }}">
+                                            @if (!empty($product->product_variants))
+                                                @foreach ($product->product_variants as $product_attribute)
+                                                    <div class="select-dropdown selectDropdown">
+                                                        <select
+                                                            class="form-control edit_attribute_e_{{ $key }} detect_attribute_similarties"
+                                                            name="attributes[]"
+                                                            onchange="return edit_attribute('{{ $key }}')">
+                                                            @foreach ($product_attribute->product_attributes as $attr)
+                                                                <option
+                                                                    value="{{ $attr->attribute_id }}"{{ in_array($attr->attribute_id, $attribute_ids_array) ? 'selected' : '' }}>
+                                                                    {{ $attr->attribute }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                            {{-- {{ in_array($attr->attribute_id,$attribute_values_array) == true ? 'selected' : ''}} --}}
+
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-e-{{ $key }}" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-e-{{ $key }}">
+
+                                            </button>
+                                            <button type="button" class="removeBtn"><a
+                                                    href="{{ route('delete-variation', ['id' => $item->id]) }}"
+                                                    onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
+                                        </h2>
+                                        <div id="panelsStayOpen-e-{{ $key }}" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-e-{{ $key }}">
+                                            <div class="accordion-body">
+                                                <div class="variationsBox">
+                                                    <div class="row  mt-4 mb-4">
+                                                        <div class="col-lg-6">
+                                                            <div class="imageWrapper">
+                                                                <img class="image"
+                                                                    src="{{ $item->image ? asset('variations/' . $item->image) : asset('images/No-Image-Placeholder.svg') }}">
+                                                            </div>
+                                                            <button class="file-upload" type="button">
+                                                                <input type="file" class="file-input" name="image[]">
+                                                            </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Sale end date.*</label>
-                                                            <input type="date" name="end_date[]" class="form-control sale_end"
-                                                                placeholder="Sale end date" value="{{ !empty($item->end_date) ? date_format(date_create($item->end_date), 'Y-m-d') : null}}">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Regular
+                                                                    price.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="regular_price[]"
+                                                                    value="{{ $item->regular_price }}"
+                                                                    placeholder="Regular price">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale price.* <span
+                                                                        class="schedule">Schedule</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Sale price" name="sale_price[]"
+                                                                    value="{{ $item->sale_price }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Quantity.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Quantity" name="quantity[]"
+                                                                    value="{{ $item->quantity }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">SKU.*</label>
+                                                                <input type="text" name="sku[]" class="form-control"
+                                                                    placeholder="SKU" value="{{ $item->sku }}">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4 mb-4 data">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale start
+                                                                    date.*</label>
+                                                                <input type="date" name="start_date[]"
+                                                                    class="form-control sale_start"
+                                                                    placeholder="Sale start date"
+                                                                    value="{{ !empty($item->start_date) ? date_format(date_create($item->start_date), 'Y-m-d') : null }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale end
+                                                                    date.*</label>
+                                                                <input type="date" name="end_date[]"
+                                                                    class="form-control sale_end"
+                                                                    placeholder="Sale end date"
+                                                                    value="{{ !empty($item->end_date) ? date_format(date_create($item->end_date), 'Y-m-d') : null }}">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Weight.*</label>
-                                                            <input type="text" name="weight[]" class="form-control"
-                                                                placeholder="Weight" value="{{ $item->weight }}">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Weight.*</label>
+                                                                <input type="text" name="weight[]"
+                                                                    class="form-control" placeholder="Weight"
+                                                                    value="{{ $item->weight }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Length.*</label>
+                                                                <input type="text" name="length[]"
+                                                                    class="form-control" placeholder="Length"
+                                                                    value="{{ $item->length }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Width.*</label>
+                                                                <input type="text" name="width[]" class="form-control"
+                                                                    placeholder="Width" value="{{ $item->width }}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Height.*</label>
+                                                                <input type="text" name="height[]"
+                                                                    class="form-control" placeholder="Height"
+                                                                    value="{{ $item->height }}">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Length.*</label>
-                                                            <input type="text" name="length[]" class="form-control"
-                                                                placeholder="Length" value="{{ $item->length }}">
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <label for="exampleFormControlInput10">Stock status.*</label>
+                                                            <div class="select-dropdown">
+                                                                <select class="form-control" name="stock[]">
+                                                                    {{-- <option value="" disabled selected>Stock status</option> --}}
+                                                                    <option value="1"
+                                                                        {{ $item->stock == 1 ? 'selected' : '' }}>In stock
+                                                                    </option>
+                                                                    <option value="2"
+                                                                        {{ $item->stock == 2 ? 'selected' : '' }}>Out stock
+                                                                    </option>
+                                                                </select>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Width.*</label>
-                                                            <input type="text" name="width[]" class="form-control"
-                                                                placeholder="Width" value="{{ $item->width }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="form-group">
-                                                            <label for="exampleFormControlInput10">Height.*</label>
-                                                            <input type="text" name="height[]" class="form-control"
-                                                                placeholder="Height" value="{{ $item->height }}">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col-md-3">
-                                                        <label for="exampleFormControlInput10">Stock status.*</label>
-                                                        <div class="select-dropdown">
-                                                            <select class="form-control" name="stock[]">
-                                                                {{-- <option value="" disabled selected>Stock status</option> --}}
-                                                                <option value="1" {{ $item->stock == 1 ? 'selected' : ''}}>In stock</option>
-                                                                <option value="2" {{ $item->stock == 2 ? 'selected' : ''}}>Out stock</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    {{-- <div class="col-md-3">
+                                                        {{-- <div class="col-md-3">
                                                         <label for="exampleFormControlInput10">Shipping class.*</label>
                                                         <div class="select-dropdown">
                                                             <select class="form-control" name="shipping[]">
@@ -637,141 +667,156 @@ textarea.textAreaValue:focus {
                                                             </select>
                                                         </div>
                                                     </div> --}}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-                            {{-- in data exist variations --}}
+                                @endforeach
+                                {{-- in data exist variations --}}
 
 
-                            @foreach ($collections as $key => $item)
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    @if (!empty($product_attributes))
-                                        @foreach ($product_attributes as $product_attribute)
-                                        <div class="select-dropdown selectDropdown">
-                                            <select class="form-control" name="attributes[]">
-                                                @foreach ($product_attribute->product_additional_attributes as $attr)
-                                                <option value="{{ $attr->attribute_id }}">{{ $attr->attribute }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>                                            
-                                        @endforeach
-                                    @endif
-
-                                    
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-{{ $key }}" aria-expanded="true"
-                                        aria-controls="panelsStayOpen-{{ $key }}">
-
-                                    </button>
-                                    <button type="button" class="removeBtn"><a href="{{ route('remove-variation-session', ['id' => $key]) }}" onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
-                                </h2>
-                                <div id="panelsStayOpen-{{ $key }}" class="accordion-collapse collapse"
-                                    aria-labelledby="panelsStayOpen-{{ $key }}">
-                                    <div class="accordion-body">
-                                        <div class="variationsBox">
-                                            <div class="row  mt-4 mb-4">
-                                                <div class="col-lg-6">
-                                                    <div class="imageWrapper">
-                                                        <img class="image" src="{{ asset('images/No-Image-Placeholder.svg') }}" alt="no image">
-                                                    </div>
-                                                    <button class="file-upload" type="button">
-                                                        <input type="file" class="file-input" name="image[]">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-4 mb-4">
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Regular price.*</label>
-                                                        <input type="text" class="form-control" name="regular_price[]" placeholder="Regular price">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Sale price.* <span
-                                                                class="schedule">Schedule</span></label>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Sale price" name="sale_price[]">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Quantity.*</label>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Quantity" name="quantity[]">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">SKU.*</label>
-                                                        <input type="text" name="sku[]" class="form-control" placeholder="SKU">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="row mt-4 mb-4 data">
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Sale start
-                                                            date.*</label>
-                                                        <input type="date" name="start_date[]" class="form-control sale_start"
-                                                            placeholder="Sale start date">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Sale end date.*</label>
-                                                        <input type="date" name="end_date[]" class="form-control sale_end"
-                                                            placeholder="Sale end date">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-4 mb-4">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Weight.*</label>
-                                                        <input type="text" name="weight[]" class="form-control"
-                                                            placeholder="Weight">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Length.*</label>
-                                                        <input type="text" name="length[]" class="form-control"
-                                                            placeholder="Length">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Width.*</label>
-                                                        <input type="text" name="width[]" class="form-control"
-                                                            placeholder="Width">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlInput10">Height.*</label>
-                                                        <input type="text" name="height[]" class="form-control"
-                                                            placeholder="Height">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-4 mb-4">
-                                                <div class="col-md-3">
-                                                    <label for="exampleFormControlInput10">Stock status.*</label>
-                                                    <div class="select-dropdown">
-                                                        <select class="form-control" name="stock[]">
-                                                            <option value="" disabled selected>Stock status</option>
-                                                            <option value="1">In stock</option>
-                                                            <option value="2">Out stock</option>
+                                @foreach ($collections as $key => $item)
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            @if (!empty($product_attributes))
+                                                @foreach ($product_attributes as $product_attribute)
+                                                    <div class="select-dropdown selectDropdown">
+                                                        <select
+                                                            class="form-control edit_attribute_{{ $key }} detect_attribute_similarties"
+                                                            name="attributes[]"
+                                                            onchange="return edit_attribute('{{ $key }}')">
+                                                            @foreach ($product_attribute->product_additional_attributes as $attr)
+                                                                <option value="{{ $attr->attribute_id }}">
+                                                                    {{ $attr->attribute }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
-                                                </div>
-                                                {{-- <div class="col-md-3">
+                                                @endforeach
+                                            @endif
+
+
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-{{ $key }}" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-{{ $key }}">
+
+                                            </button>
+                                            <button type="button" class="removeBtn"><a
+                                                    href="{{ route('remove-variation-session', ['id' => $key]) }}"
+                                                    onclick="return confirm('Are you sure, you want to delete it?')">Remove</a></button>
+                                        </h2>
+                                        <div id="panelsStayOpen-{{ $key }}" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-{{ $key }}">
+                                            <div class="accordion-body">
+                                                <div class="variationsBox">
+                                                    <div class="row  mt-4 mb-4">
+                                                        <div class="col-lg-6">
+                                                            <div class="imageWrapper">
+                                                                <img class="image"
+                                                                    src="{{ asset('images/No-Image-Placeholder.svg') }}"
+                                                                    alt="no image">
+                                                            </div>
+                                                            <button class="file-upload" type="button">
+                                                                <input type="file" class="file-input" name="image[]">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Regular
+                                                                    price.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    name="regular_price[]" placeholder="Regular price">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale price.* <span
+                                                                        class="schedule">Schedule</span></label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Sale price" name="sale_price[]">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Quantity.*</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Quantity" name="quantity[]">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">SKU.*</label>
+                                                                <input type="text" name="sku[]" class="form-control"
+                                                                    placeholder="SKU">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4 mb-4 data">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale start
+                                                                    date.*</label>
+                                                                <input type="date" name="start_date[]"
+                                                                    class="form-control sale_start"
+                                                                    placeholder="Sale start date">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Sale end
+                                                                    date.*</label>
+                                                                <input type="date" name="end_date[]"
+                                                                    class="form-control sale_end"
+                                                                    placeholder="Sale end date">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Weight.*</label>
+                                                                <input type="text" name="weight[]"
+                                                                    class="form-control" placeholder="Weight">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Length.*</label>
+                                                                <input type="text" name="length[]"
+                                                                    class="form-control" placeholder="Length">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Width.*</label>
+                                                                <input type="text" name="width[]" class="form-control"
+                                                                    placeholder="Width">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlInput10">Height.*</label>
+                                                                <input type="text" name="height[]"
+                                                                    class="form-control" placeholder="Height">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-4 mb-4">
+                                                        <div class="col-md-3">
+                                                            <label for="exampleFormControlInput10">Stock status.*</label>
+                                                            <div class="select-dropdown">
+                                                                <select class="form-control" name="stock[]">
+                                                                    <option value="" disabled selected>Stock status
+                                                                    </option>
+                                                                    <option value="1">In stock</option>
+                                                                    <option value="2">Out stock</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        {{-- <div class="col-md-3">
                                                     <label for="exampleFormControlInput10">Shipping class.*</label>
                                                     <div class="select-dropdown">
                                                         <select class="form-control" name="shipping[]">
@@ -784,27 +829,28 @@ textarea.textAreaValue:focus {
                                                         </select>
                                                     </div>
                                                 </div> --}}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                @endforeach
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+
+                                    @if (count($collections) > 0 || count($product->product_variations) > 0)
+                                        <button type="submit" id="saveVariations"
+                                            class="btn btn-success saveRedBtn plusButton mr-2" data-bs-original-title=""
+                                            title="">Save Attribute</button>
+
+                                        <button type="button" class="btn btn-success saveRedBtn plusButton"
+                                            data-bs-original-title="" title="">Cancel</button>
+                                    @else
+                                        <p>Variation(s) Not found!, go back and create it.</p>
+                                    @endif
                                 </div>
                             </div>
-                            @endforeach
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5">
-                                
-                                @if (count($collections) > 0 || count($product->product_variations) > 0)
-                                <button type="submit" id="saveVariations" class="btn btn-success saveRedBtn plusButton mr-2"
-                                    data-bs-original-title="" title="">Save Attribute</button>    
-                                    
-                                    <button type="button" class="btn btn-success saveRedBtn plusButton"
-                                    data-bs-original-title="" title="">Cancel</button>
-                                @else
-                                <p>Variation(s) Not found!, go back and create it.</p>
-                                @endif
-                            </div>
-                        </div>
                         </form>
                     </div>
 
@@ -820,7 +866,108 @@ textarea.textAreaValue:focus {
     @push('scripts')
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+        <script>
+            add_variation = [];
+            // attribute validation
+            function edit_attribute(key) {
+                // alert('Please');
+                // let row_attr_length = $('.edit_attribute_' + key).length;
+                // let total_attr_count = $(".detect_attribute_similarties").length;
+                // let attr_total_arr = [];
+                // let row_attr_ids = [];
 
+
+                let row_attr_length = $('.edit_attribute_' + key).length;
+                let val = $('.edit_attribute_' + key);
+
+                let total_attr_count = $(".detect_attribute_similarties").length;
+                let attr_total_arr = [];
+                let row_attr_ids = [];
+                option = [];
+
+                $.each($(val), function(indexInArray, valueOfElement) {
+                    option.push($(this).val());
+                });
+                $.each($(add_variation), function(indexInArray, valueOfElement) {
+                    console.log(indexInArray, valueOfElement, 'as', add_variation)
+                    if (valueOfElement.key == key) {
+                        console.log(valueOfElement.key, key, 'abc')
+                        delete add_variation.key;
+
+                    } else if (valueOfElement.key != key) {
+
+                        console.log(disable = JSON.stringify(valueOfElement.option) === JSON.stringify(option))
+                        if (disable) {
+                            // console.log(valueOfElement.key, key, 'def', valueOfElement.option, option)
+                            toastr.error('variation already exist');
+                            $("#saveVariations").attr('disabled', 'disabled');
+                            // console.log('variation already exist')
+                        }else{
+                            $("#saveVariations").attr('disabled',false);
+                        }
+                    }
+                });
+
+                var arr = {
+                    'key': key,
+                    "option": option
+                };
+                add_variation.push(arr);
+
+
+
+                // old code by tofique
+                // $.each($(".detect_attribute_similarties"), function (indexInArray, valueOfElement) {
+                //     attr_total_arr.push($(this).val());
+                // });
+
+                // function sliceIntoChunks(arr, chunkSize) {
+                //     const res = [];
+                //     for (let i = 0; i < arr.length; i += chunkSize) {
+                //         const chunk = arr.slice(i, i + chunkSize);
+                //         res.push(chunk);
+                //     }
+                //     return res;
+                // }
+
+
+
+
+
+
+                // $.each($('.edit_attribute_'+key), function (indexInArray, valueOfElement) {
+                //     row_attr_ids.push($(this).val());
+                //     // console.log($(this).val())
+                // });
+
+                // let all_attr_arr_chunks = sliceIntoChunks(attr_total_arr, row_attr_length);
+                // // console.log(all_attr_arr_chunks)
+                // // console.log(row_attr_ids)
+
+
+
+                // var array1 = [4,8,9,10];
+                // var array2 = [4,8,9,10];
+
+                // for(let i = 0; i < all_attr_arr_chunks.length; i++){
+
+                //     var is_same = row_attr_ids.length == all_attr_arr_chunks[i].length && row_attr_ids.every(function(element, index) {
+                //         return element === all_attr_arr_chunks[i][index];
+                //     });
+
+                //     console.log(is_same);
+
+                // }
+
+
+
+
+                // console.log(is_same);
+
+
+
+            }
+        </script>
         <script>
             $(".js-example-tokenizer").select2({
                 tags: true,
@@ -835,7 +982,7 @@ textarea.textAreaValue:focus {
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
             integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    
+
 
         <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css"
             rel="stylesheet">
@@ -849,7 +996,7 @@ textarea.textAreaValue:focus {
                     jQuery('.data').toggle();
                 })
             });
-          
+
             $(function() {
                 $('.select').each(function() {
                     $(this).select2({
@@ -872,12 +1019,11 @@ textarea.textAreaValue:focus {
                 // read the image file as a data URL.
                 reader.readAsDataURL(this.files[0]);
             });
-           
         </script>
 
         <script>
             $(document).ready(function() {
-             
+
                 $('#parent_category_id').on('change', function() {
                     var id = $(this).val();
                     $.ajax({
@@ -935,7 +1081,7 @@ textarea.textAreaValue:focus {
                 }
             });
         </script>
-        
+
         <script>
             $(document).ready(function() {
                 $('#main-category_id').on('click', function() {
@@ -964,7 +1110,7 @@ textarea.textAreaValue:focus {
             });
         </script>
 
-        
+
         <script>
             $(":input").on("keyup change", function(e) {
                 var price = $("#price").val();
@@ -980,7 +1126,6 @@ textarea.textAreaValue:focus {
 
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <script>
-
             function selectRefresh() {
                 $('.select_2').select2({
                     tags: true,
@@ -989,19 +1134,21 @@ textarea.textAreaValue:focus {
                     width: '100%'
                 });
             }
-            function selectAll(id){
-                    $(`.select_${id} > option`).prop("selected", "selected");
-                    $(`.select_${id}`).trigger("change");
-               
+
+            function selectAll(id) {
+                $(`.select_${id} > option`).prop("selected", "selected");
+                $(`.select_${id}`).trigger("change");
+
             }
-            function unselectAll(id){
+
+            function unselectAll(id) {
                 $(`.select_${id}`).val("-1").trigger("change");
             }
-         
-            
+
+
             $(document).ready(function() {
-            selectRefresh();
-            
+                selectRefresh();
+
             });
 
 
@@ -1009,7 +1156,7 @@ textarea.textAreaValue:focus {
 
 
             // add variant
-            function addVariant(){
+            function addVariant() {
                 selectRefresh();
                 var variant = $("#variants").val();
                 var product_id = "{{ session()->get('var_product_id') }}";
@@ -1019,8 +1166,8 @@ textarea.textAreaValue:focus {
                     url: "{{ route('add.product_variants') }}",
                     data: {
                         _token: '{{ csrf_token() }}',
-                        product_id : product_id,
-                        variant : variant,
+                        product_id: product_id,
+                        variant: variant,
                     },
                     beforeSend: function() {
                         $(".loader-bg").removeClass('loader-active');
@@ -1032,17 +1179,17 @@ textarea.textAreaValue:focus {
                     }
                 });
             }
-            
-            function removeVariant(variant_id, attribute_id){
+
+            function removeVariant(variant_id, attribute_id) {
                 alert(variant_id)
 
                 $.ajax({
                     type: "GET",
                     url: "{{ route('remove.product_variants') }}",
                     data: {
-                         _token: '{{ csrf_token() }}',
-                         variant_id:variant_id,
-                         attribute_id:attribute_id
+                        _token: '{{ csrf_token() }}',
+                        variant_id: variant_id,
+                        attribute_id: attribute_id
                     },
                     beforeSend: function() {
                         $(".loader-bg").removeClass('loader-active');
@@ -1054,16 +1201,16 @@ textarea.textAreaValue:focus {
                     }
                 });
             }
-            
+
             // attribute tab
 
 
 
-            // function removeVariations(session_id) { 
-             
+            // function removeVariations(session_id) {
+
             //     if(confirm('Are you sure, you want to delete it?')){
-                    
-                    
+
+
 
             //         $.ajax({
             //         type: "POST",
@@ -1085,22 +1232,17 @@ textarea.textAreaValue:focus {
             //     }
 
             //  }
-
-
-
-            
-        
         </script>
 
-<script language="javascript">
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+        <script language="javascript">
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
 
-    today = yyyy + '-' + mm + '-' + dd;
-    $('.sale_start').attr('min', today);
-    $('.sale_end').attr('min', today);
-</script>
+            today = yyyy + '-' + mm + '-' + dd;
+            $('.sale_start').attr('min', today);
+            $('.sale_end').attr('min', today);
+        </script>
     @endpush
 @endsection

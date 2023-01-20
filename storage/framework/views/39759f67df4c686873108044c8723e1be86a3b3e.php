@@ -1230,7 +1230,6 @@
 
     // });
 
-
     var shipping_address_count = '<?php echo e(count($shipping_addresses)); ?>';
     if(shipping_address_count > 0){
         $(".payment_btn").addClass("remove_none");
