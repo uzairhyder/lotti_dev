@@ -1,0 +1,925 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 03, 2022 at 12:26 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cuba_dasboard_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
+CREATE TABLE `banners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `page_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `banner_image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `page_id`, `banner_image`, `created_at`, `updated_at`) VALUES
+(5, '5', '1667331682.png', '2022-11-01 14:41:22', '2022-11-02 14:58:30'),
+(7, '7', '1667422409.jpg', '2022-11-01 14:42:31', '2022-11-02 15:53:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `title`, `slug`, `image`, `date`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Lorem ipsum is placeholder text commonly used in the graphic', 'lorem-ipsum-is-placeholder-text-commonly-used-in-the-graphic', '1667340369.png', '2022-11-02', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', 1, '2022-11-01 17:06:09', '2022-11-01 17:07:16'),
+(2, 'Lorem ipsum is a name for a common type of placeholder text', 'lorem-ipsum-is-a-name-for-a-common-type-of-placeholder-text', '1667422467.jpg', '2022-11-02', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', 1, '2022-11-01 17:06:57', '2022-11-02 15:54:27'),
+(3, 'What does Lorem Ipsum text say', 'what-does-lorem-ipsum-text-say', '1667340473.png', '2022-11-02', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available</p>', 0, '2022-11-01 17:07:53', '2022-11-02 15:10:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `configurations`
+--
+
+CREATE TABLE `configurations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `copy_right` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `configurations`
+--
+
+INSERT INTO `configurations` (`id`, `copy_right`, `contact`, `email`, `slug`, `created_at`, `updated_at`) VALUES
+(3, 'All Rights reserved by designprosusa', 123456812, 'admin@cubadashboard.com', 'configuration', '2022-10-31 17:26:57', '2022-11-01 17:39:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `failed_jobs`
+--
+
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faqs`
+--
+
+CREATE TABLE `faqs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `questions` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(119) COLLATE utf8mb4_unicode_ci DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `questions`, `answer`, `status`, `created_at`, `updated_at`) VALUES
+(6, 'Question 1', '<p>Answer 1</p>', '0', '2022-10-31 12:06:07', '2022-11-01 11:37:11'),
+(7, 'Question 2', '<p>Answer 2</p>', '1', '2022-10-31 12:06:20', '2022-10-31 12:06:20'),
+(9, 'Question 3', '<p>Answer3</p>', '1', '2022-11-01 11:38:52', '2022-11-01 11:38:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `image_title`, `image_slug`, `image_name`, `image_path`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'Home15', 'Home', '1665606129.jpg', NULL, '2022-10-12 18:20:49', '2022-09-19 12:11:26', '2022-10-12 18:20:49'),
+(2, 'test2', 'test2', '1665616916.jpg', NULL, '2022-10-12 18:22:28', '2022-10-12 18:21:56', '2022-10-12 18:22:28'),
+(3, 'Home', 'Home', '1665616942.jpg', NULL, '2022-10-12 18:22:48', '2022-10-12 18:22:22', '2022-10-12 18:22:48'),
+(4, 'test', 'test', '1665617019.jpg', NULL, '2022-10-12 18:23:53', '2022-10-12 18:23:39', '2022-10-12 18:23:53'),
+(5, 'Home', 'Home', '1665617058.jpg', NULL, NULL, '2022-10-12 18:24:08', '2022-10-12 18:24:18'),
+(6, 'test2', 'test2', '1665687427.jpg', NULL, '2022-10-13 13:57:51', '2022-10-13 13:56:55', '2022-10-13 13:57:51'),
+(7, 'Home', 'Home', '1667423832.png', NULL, NULL, '2022-10-13 15:33:18', '2022-11-02 16:17:12'),
+(8, 'Test', 'Test', '1667321642.jpg', NULL, '2022-11-01 11:54:51', '2022-11-01 11:49:53', '2022-11-01 11:54:51'),
+(9, 'Home', 'Home', '1667424717.png', NULL, '2022-11-02 16:32:00', '2022-11-02 16:31:57', '2022-11-02 16:32:00'),
+(10, 'Home', 'Home', '1667425141.png', NULL, '2022-11-02 16:39:10', '2022-11-02 16:39:01', '2022-11-02 16:39:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `homes`
+--
+
+CREATE TABLE `homes` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `page_title` varchar(119) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home_content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home_banner` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inquiries`
+--
+
+CREATE TABLE `inquiries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `inquiries`
+--
+
+INSERT INTO `inquiries` (`id`, `name`, `email`, `contact`, `message`, `created_at`, `updated_at`) VALUES
+(3, 'John Doe', 'johndoe@gmail.com', '123456789', 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.', '2022-10-31 17:25:32', '2022-10-31 17:25:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logos`
+--
+
+CREATE TABLE `logos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `logos`
+--
+
+INSERT INTO `logos` (`id`, `type`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'favicon', '6361a3f81051e.png', NULL, '2022-11-01 17:55:52'),
+(2, 'navLogo', '6361aa87dc2d2.png', NULL, '2022-11-01 18:23:51'),
+(3, 'footerLogo', '62227250187f0.png', NULL, '2022-03-04 15:10:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `main_categories`
+--
+
+CREATE TABLE `main_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `parent_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `main_category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `main_categories`
+--
+
+INSERT INTO `main_categories` (`id`, `parent_category_id`, `main_category_name`, `slug`, `status`, `created_at`, `updated_at`) VALUES
+(1, '1', 'Iron', 'iron', 1, '2022-11-02 12:00:51', '2022-11-02 12:00:51'),
+(2, '2', 'LG', 'lg', 1, '2022-11-02 12:00:59', '2022-11-02 12:00:59'),
+(3, '5', 'My Cat', 'my-cat', 1, '2022-11-02 14:35:57', '2022-11-02 14:35:57'),
+(4, '4', 'Built-in-Ovens', 'built-in-ovens', 1, '2022-11-02 15:20:57', '2022-11-02 15:28:09'),
+(5, '1', 'Sewing Machine', 'sewing-machine', 1, '2022-11-02 15:21:14', '2022-11-02 15:21:14'),
+(6, '4', 'BedRoom', 'bedroom', 1, '2022-11-02 15:22:51', '2022-11-02 15:22:51'),
+(7, '4', 'Living Room', 'living-room', 1, '2022-11-02 15:23:22', '2022-11-02 15:23:22'),
+(8, '4', 'Kitchen Furniture', 'kitchen-furniture', 1, '2022-11-02 15:23:33', '2022-11-02 15:23:33'),
+(9, '3', 'Gaming PC', 'gaming-pc', 1, '2022-11-02 15:25:22', '2022-11-02 15:25:22'),
+(10, '3', 'HP Laptops', 'hp-laptops', 1, '2022-11-02 15:25:49', '2022-11-02 15:25:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2022_03_03_210155_create_logos_table', 2),
+(5, '2022_03_04_205232_create_homes_table', 3),
+(6, '2022_09_17_160840_create_galleries_table', 4),
+(7, '2022_09_17_162131_create_galleries_table', 5),
+(8, '2022_10_13_190725_create_testimonials_table', 6),
+(9, '2022_10_18_184937_testimonial', 7),
+(10, '2022_10_18_190709_create__testimonial_table', 8),
+(11, '2022_10_27_173542_create_faqs_table', 9),
+(12, '2022_10_28_215824_create_portfolio', 10),
+(13, '2022_10_31_164116_create_inquiries_table', 11),
+(14, '2022_10_31_173933_create_packages_table', 12),
+(15, '2022_10_31_204251_create_configurations_table', 13),
+(16, '2022_10_31_214150_create_socials_table', 14),
+(17, '2022_10_31_223033_create_services_table', 15),
+(18, '2022_10_31_230211_create_portfolios_table', 16),
+(19, '2014_10_12_000000_create_users_table', 17),
+(21, '2022_11_01_170350_create_pages_table', 18),
+(22, '2022_11_01_180422_create_banners_table', 19),
+(24, '2022_11_01_195440_create_privacy_policies_table', 20),
+(25, '2022_11_01_201457_create_terms_conditions_table', 21),
+(26, '2022_11_01_203428_create_page_contents_table', 22),
+(28, '2022_11_01_212644_create_blogs_table', 23),
+(30, '2022_11_02_151719_create_parent_categories_table', 24),
+(31, '2022_11_02_161824_create_main_categories_table', 25),
+(32, '2022_11_02_170134_create_sub_categories_table', 26);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+
+CREATE TABLE `packages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id`, `title`, `price`, `description`, `status`, `created_at`, `updated_at`) VALUES
+(3, 'Basic', '500', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', 1, '2022-10-31 14:36:56', '2022-11-01 11:34:11'),
+(4, 'Gold', '700', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', 0, '2022-10-31 14:37:12', '2022-11-01 11:33:36'),
+(5, 'Premium', '1000', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', 0, '2022-10-31 14:37:23', '2022-11-01 11:33:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `page_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `page_name`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Home', 1, '2022-11-01 12:55:44', '2022-11-01 12:55:44'),
+(2, 'About us', 1, '2022-11-01 12:55:52', '2022-11-01 12:55:52'),
+(3, 'Contact Us', 1, '2022-11-01 12:56:04', '2022-11-01 12:56:04'),
+(4, 'Gallery', 1, '2022-11-01 12:56:30', '2022-11-01 12:56:30'),
+(5, 'Privacy Policy', 1, '2022-11-01 12:56:42', '2022-11-01 12:56:42'),
+(6, 'Terms & Conditions', 1, '2022-11-01 12:57:19', '2022-11-01 12:57:19'),
+(7, 'Sign up', 1, '2022-11-01 12:57:39', '2022-11-01 12:57:39'),
+(8, 'Sign in', 1, '2022-11-01 12:57:48', '2022-11-01 12:57:48'),
+(9, 'Testimonials', 1, '2022-11-01 12:59:38', '2022-11-01 12:59:38'),
+(10, 'Faq', 1, '2022-11-01 12:59:48', '2022-11-01 12:59:48'),
+(11, 'Portfolio', 1, '2022-11-01 13:00:58', '2022-11-02 15:03:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `page_contents`
+--
+
+CREATE TABLE `page_contents` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `page_id` int(11) NOT NULL,
+  `section_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `page_contents`
+--
+
+INSERT INTO `page_contents` (`id`, `page_id`, `section_name`, `title`, `slug`, `description`, `image`, `created_at`, `updated_at`) VALUES
+(1, 1, 'About Section', 'Lorem ipsum is placeholder text', 'lorem-ipsum-is-placeholder-text', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available</p>', '1667337496.png', '2022-11-01 16:18:16', '2022-11-01 16:18:16'),
+(2, 2, 'Contact Us', 'Lorem ipsum is placeholder text commonly used in the graphic', 'lorem-ipsum-is-placeholder-text-commonly-used-in-the-graphic', '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', '1667337580.png', '2022-11-01 16:19:40', '2022-11-01 16:19:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parent_categories`
+--
+
+CREATE TABLE `parent_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `parent_category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `parent_categories`
+--
+
+INSERT INTO `parent_categories` (`id`, `parent_category_name`, `slug`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Home Appliances', 'home-appliances', 1, '2022-11-02 11:11:20', '2022-11-02 11:11:20'),
+(2, 'TV & Entertainment', 'tv-entertainment', 1, '2022-11-02 11:11:56', '2022-11-02 11:11:56'),
+(3, 'Computing & Mobiles', 'computing-mobiles', 1, '2022-11-02 11:12:15', '2022-11-02 11:12:15'),
+(4, 'Furniture', 'furniture', 1, '2022-11-02 11:12:27', '2022-11-02 11:12:57'),
+(5, 'New Cat', 'new-cat', 1, '2022-11-02 14:35:29', '2022-11-02 14:35:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portfolios`
+--
+
+CREATE TABLE `portfolios` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` int(11) NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `portfolios`
+--
+
+INSERT INTO `portfolios` (`id`, `type`, `image`, `image_thumbnail`, `video`, `status`, `created_at`, `updated_at`) VALUES
+(2, 2, NULL, NULL, '1667320034.mp4', 0, '2022-10-31 18:21:45', '2022-11-01 11:27:14'),
+(5, 1, '1667319869.png', '1667318978.jpg', '1667319546.jpg', 1, '2022-11-01 11:09:38', '2022-11-01 11:24:29');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `privacy_policies`
+--
+
+CREATE TABLE `privacy_policies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `privacy_policies`
+--
+
+INSERT INTO `privacy_policies` (`id`, `title`, `slug`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Lorem ipsum is placeholder text', NULL, '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is availableIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available</p>', '2022-11-01 15:28:44', '2022-11-01 15:28:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `service_name`, `created_at`, `updated_at`) VALUES
+(1, 'Logo Design', '2022-10-31 17:36:04', '2022-10-31 17:36:04'),
+(2, 'Animation', '2022-10-31 17:36:25', '2022-10-31 17:36:25'),
+(3, 'Website Design and Development', '2022-10-31 17:36:37', '2022-10-31 17:36:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `socials`
+--
+
+CREATE TABLE `socials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `youtube` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `socials`
+--
+
+INSERT INTO `socials` (`id`, `facebook`, `twitter`, `instagram`, `youtube`, `linkedin`, `slug`, `created_at`, `updated_at`) VALUES
+(5, 'http://facebook.com', 'http://twitter.com', 'http://instagram.com', NULL, 'http://linkedin.com', NULL, '2022-11-02 17:17:58', '2022-11-02 17:17:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_categories`
+--
+
+CREATE TABLE `sub_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `parent_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `main_category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sub_category_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sub_categories`
+--
+
+INSERT INTO `sub_categories` (`id`, `parent_category_id`, `main_category_id`, `sub_category_name`, `slug`, `status`, `created_at`, `updated_at`) VALUES
+(1, '2', '2', 'Sub Category 1', 'sub-category-1', 1, '2022-11-02 13:57:45', '2022-11-02 14:26:47'),
+(2, '1', '1', 'Sub category 2', 'sub-category-2', 0, '2022-11-02 14:27:41', '2022-11-02 14:29:31'),
+(3, '5', '3', 'Sub Category 3', 'sub-category-3', 1, '2022-11-02 14:36:17', '2022-11-02 14:36:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `terms_conditions`
+--
+
+CREATE TABLE `terms_conditions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `terms_conditions`
+--
+
+INSERT INTO `terms_conditions` (`id`, `title`, `slug`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Lorem ipsum is placeholder text', NULL, '<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>', '2022-11-01 15:27:49', '2022-11-01 15:30:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `short_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `long_description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('1','0') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `name`, `image`, `short_description`, `long_description`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'Freya Steele', '1666729111.jpg', 'Sapiente dicta sed q', '<p>wdqwerkebfkbfkbhg</p>', '1', '2022-10-25 15:18:31', '2022-10-25 15:18:31'),
+(3, 'Boris Barry', '1666814435.jpg', 'testing testing', '<p>aefwerfwerfwsedqa</p>', '1', '2022-10-25 15:20:27', '2022-10-26 15:00:35'),
+(4, 'Boris Barry', '1667423137.jpg', 'Officiis debitis eiu', '<p>aefwerfwerfwsedqa</p>', '1', '2022-10-25 15:20:34', '2022-11-02 16:05:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact` int(11) DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) NOT NULL,
+  `profile` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `first_name`, `last_name`, `user_name`, `role`, `slug`, `contact`, `address`, `status`, `profile`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@cubadashboard.com', NULL, NULL, NULL, '1', NULL, NULL, NULL, 1, NULL, NULL, '$2y$10$31W7x2S/s1I3iA.H.O2M0OEnRuDVjn3z1.HcbXWD5/KLB4itpwmSq', NULL, '2022-11-01 15:18:37', '2022-11-01 15:18:37'),
+(2, 'David Joy', 'djoy62471@gmail.com', 'David', 'Joy', 'david007', '2', 'david007', 1234556789, 'test address', 0, NULL, NULL, '$2y$10$3cLvrlPm6xq55MKYs/K8X.2Y5/a8xrF/1iJ1KN79eWV/jaDtbrC7y', NULL, '2022-11-01 10:37:57', '2022-11-01 10:50:04'),
+(3, 'James Albert', 'iamjamesalbertt@gmail.com', 'James', 'Albert', 'james007', '2', 'james007', 123456789, 'Test Address', 1, NULL, NULL, '$2y$10$ZjL7zr4cEjGloLw/u7O3Y.WK6XXpGuxyrqPtUSPUtHSWKl5HOPOiS', NULL, '2022-11-01 10:52:39', '2022-11-02 14:56:04');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `banners`
+--
+ALTER TABLE `banners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `configurations`
+--
+ALTER TABLE `configurations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `homes`
+--
+ALTER TABLE `homes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `inquiries`
+--
+ALTER TABLE `inquiries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `logos`
+--
+ALTER TABLE `logos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `main_categories`
+--
+ALTER TABLE `main_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `packages`
+--
+ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `page_contents`
+--
+ALTER TABLE `page_contents`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parent_categories`
+--
+ALTER TABLE `parent_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `portfolios`
+--
+ALTER TABLE `portfolios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `privacy_policies`
+--
+ALTER TABLE `privacy_policies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `socials`
+--
+ALTER TABLE `socials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_categories`
+--
+ALTER TABLE `sub_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `terms_conditions`
+--
+ALTER TABLE `terms_conditions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `banners`
+--
+ALTER TABLE `banners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `configurations`
+--
+ALTER TABLE `configurations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `homes`
+--
+ALTER TABLE `homes`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `inquiries`
+--
+ALTER TABLE `inquiries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `logos`
+--
+ALTER TABLE `logos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `main_categories`
+--
+ALTER TABLE `main_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `packages`
+--
+ALTER TABLE `packages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `page_contents`
+--
+ALTER TABLE `page_contents`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `parent_categories`
+--
+ALTER TABLE `parent_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `portfolios`
+--
+ALTER TABLE `portfolios`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `privacy_policies`
+--
+ALTER TABLE `privacy_policies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `socials`
+--
+ALTER TABLE `socials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `sub_categories`
+--
+ALTER TABLE `sub_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `terms_conditions`
+--
+ALTER TABLE `terms_conditions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
