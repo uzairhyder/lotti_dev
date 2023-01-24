@@ -6,7 +6,7 @@
                 ->latest()
                 ->get();
         }
-        
+
     ?>
     <style>
         .customer_records,
@@ -445,7 +445,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card tabsBox" id="tabs_id">
 
-                      
+
                     <ul class="nav nested nav-pills mb-3" id="pills-tab" role="tablist">
 
                         <li class="nav-item" role="presentation">
@@ -453,7 +453,7 @@
                         </li>
 
 
-                        
+
                         <?php if(session()->has('var_product_id')): ?>
                             <a href="<?php echo e(route('show.product_attributes')); ?>">
                                 <button class="nav-link cstm_buttons">Attribute</button>
@@ -463,13 +463,13 @@
                                 <button class="nav-link button cstm_buttons">Attribute</button>
                             </li>
                         <?php endif; ?>
-                        
+
                         <li class="nav-item">
                             <button class="nav-link cstm_buttons validation-product">Variations</button>
                         </li>
 
 
-                      
+
 
                     </ul>
 
@@ -630,7 +630,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3" id="tags_name">
@@ -639,6 +639,8 @@
                                         <select class="form-control js-example-tokenizer" name="tags[]"
                                         id="tags_value"  multiple="multiple">
                                         </select>
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -667,30 +669,30 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <div class="tab-content tabsContent" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pillsProduct" role="tabpanel"
                         aria-labelledby="pillsProductTab">
-                            
+
                             </div>
 
 
                             <div class="tab-pane fade" id="pillsVariation" role="tabpanel"
                                 aria-labelledby="pillsVariationTab">
                                 <div class="container">
-                                  
 
-                                    
+
+
                                     <div id="variant_accordion_html">
                                         <?php echo $__env->make('admin_dashboard.partial.variant_accordion', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                                     </div>
-                                 
 
 
-                                  
+
+
                                 </div>
                             </div>
-                    
+
 
 
                 </div>
@@ -768,7 +770,7 @@
         <script>
              $(".js-example-tokenizer").select2({
                 tags: true,
-                tokenSeparators: [',', ' ']
+                // tokenSeparators: [',', ' ']
             })
         </script>
 
@@ -785,7 +787,7 @@
                     jQuery('.data').toggle();
                 })
             });
-         
+
             $(function() {
                 $('.select').each(function() {
                     $(this).select2({
@@ -813,7 +815,7 @@
 
         <script>
             $(document).ready(function() {
-             
+
                 $('#parent_category_id').on('change', function() {
                     var id = $(this).val();
                     $.ajax({
@@ -871,7 +873,7 @@
                 }
             });
         </script>
-        
+
         <script>
             $(document).ready(function() {
                 $('#main-category_id').on('click', function() {
@@ -900,7 +902,7 @@
             });
         </script>
 
-       
+
         <script>
             $(":input").on("keyup change", function(e) {
                 var price = $("#price").val();
@@ -915,16 +917,16 @@
 
 
             // discount date
-            $(".salePrice").keyup(function(e){ 
+            $(".salePrice").keyup(function(e){
                 var num = this.value.match(/^\d+$/);
-                
+
                 if (num === null || num == 0) {
                     this.value = "";
                 }
             });
 
 
-            $(".salePrice").change(function(e){ 
+            $(".salePrice").change(function(e){
                 var regular_price = $("#regular_price").val();
                 var sale_price = $("#sale_price").val();
 
@@ -939,7 +941,7 @@
             $("#sale_end").on("change", function(){
                 var sale_start = $("#sale_start").val();
                 var sale_end = $("#sale_end").val();
-                
+
                 if(sale_start == ''){
                     toastr.error('Please add sale start date.');
                     $("#sale_start").focus();
@@ -966,9 +968,9 @@
         </script>
 
 
-        
+
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-       
+
         <script>
 
             function selectRefresh() {
@@ -982,13 +984,13 @@
             function selectAll(id){
                     $(`.select_${id} > option`).prop("selected", "selected");
                     $(`.select_${id}`).trigger("change");
-               
+
             }
             function unselectAll(id){
                 $(`.select_${id}`).val("-1").trigger("change");
             }
-         
-            
+
+
             $(document).ready(function() {
             selectRefresh();
             });
@@ -1021,7 +1023,7 @@
                     }
                 });
             }
-            
+
             function removeVariantAttribute(variant_id, attribute_id){
                 alert(variant_id)
 
@@ -1043,13 +1045,13 @@
                     }
                 });
             }
-            
+
             // attribute tab
 
 
             $("#saveAttributeFrom").on("submit", function(e){
                 e.preventDefault();
-                
+
                 const form = document.getElementById('saveAttributeFrom');
                 const formData = new FormData(form);
 
@@ -1070,7 +1072,7 @@
                         console.log(response);
                     }
                 });
-                
+
             });
         </script>
 
@@ -1080,7 +1082,7 @@
             $('.remove-tag').click(function() {
                 $(".loader-bg").removeClass('loader-active');
             });
-            
+
 
             $(document).ready(function(e) {
             $("#product_type").on('change', function() {

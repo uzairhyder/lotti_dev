@@ -538,6 +538,7 @@ class UserDashboardController extends Controller
             ]);
         }
     }
+    
     public function verifyemail(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -615,6 +616,7 @@ class UserDashboardController extends Controller
             }
         }
     }
+
     public function changeemail()
     {
         if (Auth::check()) {
